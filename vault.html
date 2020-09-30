@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Luc Heaton</title>
+        <script src="https://kit.fontawesome.com/06c0747e2d.js" crossorigin="anonymous"></script>
+        <script>
+			function ToggleDesc(ref)
+			{
+				var content = ref.nextElementSibling;
+				if (content.style.display === "block") {
+					content.style.display = "none";
+				} else {
+					content.style.display = "block";
+				}
+			}
+		</script>
+        <style>
+            /*Site wide default styling*/
+            a,p,h1,h2,h3,h4,li
+            {
+                font-family: Roboto;
+                color: #6aabe3;
+                margin: 0;
+                padding: 0;
+            }
+            /*Remove underline*/
+            a 
+            {
+                text-decoration: none;
+            }
+            /*Sorts out header*/
+            header a
+            {
+                /*For complete-ness*/
+                display: inline-block;
+                padding-top: 0.5vw;
+            }
+            body 
+            {
+                background-color: #222223;
+                margin: 0;
+            }
+            /*Header container*/
+            header 
+            {
+                z-index: 1;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                position: fixed;
+                box-shadow: 1vw 0.2vw 1vw #121212;
+                background-color: #272728;
+                height: 6vw;
+                text-align: center;
+                font-size: 4vw;
+                font-weight: lighter;
+            }
+            /*Space between each section*/
+            section
+            {
+                padding-bottom: 9vw;
+            }
+            /*Nice clean underline*/
+            u
+            {
+                text-decoration: none;
+                border-bottom: 0.2vw solid #f97979;
+            }
+            /*Spaces content away from sidebar*/
+            .main-container
+            {
+                margin-left: 9vw;
+            }
+            /*Nice little effect*/
+            .header-item:hover 
+            {
+            	color: #f97979;
+            }
+            /*Header item seperator*/
+            .divider 
+            {
+            	color: #f97979;
+            	font-size: 4vw;
+                display: inline-block;
+                pointer-events: none;
+            }
+            /*Spacing away from section parent*/
+            .section-header
+            {
+                padding-top: 6vw;
+                padding-bottom: 1vw;
+            }
+            /*Styling each section title*/
+            .section-header h3
+            {
+                font-size: 4vw;
+                font-weight: lighter;
+                color: #f97979;
+            }
+            /*Styling each section short desc*/
+            .section-header p
+            {
+                padding-top: 1vw;
+                font-weight: lighter;
+                font-size: 2vw;
+            }
+            /*Progress bar*/
+            #progBar
+            {
+                height: 0.3vw;
+                background: #f97979;
+                width: 0%;
+                margin-top: 0.7vw;
+            }
+            /*Social transform*/
+            .social-bar
+            {
+                position: fixed;
+                bottom: 5%;
+            }
+            /*Social icons*/
+            .social-bar a,
+            .social-bar i
+            {
+                display: block;
+                text-align: center;
+                padding-left: 1.5vw;
+                padding-bottom: 2vw;
+                color: #6aabe3;
+                font-size: 2.6vw;
+            }
+            /*Entry container*/
+            .entry
+			{
+				padding-bottom: 0.2vw;
+				width: 80%;
+			}
+            /*Dropdown button*/
+			.entry button
+			{
+				background-color: #222223;
+				border: none;
+				text-align: left;
+				font-size: 1.5vw;
+				width: 100%;
+				cursor: pointer;
+				color: #6aabe3;
+				outline: none;  
+				font-family: Consolas,monospace;
+			}
+            /*Down caret*/
+			.entry i 
+			{
+				font-size: 60%;
+				padding-left: 0.7vw;
+			}
+            /*Dropdown tags*/
+			.entry h4
+			{
+				color: #f97979;
+                padding-bottom: 0.3vw;
+				font-family: Consolas,monospace;
+                font-size: 1.2vw;
+			}
+            /*Dropdown info*/
+			.entry div
+			{
+				font-size: 1.6vw;
+				padding-left: 1vw;
+				display: none;
+				overflow: hidden;
+                box-shadow: 0.2vw 0.2vw 0.2vw #121212;
+			}
+            /*Dropdown text*/
+			.entry p
+			{
+                font-size: 1.4vw;
+                font-family: Consolas,monospace;
+				color: #6aabe3;
+                padding-top: 0.4vw;
+				padding-right: 1vw;
+				padding-bottom: 0.4vw;
+			}
+            /*Small styling*/
+			span
+			{
+				color: #f97979;
+			}
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <a class="header-item" href="index.html#portfolio">portfolio</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#experience">experience</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#about">about</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#">contact</a>
+            <div>
+                <div id="progBar"></div>
+            </div> 
+        </header>
+
+        <div class="social-bar">
+            <div><a href="#"><i class="fab fa-github"></i></a></div>
+            <div><a href="#"><i class="fab fa-twitter"></i></a></div>
+            <div><a href="#"><i class="fas fa-envelope"></i></a></div>
+        </div>
+
+        <div class="main-container">
+            
+            <section id="vault">
+
+                <div class="section-header">
+                    <h3><u>.vault</u></h3>
+                    <p>The vault</p>
+                </div>
+
+                <div>
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Learning a little more about SPI<i class="fas fa-caret-down"></i></button>
+                        <div>
+                            <p>Running into minor issues with drawing into this display, I looked further into SPI</p>
+                            <h4>Arduino C/C++ Work Research Hive Industries</h4>
+                        </div>
+                    </div>
+                </div>    
+
+            </section>
+        </div>
+
+        <script>
+            window.onscroll = function() {Progress()};
+
+            function Progress() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progBar").style.width = scrolled + "%";
+            }
+        </script>
+        <script>
+            function ToggleDesc(ref){
+                var content = ref.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>

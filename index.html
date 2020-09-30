@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Luc Heaton</title>
+        <script src="https://kit.fontawesome.com/06c0747e2d.js" crossorigin="anonymous"></script>
+        <style>
+            /*Site wide default styling*/
+            a,p,h1,h2,h3,h4,li
+            {
+                font-family: Roboto;
+                color: #6aabe3;
+                margin: 0;
+                padding: 0;
+            }
+            /*Remove underline*/
+            a 
+            {
+                text-decoration: none;
+            }
+            /*Sorts out header*/
+            header a
+            {
+                /*For complete-ness*/
+                display: inline-block;
+                padding-top: 0.5vw;
+            }
+            body 
+            {
+                background-color: #222223;
+                margin: 0;
+            }
+            /*Header container*/
+            header 
+            {
+                z-index: 1;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                position: fixed;
+                box-shadow: 1vw 0.2vw 1vw #121212;
+                background-color: #272728;
+                height: 6vw;
+                text-align: center;
+                font-size: 4vw;
+                font-weight: lighter;
+            }
+            /*Space between each section*/
+            section
+            {
+                padding-bottom: 9vw;
+            }
+            /*Nice clean underline*/
+            u
+            {
+                text-decoration: none;
+                border-bottom: 0.2vw solid #f97979;
+            }
+            /*Spaces content away from sidebar*/
+            .main-container
+            {
+                margin-left: 9vw;
+            }
+            /*Nice little effect*/
+            .header-item:hover 
+            {
+            	color: #f97979;
+            }
+            /*Header item seperator*/
+            .divider 
+            {
+            	color: #f97979;
+            	font-size: 4vw;
+                display: inline-block;
+                pointer-events: none;
+            }
+            /*Spacing away from section parent*/
+            .section-header
+            {
+                padding-top: 6vw;
+                padding-bottom: 1vw;
+            }
+            /*Styling each section title*/
+            .section-header h3
+            {
+                font-size: 4vw;
+                font-weight: lighter;
+                color: #f97979;
+            }
+            /*Styling each section short desc*/
+            .section-header p
+            {
+                padding-top: 1vw;
+                font-weight: lighter;
+                font-size: 2vw;
+            }
+            .title-container
+            {
+                /*Spacing away from section parent*/
+                padding-top: 6vw;
+            }
+            /*Title styling*/
+            .title-container h1
+            {
+                /*Get from underneath the header*/
+                margin-top: 6vw;
+	            font-size: 12vw;
+	            font-weight: lighter;
+                /*Strange*/
+                margin-left: -1vw;
+            }
+            /*Sub title styling*/
+            .title-container h2
+            {
+	            font-size: 4vw;
+	            font-weight: lighter;
+                color: #f97979;
+            }
+            /*Short info + generator container*/
+            .short-info 
+            {
+                width: 100%;
+                padding-top: 5vw;
+            }
+            /*Short Info*/
+            .short-info p
+            {
+                width: 60%;
+                float: left;
+                /*Padding between table*/
+                padding-right: 6vw;
+                /*Padding between table if vertical align*/
+                padding-bottom: 2vw;
+                font-size: 1.6vw;
+                font-weight: lighter;
+            }
+            /*Button aligns to canvas*/
+            .sub-container
+            {
+                text-align: center;
+            }
+            /*Generator button*/
+            .sub-container button
+            {
+                background-color: #373b41;
+                border: 0;
+                /*Sticking with gross pixels because of the canvas*/
+                height: 30px;
+                width: 100%;
+                color: #f97979;
+                font-size: 24px;
+            }
+            /*Canvas*/
+            #canvas-grid
+            {
+                float: left;
+                border: 0.2vw solid #373b41;
+            }
+            /*Progress bar*/
+            #progBar
+            {
+                height: 0.3vw;
+                background: #f97979;
+                width: 0%;
+                margin-top: 0.7vw;
+            }
+            /*Social transform*/
+            .social-bar
+            {
+                position: fixed;
+                bottom: 5%;
+            }
+            /*Social icons*/
+            .social-bar a,
+            .social-bar i
+            {
+                display: block;
+                text-align: center;
+                padding-left: 1.5vw;
+                padding-bottom: 2vw;
+                color: #6aabe3;
+                font-size: 2.6vw;
+            }
+            .fa-li i
+            {
+                color: #f97979;
+            }
+            .fa-ul
+            {
+                margin: 0;
+                padding-left: 4vw;
+
+            }
+            .fa-ul li
+            {
+                color: #6aabe3;
+                font-weight: normal;
+                font-size: 1.5vw;
+            }
+            /*Featured project container*/
+            .project
+            {
+                /*Spaces data and keeps background*/
+                padding-right: 2vw;
+                margin-bottom: 2vw;
+                /*Keeps order in these parts*/
+                overflow: hidden;
+                background-color: #272728;
+                /*Nothing like some effects*/
+                box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
+                border-radius: 0.4vw;
+            }
+            /*Contains the project data*/
+            .project-data
+            {
+                padding-top: 1vw;
+                padding-right: 1vw;
+                text-align: right;
+                position: relative;
+                overflow: hidden;
+            }
+            /*Styling till your hearts content*/
+            .project-data h2
+            {
+                font-size: 2vw;
+                padding-bottom: 1vw;
+            }
+            /*Featured project*/
+            .project-data h3
+            {
+                font-family: Consolas,monospace;
+                font-size: 1.5vw;
+                color: #f97979;
+            }
+            /*Desc*/
+            .project-data p
+            {
+                font-size: 1.5vw;
+            }
+            /*What you're really here for*/
+            .project img
+            {
+                padding: 0.8vw 1.2vw 0.8vw 0.8vw;
+                float: left;
+                width: 60%;
+                border-radius: 1.5vw;
+            }
+            .project img:hover
+            {
+                opacity: 80%;
+            }
+            /*What does the vault even contain?*/
+            .vault-link
+            {
+                font-size: 2vw;
+                padding-top: 1vw;
+                color: #f97979;
+            }
+            /*The notable, but not as notable project container*/
+            .project-extra
+            {
+                padding-top: 4vw;
+                text-align: center;
+            }
+            /*The not-so note worthy projects title*/
+            .project-extra h4
+            {
+                font-size: 3vw;
+                font-weight: lighter;
+                padding-bottom: 1vw;
+            }
+            /*Here they come! All in their mini project containers*/
+            .mini-project
+            {
+                width: 48%;
+                float: left;
+                background-color: #272728;
+                box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
+                /*Making responsiveness difficult*/
+                margin-right: 1%;
+                margin-bottom: 1vw;
+                position: relative;
+                border-radius: 1%;
+            }
+            /*Mini project icon*/
+            .mini-project i
+            {
+                display: block;
+                text-align: left;
+                font-size: 4vw;
+                color: #6aabe3;
+                padding: 2vw 0vw 0vw 2vw;
+            }
+            /*Mini project container*/
+            .mini-data
+            {
+                padding: 0vw 2vw 2vw 2vw;
+            }
+            /*Mini project title*/
+            .mini-data h2
+            {
+                color: #f97979;
+                padding-bottom: 1vw;
+                font-size: 2.5vw;
+            }
+            /*Mini project desc*/
+            .mini-data p
+            {
+                font-size: 1.5vw;
+            }
+            /*Mini project tag*/
+            .mini-data h3
+            {
+                font-family: Consolas, monospace;
+                font-size: 1.5vw;
+                color: #f97979;
+                text-align: left;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 2vw;
+            }
+            /*Contains all the minis*/
+            .grid
+            {
+                /*I said, don't touch that other element*/
+                padding-top: 2vw;
+                /*Remain FULL*/
+                width: 100%;
+                /*Fixes collapsing margins*/
+                overflow: auto;
+            }
+            .about-data
+            {
+                /*Setting less to allow padding*/
+                width: 58%;
+                float: left;
+                padding-right: 1vw;
+                padding-bottom: 2vw;
+            }
+            .about-data p
+            {
+                font-size: 1.5vw;
+            }
+            .about-me img
+            {
+                /*Setting less, to allow padding*/
+                width: 38%;
+                float: right;
+                /*Resolves radius issue*/
+                margin-right: 2vw;
+                border-radius: 1vw;
+                /*Don't wanna be too large*/
+                max-width: 24vw;
+                max-height: 24vw;
+            }
+            /*When width <=768px*/
+            @media screen and (max-width: 720px) {
+                .mini-project {
+                    /*Fill width with small margin*/
+                    width: 98%;
+                    margin-right: 2%;
+                    /*No longer float to left*/
+                    float: none;
+                }
+                .about-me img
+                {
+                    float: none;
+                }
+                .about-data
+                {
+                    float: none;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <a class="header-item" href="index.html#portfolio">portfolio</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#experience">experience</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#about">about</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#">contact</a>
+            <div>
+                <div id="progBar"></div>
+            </div> 
+        </header>
+
+        <div class="social-bar">
+            <div><a href="#"><i class="fab fa-github"></i></a></div>
+            <div><a href="#"><i class="fab fa-twitter"></i></a></div>
+            <div><a href="#"><i class="fas fa-envelope"></i></a></div>
+        </div>
+
+        <div class="main-container">
+            <section>
+                
+                <div class="title-container">
+                    <h1>Luc Heaton</h1>
+                    <h2><u>Software Developer</u></h2>
+                </div>
+
+                <div class="short-info ">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim, ac blandit nunc.<p>     
+                    <table>
+                        <tr>
+                            <td>
+                                <div>
+                                    <canvas id="canvas-grid" width="200" height="200">Your browser does not support the canvas element.</canvas>
+                                </div>
+                                <div class="sub-container">
+                                    <button onclick="Draw()" type="button">Generate</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+            <section id="portfolio">
+                
+                <div class="section-header">
+                    <h3><u>.portfolio</u></h3>
+                    <p>A collection of all the things</p>
+                </div>
+
+                <div class="project">
+                    <img src="http://s778198768.websitehome.co.uk/wp-content/uploads/2020/09/Template.jpg">
+                    <div class="project-data">
+                        <h3>Featured Project</h3>
+                        <h2>Door Counter</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="http://s778198768.websitehome.co.uk/wp-content/uploads/2020/09/Template.jpg">
+                    <div class="project-data">
+                        <h3>Featured Project</h3>
+                        <h2>Door Counter</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                    </div>
+                </div>
+
+                <div class="project-extra">
+                    <h4>The other things</h4>
+                    <a class="vault-link" href="vault.html"><u>View the vault</u></a>
+                    <div class="grid">
+                        <div class="mini-project">
+                            <i class="far fa-sticky-note mini-icon"></i>
+                            <div class="mini-data">
+                                <h2>Extra Thing</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                                <h3>C# C Python</h3>
+                            </div>
+                        </div>
+                        <div class="mini-project">
+                            <i class="far fa-sticky-note mini-icon"></i>
+                            <div class="mini-data">
+                                <h2>Extra Thing</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                                <h3>C# C Python</h3>
+                            </div>
+                        </div>
+                        <div class="mini-project">
+                            <i class="far fa-sticky-note mini-icon"></i>
+                            <div class="mini-data">
+                                <h2>Extra Thing</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                                <h3>C# C Python</h3>
+                            </div>
+                        </div>
+                        <div class="mini-project">
+                            <i class="far fa-sticky-note mini-icon"></i>
+                            <div class="mini-data">
+                                <h2>Extra Thing</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                                <h3>C# C Python</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience">
+                <div class="section-header">
+                    <h3><u>.experience</u></h3>
+                    <p>A little bit of knowledge</p>
+                </div>
+                <div>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>List icons can</li>
+                        <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>be used to</li>
+                        <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>replace bullets</li>
+                        <li><span class="fa-li"><i class="fas fa-caret-right"></i></span>in lists</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="about">
+
+                <div class="section-header">
+                    <h3><u>.about</u></h3>
+                    <p>A little bit about myself</p>
+                </div>
+
+                <div class="about-me">
+                    <div class="about-data">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel lectus orci. Phasellus in ligula sollicitudin, pulvinar sapien ut, finibus ligula. Nam lorem mauris, pellentesque nec placerat ac, efficitur quis libero. Vestibulum lobortis velit velit, eu feugiat metus posuere nec. Maecenas at maximus nisi. In hac habitasse platea dictumst. Duis sed arcu scelerisque, ultricies ex at, ornare risus. Nunc blandit eleifend enim</p>
+                    </div>
+                    <img src="drawn-me.png">
+                </div>
+
+            </section>
+        </div>
+
+        <script>
+            window.onscroll = function() {Progress()};
+
+            function Progress() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progBar").style.width = scrolled + "%";
+            }
+        </script>
+
+        <script>
+            var size = 200;
+            var fillAmount = 200;
+            function Draw()
+            {
+                let startPos = [size/2,size/2];
+                var canvas = document.getElementById("canvas-grid");
+                var ctx = canvas.getContext("2d");
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "#f97979";
+                for (var i = 0; i < fillAmount; i++)
+                {
+                    ChangeDir(startPos);
+                    ctx.fillRect(startPos[0],startPos[1],10,10);
+                }
+            }
+            function ChangeDir(i){var a=Math.floor(21*Math.random());a<5?i[0]==size-10?i[0]=0:i[0]+=10:a<10?0==i[0]?i[0]=size-10:i[0]-=10:a<15?i[1]==size-10?i[1]=0:i[1]+=10:0==i[1]?i[1]=size-10:i[1]-=10}
+        </script>
+    </body>
+</html>
