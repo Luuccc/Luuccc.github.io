@@ -58,8 +58,8 @@ footer p
 /*Nice clean underline*/
 u
 {
-    text-decoration: none;
-    border-bottom: 0.2vw solid #f97979;
+    text-decoration: underline;
+    text-decoration-thickness: 0.4vw;
 }
 /*Spaces content away from sidebar*/
 .main-container
@@ -107,8 +107,6 @@ u
 /*Title styling*/
 .title-container h1
 {
-    /*Get from underneath the header*/
-    margin-top: 6vw;
     font-size: 12vw;
     font-weight: lighter;
     /*Strange*/
@@ -196,11 +194,7 @@ u
 .fa-ul
 {
     margin: 0;
-    padding-left: 4vw;
-    /*Double the columns*/
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
+    padding-left: 2vw;
 }
 /*List element*/
 .fa-ul li
@@ -221,32 +215,41 @@ u
     /*Nothing like some effects*/
     box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
     border-radius: 0.4vw;
-}
-/*Contains the project data*/
-.project-data
-{
-    padding-top: 1vw;
-    padding-right: 1vw;
-    text-align: right;
     position: relative;
-    overflow: hidden;
 }
 /*Styling till your hearts content*/
-.project-data h2
+.project h2
 {
     font-size: 2vw;
     padding-bottom: 1vw;
+    text-align: right;
+    color: #f97979;
+    font-family: Consolas,monospace;
 }
 /*Featured project*/
-.project-data h3
+.project h3
 {
     font-family: Consolas,monospace;
     font-size: 1.5vw;
+    text-align: right;
     color: #f97979;
+    padding-top: 1vw;
+}
+/*Extra info*/
+.project h4
+{
+    font-family: Consolas,monospace;
+    font-size: 1.4vw;
+    color: #f97979;
+    text-align: right;
+    padding-bottom: 1vw;
+    float: right;
 }
 /*Desc*/
-.project-data p
+.project p
 {
+    padding-bottom: 1vw;
+    text-align: right;
     font-size: 1.5vw;
 }
 /*What you're really here for*/
@@ -296,42 +299,45 @@ u
     border-radius: 1%;
 }
 /*Mini project icon*/
-.mini-project i
+.mini-project span
 {
-    display: block;
-    text-align: left;
-    font-size: 4vw;
+    font-size: 2vw;
     color: #6aabe3;
-    padding: 2vw 0vw 0vw 2vw;
+    float: left;
+    position: relative;
+    top: 0;
+    padding: 1vw 1vw 1vw 1vw;
 }
 /*Mini project container*/
 .mini-data
 {
-    padding: 0vw 2vw 2vw 2vw;
+    padding: 1vw 2vw 2vw 2vw;
 }
 /*Mini project title*/
 .mini-data h2
 {
+    font-family: Consolas, monospace;
     color: #f97979;
+    padding-top: 1.5vw;
     padding-bottom: 1vw;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
 }
 /*Mini project desc*/
 .mini-data p
 {
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 /*Mini project tag*/
-.mini-data h3
+.mini-data h4
 {
     font-family: Consolas, monospace;
-    font-size: 1.5vw;
+    font-size: 1vw;
     color: #f97979;
     text-align: left;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 2vw;
+    padding: 1vw 1vw 0vw 1vw;
 }
 /*Contains all the minis*/
 .grid
@@ -356,6 +362,7 @@ u
 .about-data p
 {
     font-size: 1.5vw;
+    padding-top: 1vw;
 }
 /*My old drawing of me*/
 .about-me img
@@ -389,7 +396,7 @@ u
 /*Entry container*/
 .entry
 {
-    padding-bottom: 0.2vw;
+    padding-bottom: 0.4vw;
     width: 80%;
 }
 /*Dropdown button*/
@@ -404,12 +411,18 @@ u
     color: #6aabe3;
     outline: none;  
     font-family: Consolas,monospace;
+    padding-left: 0;
 }
 /*Down caret*/
 .entry i 
 {
     font-size: 60%;
     padding-left: 0.7vw;
+}
+.fa-caret-right
+{
+    color: #f97979;
+    padding-right: 1vw;
 }
 /*Dropdown tags*/
 .entry h4
@@ -425,7 +438,6 @@ u
     font-size: 1.6vw;
     padding-left: 1vw;
     display: none;
-    overflow: hidden;
     box-shadow: 0.2vw 0.2vw 0.2vw #121212;
 }
 /*Dropdown text*/
@@ -440,11 +452,42 @@ u
 }
 .entry img
 {
-    padding-top: 0.8vw;
-    padding-bottom: 0.4vw;
+    padding: 0.8vw 0.8vw 0vw 0vw;
     background-image: #2e2e2e;
-    max-height: 12vw;
+    max-height: 18vw;
     width: auto;
+}
+.entry-drop span
+{
+    font-family: Consolas,monospace;
+    font-size: 1vw;
+    padding-right: 0.5vw;
+}
+.exp-info button
+{
+    font-family: Roboto;
+}
+.exp-info a 
+{
+    color: #f97979;
+    font-family: Consolas,monospace;
+}
+.exp-info p
+{
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    font-family: Consolas,monospace;
+    font-size: 1.2vw;
+}
+.exp-info span
+{
+    font-family: Consolas,monospace;
+    font-size: 1vw;
+}
+.languages p
+{
+    font-family: Consolas,monospace;
+    padding-top: 0.2vw;
 }
 /*Small styling*/
 span
