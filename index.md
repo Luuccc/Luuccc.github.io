@@ -12,16 +12,16 @@
     <body>
 
         <header>
-            <a class="header-item" href="index.html#portfolio">portfolio</a>
+            <a class="header-item" href="index.md#portfolio">portfolio</a>
             <a class="divider"> / </a>
-            <a class="header-item" href="index.html#experience">experience</a>
+            <a class="header-item" href="index.md#experience">experience</a>
             <a class="divider"> / </a>
-            <a class="header-item" href="index.html#about">about</a>
+            <a class="header-item" href="index.md#about">about</a>
             <a class="divider"> / </a>
-            <a class="header-item" href="index.html#contact">contact</a>
+            <a class="header-item" href="index.md#contact">contact</a>
             <div>
                 <div id="progBar"></div>
-            </div> 
+            </div>
         </header>
 
         <div class="social-bar">
@@ -32,14 +32,14 @@
 
         <div class="main-container">
             <section>
-                
+
                 <div class="title-container">
                     <h1>Luc Heaton</h1>
                     <h2><u>Programmer</u></h2>
                 </div>
 
                 <div class="short-info ">
-                    <p>Hi, I'm Luc, a programmer of things.<br><br>I build programs for AVR microcontrollers, produce small<br>desktop / terminal applications, sometimes the odd<br>little game, and everything in between.<p>     
+                    <p>Hi, I'm Luc, a programmer of things.<br><br>I build programs for AVR microcontrollers, produce small<br>desktop / terminal applications, sometimes the odd<br>little game, and everything in between.<p>
                     <table>
                         <tr>
                             <td>
@@ -54,9 +54,9 @@
                     </table>
                 </div>
             </section>
-            
+
             <section id="portfolio">
-                
+
                 <div class="section-header">
                     <h3><u>.portfolio</u></h3>
                     <p>Some projects I'd like to give attention to</p>
@@ -87,7 +87,7 @@
                     </a>
                     <h3>Featured Project</h3>
                     <h2>Text-based Scrabble</h2>
-                    <p>An ASCII recreation of the board game Scrabble, developed for my A-Level Computer Science coursework.<br><br>Including: Premium scoring cells, Horizontal and vertical placement, 
+                    <p>An ASCII recreation of the board game Scrabble, developed for my A-Level Computer Science coursework.<br><br>Including: Premium scoring cells, Horizontal and vertical placement,
                         Blank tiles, A dictionary validation check around the letter(s) placement, Multi-word scoring, and more</p>
                     <h4>Python  16/12/2018</h4>
                 </div>
@@ -107,7 +107,7 @@
 
                 <div class="project-extra">
                     <h4>The other things</h4>
-                    <a class="vault-link" href="vault.html"><u>View the vault</u></a>
+                    <a class="vault-link" href="vault.md"><u>View the vault</u></a>
                     <div class="grid">
                         <div class="mini-project">
                             <span><i class="far fa-sticky-note"></i></span>
@@ -191,10 +191,10 @@
 
                 <div class="about-me">
                     <div class="about-data">
-                        <p>I guess one way that you could put it, is that I enjoy making things work, whether it's a microcontroller, 
-                            a small desktop application, a website (like this one), or even the odd little game. 
+                        <p>I guess one way that you could put it, is that I enjoy making things work, whether it's a microcontroller,
+                            a small desktop application, a website (like this one), or even the odd little game.
                             I also do enjoy drawing things, but for the most part it's of circuit diagrams and ideas<br><br>
-                            Since a young age I've enjoyed using my knowledge to try and resolve computing and electrical issues, 
+                            Since a young age I've enjoyed using my knowledge to try and resolve computing and electrical issues,
                             although it's safe to say I'm much better at it now, than I used to be.<br><br>
                             Some of the languages that I'm currently comfortable with include:
                         </p>
