@@ -50,18 +50,68 @@
 
                 <div>
                     <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>26/10/2020<span>]</span> SSD1306 <i class="fas fa-caret-down"></i></button>
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>14/11/2020<span>]</span> Connected lines<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
-                            <p>Just more styling while populating the website with STUFF, although alot of cleaning up can be done</p>
-                            <span>HTML & CSS</span>
-                            <span>JS</span>
+                            <img src="images/Lines.gif">
+
+                            <p>I put together a small connection generator using Extended ASCII, which I thought produced nice looking geometry, generating for any width or height.</p>
+                            <span>C#</span>
                             <span>Myself</span>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span> WordWrap<i class="fas fa-caret-down"></i></button>
+                        <div class="entry-drop">
+                            <img src="images/WordWrap.gif">
+
+                            <p>To allow the Notifier display text, I produced a small word-wrapping function, which I thought I'd mention</p>
+                            <span>C#</span>
+                            <span>Myself</span>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span> Notifier<i class="fas fa-caret-down"></i></button>
+                        <div class="entry-drop">
+                            <img src="images/Notifier.gif">
+                            <img src="images/NotifierOld.gif">
+
+                            <p>At first, I wanted to produce a graphical events system, where you could enter a summary for each "note", and define its time/datetime/interval through a pop-up menu, which quickly 
+                                fell apart after no real planning. So instead I built a smaller version as a console application, using a BackgroundWorker to compare the time elapsed, and current time against each defined entry. As well as storing
+                                given notes within a json file, on their creation / deletion, so that they are recalled on the loading of the application.
+                                </br></br>When the event is called at the specified time, the summary of the event is simply displayed</p>
+                            <span>C#</span>
+                            <span>Myself</span>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>02/11/2020<span>]</span> Binary Utility<i class="fas fa-caret-down"></i></button>
+                        <div class="entry-drop">
+                            <img src="images/Utility1.gif">
+                            <img src="images/Utility2.gif">
+
+                            <p>I wanted to produce a utility that combined all of the functions that I usually have to find online, including bitwise maths, converting between decimal, hex, and binary automatically 
+                                (could be better), and drawing an 8x8 bmp from entered byte data, or from clicking on the canvas to draw (left-click to draw, right-click to erase)</p>
+                            <span>Winforms</span>
+                            <span>C#</span>
+                            <span>Myself</span>
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>26/10/2020<span>]</span> SSD1306<i class="fas fa-caret-down"></i></button>
+                        <div class="entry-drop">
+                            <img src="images/SSD1306.jpg">
+
+                            <p>Building a controller chip for the SSD1306 128x32 OLED display, working over SPI. Taking in basic defined commands, then converting them to a set of byte commands for the display to interpret, 
+                                and draw to the screen.</p>
+                            <span>C</span>
+                            <span>Arduino</span>
+                            <span>Hive Industries</span>
                         </div>
                     </div>
                     <div class="entry">
                         <button type="button" onClick="ToggleDesc(this)"><span>[</span>17/10/2020<span>]</span> Almost finished populating this site<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
-                            <p>Just more styling while populating the website with STUFF, although alot of cleaning up can be done</p>
+                            <p>Just more styling while populating the website with STUFF, although a lot of cleaning up can be done</p>
                             <span>HTML & CSS</span>
                             <span>JS</span>
                             <span>Myself</span>
@@ -72,7 +122,7 @@
                         <div class="entry-drop">
                             <img src="images/DBot.jpg">
 
-                            <p>The version of Python that this bot was build on is nolonger supported by the discord module. Also the JSON file saves were nolonger compatible. I may rebuild this at some point,
+                            <p>The version of Python that the bot was built upon is no longer supported by the discord module. Also, the JSON file saves were no longer compatible. I may rebuild this at some point,
                                 as a lot of the old methods I've used are outdated</p>
                             <span>Python</span>
                             <span>Json</span>
@@ -84,7 +134,7 @@
                         <div class="entry-drop">
                             <img src="images/SteamSize.JPG">
 
-                            <p>As the Steam library doesn't support the sorting of uninstalled games, I sorted through the XML from the Steam Web API, visualising the data with a csv file</p>
+                            <p>As the Steam library doesn't support the sorting of uninstalled games, I sorted through the XML from the Steam Web API, visualising the data with a CSV file</p>
                             <span>Python</span>
                             <span>Myself</span>
                         </div>
@@ -93,7 +143,7 @@
                         <button type="button" onClick="ToggleDesc(this)"><span>[</span>04/10/2020<span>]</span> Ebook name formatting<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
 
-                            <p>When downloading my ebooks, the file name is rarly formatted correctly. So I built a small utility to cleanup the title name within certain ebook readers</p>
+                            <p>When downloading my ebooks, the file name is rarely formatted correctly. So I built a small utility to clean up the title name within select ebook readers</p>
                             <span>Python</span>
                             <span>Myself</span>
                         </div>
@@ -103,7 +153,7 @@
                         <div class="entry-drop">
                             <img src="images/DS.JPG">
 
-                            <p>I recently replaced a faulty Nintendo DS Lite power switch for my cousin, as the switch mechanism had snapped</p>
+                            <p>I recently replaced a faulty Nintendo DS Lite power switch for my cousin, as the switch mechanism had snapped.</p>
                             <span>Electronics</span>
                             <span>Myself</span>
                         </div>
@@ -116,7 +166,7 @@
                             <p>Not being able todo very much with my not-so-great internet connection, I decided to recreate the terminal hacking minigame from Fallout 4 for my phone.
                                 I ended up building a version that took most of the visuals, but scored slightly differently to the original game (which was a bad idea), scoring two
                                 points for the guessed word containing a correct letter in the correct position, and one point for containing a correct letter, but not in the right spot.
-                                In short, it was more confusing, and less intuative than the original.</p>
+                                In short, it was more confusing, and less intuitive than the original.</p>
                             <span>C#</span>
                             <span>Unity</span>
                             <span>Myself</span>
@@ -128,8 +178,8 @@
                             <img src="images/Stack.gif">
 
                             <p>While trying to be somewhat helpful on Stackoverflow, I didn't want to sit on the webpage refreshing every so often, looking for questions that I might be able to answer.<br><br>
-                                So I developed a small Winforms application that displays the latest questions under a given tag, as links to the web post. Refreshing every five minutes, grabbing entries from the RSS feed.
-                                I may build upon this with extra info like views, votes, etc, as well as other features like page navigation</p>
+                                So I developed a small Winforms application that displays the latest questions under a given tag, as links to the web post. Refreshing, every five minutes, grabbing entries from the RSS feed.
+                                I may build upon this with extra info such as views, votes as well as other features like page navigation.</p>
                             <span>Winforms</span>
                             <span>C#</span>
                             <span>Myself</span>
@@ -142,8 +192,8 @@
                             <img src="images/ListNotes.jpg">
 
                             <p>I thought it might be a nice idea to create a simple sort-of diary console application, which can take in a new note (some text, datetime, and a bit of data), storing it within a JSON file,
-                                which can also then be deserialised, formatted and displayed on screen. Also with the option to display notes by a specific month / year / all, also crudely adding it as an autoexec at a set
-                                time everyday through Task Scheduler</p>
+                                which can also then be deserialised, formatted and displayed on the screen. Also with the option to display notes by a specific month / year / all, also crudely adding it as an autoexec at a set
+                                time every day through Task Scheduler.</p>
                             <span>C#</span>
                             <span>Visual Studio</span>
                             <span>Myself</span>
@@ -153,7 +203,7 @@
                         <button type="button" onClick="ToggleDesc(this)"><span>[</span>09/08/2020<span>]</span> Comms over USB to Arduino<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
 
-                            <p>Just wanted to experiment with serial data transfer over USB, which may be useful for future ideas</p>
+                            <p>Just wanted to experiment with serial data transfer over USB, which may be useful for future ideas.</p>
                             <span>C#</span>
                             <span>Electronics</span>
                             <span>Myself</span>
@@ -163,7 +213,7 @@
                         <button type="button" onClick="ToggleDesc(this)"><span>[</span>08/07/2020<span>]</span> Mastermind game<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
 
-                            <p>Hearing how similar this old board game is to Fallout's terminal minigame, I decided to also recreate a version of it as a console application, to give it a try</p>
+                            <p>Hearing how similar this old board game is to Fallout's terminal minigame, I decided to also recreate a version of this, as a console application, to give it a try.</p>
                             <span>C#</span>
                             <span>Visual Studio</span>
                             <span>Myself</span>
@@ -174,7 +224,7 @@
                         <div class="entry-drop">
 
                             <p>While playing around with generating heightmaps based on surrounding cells, I ended up building what I thought was a nice little pattern generator. Which I ended up moving over to Javascript to
-                                be embeded within my site</p>
+                                be embedded within my site.</p>
                             <span>Python</span>
                             <span>JS</span>
                             <span>Myself</span>
@@ -185,8 +235,8 @@
                         <div class="entry-drop">
                             <img src="images/Thaum.jpg">
 
-                            <p>While playing a little bit of some old school Modded Minecraft, you come across a mod named Thaumcraft, where a main mechanic is linking "Aspects" which can only connect to a specific set of
-                                other Aspects, to progress through the mod. So naturally I built a small application that finds all (most) connections that can be made, from the starting to an ending Aspect</p>
+                            <p>While playing a little bit of some old school Modded Minecraft, you come across a mod named Thaumcraft, where the main mechanic is linking "Aspects" which can only connect to a specific set of
+                                other Aspects, to progress through the mod. So naturally, I built a small application that finds all (most) connections that can be made, from the starting to an ending Aspect.</p>
                             <span>C#</span>
                             <span>Visual Studio</span>
                             <span>Myself</span>
@@ -198,7 +248,7 @@
                             <img src="images/DesktopVU.JPG">
                             <img src="images/DesktopVU1.JPG">
 
-                            <p>Produced a prototype version of a desktop VU Meter, which monitors multiple devices (current limit of 5) at once, scaling the form accordingly, with the options to add / remove monitors, and clear all</p>
+                            <p>Produced a prototype version of a desktop VU Meter, which monitors multiple devices (current limit of 5) at once, scaling the form accordingly, with the options to add / remove monitors, and clear all.</p>
                             <span>C#</span>
                             <span>Winforms</span>
                             <span>Myself</span>
@@ -211,7 +261,7 @@
                             <img src="images/Charlieplex.jpg">
                             <img src="images/Charlieplex1.jpg">
 
-                            <p>I created a Charlieplexed indicator script to display the status of a battery. Instead of recreating the circuit every time on a breadboard, I finally built a perfboard version</p>
+                            <p>I created a Charlieplexed indicator script to display the status of a battery. Instead of recreating the circuit every time on a breadboard, I finally built a perfboard version.</p>
                             <span>C</span>
                             <span>Arduino</span>
                             <span>Electronics</span>
@@ -222,7 +272,7 @@
                         <button type="button" onClick="ToggleDesc(this)"><span>[</span>08/21/2020<span>]</span> Door Count<i class="fas fa-caret-down"></i></button>
                         <div class="entry-drop">
 
-                            <p>I built a script for an AVR microcontroller reading in sensor data, to determine the number of people within a building, indicated through a UART interface. Also with an adjustable limit of customers</p>
+                            <p>I built a script for an AVR microcontroller reading in sensor data, to determine the number of people within a building, indicated through a UART interface. Also, with an adjustable limit of customers.</p>
                             <span>C</span>
                             <span>AVR</span>
                             <span>Arduino</span>
