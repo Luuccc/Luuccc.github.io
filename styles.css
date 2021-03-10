@@ -46,14 +46,17 @@ section
     padding-bottom: 9vw;
     overflow: auto;
 }
-footer p
+footer
 {
     text-align: center;
+    padding-top: 20vw;
+    padding-bottom: 1vw;
+}
+footer p, footer a
+{
     font-size: 1.2vw;
     font-family: Consolas,monospace;
     color: #f97979;
-    padding-top: 20vw;
-    padding-bottom: 1vw;
 }
 /*Nice clean underline*/
 u
@@ -490,6 +493,27 @@ u
 {
     font-family: Consolas,monospace;
     padding-top: 0.2vw;
+}
+.policy-entry h4
+{
+    padding-top: 6vw;
+    padding-bottom: 1vw;
+    font-family: Consolas,monospace;
+    font-size: 4vw;
+    color: #f97979;
+}
+.policy-entry p
+{
+    padding-top: 0.2vw;
+    font-size: 1.4vw;
+    font-family: Consolas,monospace;
+    color: #6aabe3;
+}
+.policy-entry b
+{
+    font-size: 1.5vw;
+    font-family: Consolas,monospace;
+    color: #f97979;
 }
 /*Small styling*/
 span

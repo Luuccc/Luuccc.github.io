@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PH0C824K7"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'G-7PH0C824K7');
+	</script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Privacy policy - Luc Heaton</title>
+        <script src="https://kit.fontawesome.com/06c0747e2d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles.css">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    </head>
+    <body>
+
+        <header>
+            <a class="header-item" href="index.html#portfolio">portfolio</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#experience">experience</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#about">about</a>
+            <a class="divider"> / </a>
+            <a class="header-item" href="index.html#contact">contact</a>
+            <div>
+                <div id="progBar"></div>
+            </div>
+        </header>
+
+        <div class="social-bar">
+            <div><a href="https://github.com/Luuccc"><i class="fab fa-github"></i></a></div>
+            <div><a href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a></div>
+            <div><a href="mailto:luc@lucheaton.com"><i class="fas fa-envelope"></i></a></div>
+        </div>
+
+        <div class="main-container">
+
+            <section id="policies">
+
+                <div class="section-header">
+                    <h3><u>.privacy-policy</u></h3>
+                    <p>We all just want to enjoy our programs, knowing that we aren't being watched.</p>
+                </div>
+
+                <section id="cube-count-policy" class="policy-entry">
+                    <h4>Cube Count</h4>
+                    <p>
+                        <b>Data Collection</b><br>
+                        Should your game crash a report will be sent to Unity who will then process and anonymize this data. 
+                        I can then see within the code where the issue occurred, and on what type of device this happened. User-identifiable data is not kept.
+                        You will note that this game does not require special permissions or further access to any personal data of any kind.
+                    </p>
+                    <p>
+                        <br><b>What happens to my data?</b><br>
+                        Your data is stored by Unity and consumed by me in a composite form.
+                    </p>
+                    <p>
+                        <br><b>Sharing of data</b><br>
+                        As this data is being collected by a third party being Unity, they have access to this composite data as well. 
+                        We will not share your data with any third party unless required to do so by law or regulation (which is very unlikely).
+                    </p>
+                </section>
+
+            </section>
+            <footer>
+                <p>Designed and Built by Luc Heaton</p>
+                <a href="privacy-policy.html">Privacy policy</a>
+            </footer>   
+        </div>
+
+        <script>
+            window.onscroll = function() {Progress()};
+
+            function Progress() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progBar").style.width = scrolled + "%";
+            }
+        </script>
+    </body>
+</html>
