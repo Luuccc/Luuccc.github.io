@@ -23,11 +23,11 @@
     <body>
 
         <header>
+			<a class="header-item" href="index.html#about">about</a>
+			<a class="divider"> / </a>
             <a class="header-item" href="index.html#portfolio">portfolio</a>
             <a class="divider"> / </a>
             <a class="header-item" href="index.html#experience">experience</a>
-            <a class="divider"> / </a>
-            <a class="header-item" href="index.html#about">about</a>
             <a class="divider"> / </a>
             <a class="header-item" href="index.html#contact">contact</a>
             <div>
@@ -35,65 +35,72 @@
             </div>
         </header>
 
-        <div class="social-bar">
-            <div><a href="https://github.com/Luuccc"><i class="fab fa-github"></i></a></div>
-            <div><a href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a></div>
-            <div><a href="mailto:luc@lucheaton.com"><i class="fas fa-envelope"></i></a></div>
-        </div>
+		<div class="social-bar">
+			<div><a href="https://github.com/Luuccc"><i class="fab fa-github"></i></a></div>
+			<div><a href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a></div>
+			<div><a href="mailto:luc@lucheaton.com"><i class="fas fa-envelope"></i></a></div>
+		</div>
+		<div class="email-bar">
+			<div><a href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a></div>
+		</div>
 
         <div class="main-container">
-            <section>
-
+            <section id="about">
                 <div class="title-container">
                     <h1>Luc Heaton</h1>
                     <h2><u>Programmer</u></h2>
                 </div>
 
-                <div class="short-info ">
-                    <p>Hi, I'm Luc, a programmer of things.<br><br>I build programs for AVR microcontrollers, produce small<br>desktop / terminal applications, sometimes the odd<br>little game, and everything in between.<p>
-                    <table>
-                        <tr>
-                            <td>
-                                <div>
-                                    <canvas id="canvas-grid" width="200" height="200">Your browser does not support the canvas element.</canvas>
-                                </div>
-                                <div class="sub-container">
-                                    <button onclick="Draw()" type="button">Generate</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+				<div class="about-me">
+					<img src="images/drawn-me.png"/>
+					<div class="short-info">
+						<p>Hi, I'm Luc! I enjoy making things work.<br><br>
+							Whether it's programming an AVR microcontroller, producing a
+							desktop application, a website (like this one), or the odd little game.
+							I also enjoy drawing, but for the most part, it's a diagram, idea, or birthday card<br><br><br></p>
+						<div class="languages">
+							<h4>Here are a few technologies I’ve been working with recently:</h4>
+							<p><i class="fas fa-caret-right"></i>C</p>
+							<p><i class="fas fa-caret-right"></i>C#</p>
+							<p><i class="fas fa-caret-right"></i>HTML & CSS</p>
+						</div>
+						<div class="languages">
+							<h4>During my further education I studied:</h4>
+							<p><i class="fas fa-caret-right"></i>Computer Science</p>
+							<p><i class="fas fa-caret-right"></i>Physics</p>
+							<p><i class="fas fa-caret-right"></i>Digital Illustration</p>
+						</div>
+					</div>
+				</div>
+
             </section>
 
             <section id="portfolio">
-
-                <div class="section-header">
-                    <h3><u>.portfolio</u></h3>
-                    <p>Some projects I'd like to give attention to</p>
-                </div>
+				<div class="section-header">
+					<h3><u>.portfolio</u></h3>
+					<p>Some projects I'd like to give attention to:</p>
+				</div>
 
                 <div class="project">
-                    <a target="_blank" href="https://www.hiveindustries.com/audio-products-menu/product/115-cio2/category_pathway-23.html" >
+                    <a class="clickable" target="_blank" href="https://www.hiveindustries.com/audio-products-menu/product/115-cio2/category_pathway-23.html">
                         <img src="images/CIO2.jpg">
                     </a>
                     <h3>Featured Project</h3>
                     <h2>VU Meter</h2>
-                    <p>I developed the code for a VU Meter representing a signal level between -40dB and -2dB through Charlieplexed LEDs, which can be seen on the CiO² product from Hive Industries.</p>
+                    <p>Programmed the microcontroller that manages the VU Meter on the CiO² from Hive Industries. Representing an analog signal level through Charlieplexed LEDs.</p>
                     <h4>C AVR  16/12/2018</h4>
                 </div>
                 <div class="project">
-                    <a>
+                    <a class="clickable" target="_blank" href="https://lucheaton.com/vault.html" >
                         <img src="images/Stack.jpg">
                     </a>
                     <h3>Featured Project</h3>
-                    <h2>Stackoverflow feed</h2>
-                    <p>While trying to be somewhat helpful on Stackoverflow, I didn't want to sit on the webpage refreshing every so often, looking for questions that I might be able to answer.<br><br>
-                        So I developed a small Winforms application that displays the latest questions under a given tag, as links to the web post. Refreshing every five minutes, grabbing entries from the RSS feed.</p>
+                    <h2>StackOverflow feed</h2>
+                    <p>Developed a small Winforms application that displays the latest questions from StackOverflow under a given tag as links to the original web post. Grabbing updated entries from the RSS feed every five minutes.</p>
                     <h4>C# Winforms  15/09/2020</h4>
                 </div>
                 <div class="project">
-                    <a target="_blank" href="https://github.com/Luuccc/PythonScrabble" >
+                    <a class="clickable" target="_blank" href="https://github.com/Luuccc/PythonScrabble" >
                         <img src="images/Scrabble.jpg">
                     </a>
                     <h3>Featured Project</h3>
@@ -103,45 +110,37 @@
                     <h4>Python  16/12/2018</h4>
                 </div>
                 <div class="project">
-                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.LucHeaton.CubeCount" >
-                        <img src="images/CubeCountBanner.jpg">
+                    <a class="clickable" target="_blank" href="https://lucheaton.com/vault.html" >
+                        <img src="images/Munchman.jpg">
                     </a>
                     <h3>Featured Project</h3>
-                    <h2>Cube Count</h2>
-                    <p>Cube Count, a quick and minimalist counting game.
-                    </br></br>Count your way through endless stages and cubes, until you can't count any more! Choose your preferred gamemode, your favourite colour theme, and improve your highscore. 
-                    Or possibly that accuracy rating! Additionally, you may even form a better technique of counting as well as a bad pun...
-                    </br></br>With limited time on the clock, you'll have to count those cubes quickly, and be sure not to miss any cubes when in Marathon mode!</p>
-                    <h4>C# Unity  21/01/2020</h4>
+                    <h2>Munchman repair</h2>
+                    <p>This is my father's original Grandstand Munchman that hadn't powered up for the past few decades.<br><br>
+						After years of sitting idle, I was finally able to identify a single NPN transistor that wasn't meeting its datasheet specification.<br><br>
+						Bringing Munchman to life, once again</p>
+                    <h4>Electronics  21/01/2020</h4>
                 </div>
 
                 <div class="project-extra">
-                    <h4>The other things</h4>
-                    <a class="vault-link" href="vault.html"><u>View the vault</u></a>
+                    <h4>Other projects</h4>
                     <div class="grid">
                         <div class="mini-project">
                             <span><i class="far fa-sticky-note"></i></span>
                             <div class="mini-data">
                                 <h2>AutoTagger</h2>
-                                <p>Cycle through audio files within a directory, correctly assigning ID3 metadata by comparing artist name(s) against a JSON file, which grows dynamically with each new artist it encounters. Used for clear 
-                                    formatting when using media players.</p>
+                                <p>Often times a track name is correctly listed within the filename of the song, but not within the file's metadata. I built a Python script to fix this.</br></br>
+									It cycles through audio files within a local directory gathering artist(s) names and comparing them against an ever-growing txt file of artists.
+									 To correctly capitalize the name (as often they have slight differences which break media player albums), which is then applied to the ID3 tags along with the song name, for clear track 
+									 formatting when using media players</p>
                                 <h4>Python Json  09/07/2019</h4>
                             </div>
                         </div>
                         <div class="mini-project">
                             <span><i class="far fa-sticky-note"></i></span>
                             <div class="mini-data">
-                                <h2>TFT LCD text</h2>
-                                <p>Building upon a standard graphics library for a series of displays, I built a method of drawing character arrays to the screen, taking into account font size, and character spacing, as well as a horizontal 
-                                    aligner, that centres a rect, based on the display width.</p>
-                                <h4>C Arduino  01/03/2020</h4>
-                            </div>
-                        </div>
-                        <div class="mini-project">
-                            <span><i class="far fa-sticky-note"></i></span>
-                            <div class="mini-data">
                                 <h2>M3U Creator</h2>
-                                <p>A small program that web scapes title names from a youtube playlist, matching it to a file name within a directory. Building up an M3U file following the same order as the youtube playlist.</p>
+                                <p>Learning about the <a class="web-link" target="_blank" href="https://pypi.org/project/requests/">requests</a> library to build a small Python program that "scrapes" 
+									the title names from a youtube music playlist, attempting to match against filenames within a local directory. Building up an M3U playlist file following the same order as the youtube playlist</p>
                                 <h4>Python  15/06/2019</h4>
                             </div>
                         </div>
@@ -149,94 +148,57 @@
                             <span><i class="far fa-sticky-note"></i></span>
                             <div class="mini-data">
                                 <h2>NodeJS UDP</h2>
-                                <p>A small dive into understanding the UDP protocol, sending and receiving small amounts of data to/from local and remote servers</p>
+                                <p>Preparing for future features of the MC7, I began looking into the UDP protocol. As well as learning how to program with <a class="web-link" target="_blank" href="https://nodejs.org/">NodeJs</a>, 
+									so I could send and receive small amounts of data between local and remote servers, and confirm data packets with <a class="web-link" target="_blank" href="https://www.wireshark.org/">Wireshark</a></p>
                                 <h4>NodeJS  20/02/2020</h4>
                             </div>
                         </div>
                     </div>
+					<a class="vault-link web-link" href="vault.html"><u>View more</u></a>
                 </div>
             </section>
 
             <section id="experience">
-                <div class="section-header">
-                    <h3><u>.experience</u></h3>
-                    <p>Areas of gained knowledge that can be categorised</p>
-                </div>
+				<div class="section-header">
+					<h3><u>.experience</u></h3>
+					<p>Alot of which I have learned is from the projects I work on daily, listed <a class="web-link" href="vault.html">here</a><br>
+						Although I have or continue to work for :</p>
+				</div>
                 <div>
                     <div class="entry exp-info">
                         <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Hive Industries<i class="fas fa-caret-down"></i></button>
                         <div>
-                            <p><i class="fas fa-caret-right"></i>Developing the functionality of microcontrollers for prototypes and products</p>
-                            <p><i class="fas fa-caret-right"></i>Designing user interfaces for products incorporating a Nextion display</p>
-                            <p><i class="fas fa-caret-right"></i>Adaptation to changes in design during the development process</p>
+                            <p><i class="fas fa-caret-right"></i>Designing and programming the functionality of microcontrollers used within various prototypes and products</p>
+							<p><i class="fas fa-caret-right"></i>Teaching myself new technologies to be applied in testing and products. Such as Nextion displays, and Digi wireless connectivity modules</p>
+							<p><i class="fas fa-caret-right"></i>Designing user interfaces for products that incorporate a Nextion display</p>
+							<p><i class="fas fa-caret-right"></i>Gathering information through datasheets and documentation to meet specifications</p>
+                            <p><i class="fas fa-caret-right"></i>Adapting to change in design at any stage within the development process</p>
                             <span>2019-Present</span>
                         </div>
                     </div>
                     <div class="entry exp-info">
-                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Switch Computer Support<i class="fas fa-caret-down"></i></button>
+                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Switch Computer Support SW<i class="fas fa-caret-down"></i></button>
                         <div>
-                            <p><i class="fas fa-caret-right"></i>Lots of general computer support incorporating the mystical "PC Medical"</p>
-                            <p><i class="fas fa-caret-right"></i>Learnt how to replace components within some phones and tablets</p>
-                            <p><i class="fas fa-caret-right"></i>Customer interaction at the front desk (albeit a small amount)</p>
-                            <p><i class="fas fa-caret-right"></i>Providing the essential tea and coffees, when needed most</p>
-                            <p><i class="fas fa-caret-right"></i>Meeting Richard whom of which I learnt a great deal about websites, who can be found at <a href="http://handcoded.co.uk/">handcoded.co.uk</a></p>
+							<p><i class="fas fa-caret-right"></i>Reinforced my troubleshooting techniques and technical knowledge</p>
+							<p><i class="fas fa-caret-right"></i>Built upon my understanding of select portable devices, troubleshooting software issues and replacing damaged components</p>
+                            <p><i class="fas fa-caret-right"></i>Improved my confidence with customer interaction at the front desk, taking orders and creating tickets</p>
+                            <p><i class="fas fa-caret-right"></i>Meeting Richard who I learnt a great deal about web development, who can be found at <a class="web-link" href="http://handcoded.co.uk/">handcoded.co.uk</a></p>
+							<p><i class="fas fa-caret-right"></i>Providing the essential tea and coffees, when needed most</p>
                             <span>2017-2018</span>
                         </div>
                     </div>
-                    <div class="entry exp-info">
-                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Local computer support<i class="fas fa-caret-down"></i></button>
-                        <div>
-                            <p><i class="fas fa-caret-right"></i>Helping friends and family with technical support and advice, occasionally solving issues remotely through TeamViewer</p>
-                            <p><i class="fas fa-caret-right"></i>General repairs on devices, and electronics</p>
-                            <span>2016-Present</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about">
-
-                <div class="section-header">
-                    <h3><u>.about</u></h3>
-                    <p>A little bit about myself</p>
-                </div>
-
-                <div class="about-me">
-                    <div class="about-data">
-                        <p>I guess one way that you could put it, is that I enjoy making things work, whether it's a microcontroller,
-                            a small desktop application, a website (like this one), or even the odd little game.
-                            I also do enjoy drawing things, but for the most part, it's of circuit diagrams and ideas<br><br>
-                            Since a young age I've enjoyed using my knowledge to try and resolve computing and electrical issues,
-                            although it's safe to say I'm much better at it now than I used to be.<br><br>
-                            Some of the languages that I'm currently comfortable with include:
-                        </p>
-                        <div class="languages">
-                            <p><i class="fas fa-caret-right"></i>C</p>
-                            <p><i class="fas fa-caret-right"></i>C#</p>
-                            <p><i class="fas fa-caret-right"></i>Python</p>
-                            <p><i class="fas fa-caret-right"></i>HTML & CSS</p>
-                        </div>
-                        <p>During my further schooling I studied:</p>
-                        <div class="languages">
-                            <p><i class="fas fa-caret-right"></i>Computer Science</p>
-                            <p><i class="fas fa-caret-right"></i>Digital Illustration</p>
-                            <p><i class="fas fa-caret-right"></i>Physics</p>
-                        </div>
-                    </div>
-                    <img src="images/drawn-me.png">
                 </div>
 
             </section>
 
-            <section id="contact">
-
-                <div class="section-header">
-                    <h3><u>.contact</u></h3>
-                    <p>If you would like to get hold of me, <br>you can reach me at my inbox below</p>
-                </div>
+			<section id="contact">
+				<div class="section-header">
+					<h3 style="text-align: center;"><u>.contact</u></h3>
+					<p style="text-align: center;">If you would like to get hold of me, <br>you can reach me at my inbox below</p>
+				</div>
 
                 <div class="contact-me">
-                    <a href="mailto:luc@lucheaton.com">Contact Me</a>
+                    <a href="mailto:luc@lucheaton.com">Say Hello</a>
                 </div>
 
             </section>

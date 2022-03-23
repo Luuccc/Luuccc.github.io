@@ -1,214 +1,196 @@
-/*Site wide default styling*/
-a,p,h1,h2,h3,h4,li
-{
-    font-family: Roboto;
+a,p,h1,h2,h3,h4,li {
+    font-family: Roboto,Consolas,monospace;
     color: #6aabe3;
     margin: 0;
     padding: 0;
 }
-a 
-{
-    /*Remove underline*/
+a {
     text-decoration: none;
 }
-/*Sorts out header*/
-header a
-{
-    /*For complete-ness*/
-    display: inline-block;
-    padding-top: 0.5vw;
-}
-body 
-{
+body {
     background-color: #222223;
     margin: 0;
     overflow: scroll;
 }
-/*Header container*/
-header 
-{
+header {
     z-index: 1;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
+	height: 3vw;
     position: sticky;
     box-shadow: 1vw 0.2vw 1vw #121212;
     background-color: #272728;
-    height: 6vw;
     text-align: center;
-    font-size: 4vw;
+    font-size: 2vw;
     font-weight: lighter;
 }
-/*Space between each section*/
-section
-{
-    padding-bottom: 9vw;
+header a {
+    /*For complete-ness*/
+    display: inline-block;
+	padding-top: 0.2vw;
+}
+.header-item:hover {
+    color: #f97979;
+}
+.divider {
+    color: #f97979;
+    font-size: 2vw;
+    display: inline-block;
+    pointer-events: none;
+}
+section {
+	/*Fixes hiding under navbar*/
+    padding-top: 4vw;
+    padding-bottom: 8vw;
     overflow: auto;
 }
-footer
-{
+footer {
     text-align: center;
     padding-top: 20vw;
     padding-bottom: 1vw;
 }
-footer p, footer a
-{
+footer p, footer a {
     font-size: 1.2vw;
     font-family: Consolas,monospace;
     color: #f97979;
 }
-/*Nice clean underline*/
-u
-{
+footer a:hover {
+    color: #6aabe3;
+}
+u {
+	font-family: Roboto,Consolas,monospace;
     text-decoration: underline;
-    text-decoration-thickness: 0.4vw;
+    text-decoration-thickness: 0.3vw;
 }
-/*Spaces content away from sidebar*/
-.main-container
-{
-    margin-left: 9vw;
+.main-container {
+	margin-left: 12.5%;
+	margin-right: 12.5%;
 }
-/*Nice little effect*/
-.header-item:hover 
-{
-    color: #f97979;
-}
-/*Header item seperator*/
-.divider 
-{
-    color: #f97979;
-    font-size: 4vw;
-    display: inline-block;
-    pointer-events: none;
-}
-/*Spacing away from section parent*/
-.section-header
-{
-    padding-top: 6vw;
-    padding-bottom: 1vw;
-}
-/*Styling each section title*/
-.section-header h3
-{
-    font-size: 4vw;
-    font-weight: lighter;
-    color: #f97979;
-}
-/*Styling each section short desc*/
-.section-header p
-{
-    padding-top: 1vw;
-    font-weight: lighter;
-    font-size: 2vw;
-}
-.title-container
-{
-    /*Spacing away from section parent*/
-    padding-top: 6vw;
-}
-/*Title styling*/
-.title-container h1
-{
-    font-size: 12vw;
-    font-weight: lighter;
-    /*Strange*/
-    margin-left: -1vw;
-}
-/*Sub title styling*/
-.title-container h2
-{
-    font-size: 4vw;
-    font-weight: lighter;
-    color: #f97979;
-}
-/*Short info + generator container*/
-.short-info 
-{
-    width: 100%;
-    padding-top: 5vw;
-}
-/*Short Info*/
-.short-info p
-{
-    
-    width: 60%;
-    float: left;
-    /*Padding between table*/
-    padding-right: 6vw;
-    /*Padding between table if vertical align*/
-    padding-bottom: 2vw;
-    font-weight: lighter;
-    font-size: 2vw;
-}
-/*Button aligns to canvas*/
-.sub-container
-{
-    text-align: center;
-}
-/*Generator button*/
-.sub-container button
-{
-    background-color: #2e2e2e;
-    border: 0;
-    /*Sticking with gross pixels because of the canvas*/
-    height: 30px;
-    width: 100%;
-    color: #f97979;
-    font-size: 24px;
-}
-/*Canvas*/
-#canvas-grid
-{
-    float: left;
-    border: 0.2vw solid #2e2e2e;
-}
-/*Progress bar*/
-#progBar
-{
-    height: 0.3vw;
-    background: #f97979;
-    width: 0%;
-    margin-top: 0.7vw;
-}
-/*Social transform*/
-.social-bar
-{
+.social-bar {
+	padding-left: 5vw;
     position: fixed;
+	left: 0;
     bottom: 5%;
 }
-/*Social icons*/
 .social-bar a,
-.social-bar i
-{
+.social-bar i {
     display: block;
     text-align: center;
-    padding-left: 1.5vw;
     padding-bottom: 2vw;
     color: #6aabe3;
     font-size: 2.6vw;
 }
+.social-bar i:hover {
+    color: #f97979;
+}
+.email-bar {
+	padding-right: 5vw;
+    position: fixed;
+	right: 0;
+    bottom: 5%;
+}
+.email-bar a {
+	display: block;
+    text-align: center;
+    padding-bottom: 2vw;
+    color: #6aabe3;
+	font-family: Consolas,monospace;
+    font-size: 1vw;
+	font-weight: lighter;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+.email-bar a:hover {
+    color: #f97979;
+}
+/*Spacing away from section parent*/
+.section-header h3 {
+    padding-bottom: 1vw;
+	font-size: clamp(1vw, 4vw, 4vw);
+    font-weight: lighter;
+	text-align: left;
+    color: #f97979;
+}
+.section-header p {
+	font-weight: lighter;
+	text-align: left;
+    font-size: clamp(0.5vw, 1.5vw, 3vw);
+	padding-bottom: 1vw;
+}
+.title-container {
+    padding-top: 2vw;  /*Spacing away from section parent*/
+}
+.title-container h1 {
+    font-size: clamp(6vw, 7vw, 12vw);
+    font-weight: lighter;
+}
+.title-container h2 {
+    font-size: clamp(3vw, 4vw, 12vw);
+    font-weight: lighter;
+    color: #f97979;
+}
+.about-me {
+	padding-top: 3vw;
+	width: 100%;
+	overflow: hidden;
+}
+.about-me img{
+	float: left;
+	pointer-events: none;
+	border-radius: 5%;
+	max-width: 100%;
+    max-height: 100%;
+	height: 13vw;
+    width: 13vw;
+	margin-right: 1vw;
+	margin-bottom: 1vw;
+	box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
+}
+.short-info p,h4 {
+    font-weight: lighter;
+    font-size: clamp(0.5vw, 1.5vw, 3vw);
+}
+.languages {
+	padding-top: 2vw;
+}
+.languages i {
+	font-size: 60%;
+}
+.languages h4 {
+    font-family: Roboto;
+	font-weight: lighter;
+    font-size: clamp(0.5vw, 1.5vw, 3vw);
+}
+.languages p {
+    font-family: Consolas,monospace;
+	font-size: 1.5vw;
+    padding-top: 0.2vw;
+}
+/*Progress bar*/
+#progBar {
+    height: 0.3vw;
+    background: #f97979;
+    width: 0%;
+}
 /*List icon*/
-.fa-li i
-{
+.fa-li i {
     color: #f97979;
 }
 /*Unordered List*/
-.fa-ul
-{
+.fa-ul {
     margin: 0;
     padding-left: 2vw;
 }
 /*List element*/
-.fa-ul li
-{
+.fa-ul li {
     color: #6aabe3;
     font-weight: normal;
     font-size: 1.5vw;
 }
 /*Featured project container*/
-.project
-{
+.project {
     /*Spaces data and keeps background*/
     padding-right: 2vw;
     margin-bottom: 2vw;
@@ -221,8 +203,7 @@ u
     position: relative;
 }
 /*Styling till your hearts content*/
-.project h2
-{
+.project h2 {
     font-size: 2vw;
     padding-bottom: 1vw;
     text-align: right;
@@ -230,8 +211,7 @@ u
     font-family: Consolas,monospace;
 }
 /*Featured project*/
-.project h3
-{
+.project h3 {
     font-family: Consolas,monospace;
     font-size: 1.5vw;
     text-align: right;
@@ -239,8 +219,7 @@ u
     padding-top: 1vw;
 }
 /*Extra info*/
-.project h4
-{
+.project h4 {
     font-family: Consolas,monospace;
     font-size: 1.4vw;
     color: #f97979;
@@ -249,50 +228,46 @@ u
     float: right;
 }
 /*Desc*/
-.project p
-{
+.project p {
     padding-bottom: 1vw;
     text-align: right;
     font-size: 1.5vw;
 }
 /*What you're really here for*/
-.project img
-{
+.project img {
     padding: 0.8vw 1.2vw 0.8vw 0.8vw;
     float: left;
     width: 60%;
     border-radius: 1.5vw;
-    min-width: 160;
-    min-height: 90;
-    background-image: #2e2e2e;
+    min-width: 160px;
+    min-height: 90px;
 }
-.project img:hover
-{
+.clickable img:hover {
     opacity: 80%;
 }
-/*What does the vault even contain?*/
-.vault-link
-{
-    font-size: 2vw;
-    padding-top: 1vw;
+.vault-link {
+	font-size: 1.2vw;
+}
+.web-link {
+	font-family: inherit;
     color: #f97979;
 }
+.web-link:hover {
+    color: #6aabe3;
+}
 /*The notable, but not as notable project container*/
-.project-extra
-{
+.project-extra {
     padding-top: 4vw;
     text-align: center;
 }
 /*The not-so note worthy projects title*/
-.project-extra h4
-{
+.project-extra h4 {
     font-size: 3vw;
     font-weight: lighter;
     padding-bottom: 1vw;
 }
 /*Here they come! All in their mini project containers*/
-.mini-project
-{
+.mini-project {
     width: 48%;
     float: left;
     background-color: #272728;
@@ -304,8 +279,7 @@ u
     border-radius: 1%;
 }
 /*Mini project icon*/
-.mini-project span
-{
+.mini-project span {
     font-size: 2vw;
     color: #6aabe3;
     float: left;
@@ -314,13 +288,11 @@ u
     padding: 1vw 1vw 1vw 1vw;
 }
 /*Mini project container*/
-.mini-data
-{
+.mini-data {
     padding: 1vw 2vw 2vw 2vw;
 }
 /*Mini project title*/
-.mini-data h2
-{
+.mini-data h2 {
     font-family: Consolas, monospace;
     color: #f97979;
     padding-top: 1.5vw;
@@ -328,13 +300,11 @@ u
     font-size: 2.2vw;
 }
 /*Mini project desc*/
-.mini-data p
-{
+.mini-data p {
     font-size: 1.2vw;
 }
 /*Mini project tag*/
-.mini-data h4
-{
+.mini-data h4 {
     font-family: Consolas, monospace;
     font-size: 1vw;
     color: #f97979;
@@ -345,8 +315,7 @@ u
     padding: 1vw 1vw 0vw 1vw;
 }
 /*Contains all the minis*/
-.grid
-{
+.grid {
     /*I said, don't touch that other element*/
     padding-top: 2vw;
     /*Remain FULL*/
@@ -354,59 +323,13 @@ u
     /*Fixes collapsing margins*/
     overflow: auto;
 }
-/*Container of about*/
-.about-data
-{
-    /*Setting less to allow padding*/
-    width: 58%;
-    float: left;
-    padding-right: 1vw;
-    padding-bottom: 2vw;
-}
-/*Description of me kinda*/
-.about-data p
-{
-    font-size: 1.5vw;
-    padding-top: 1vw;
-}
-/*My old drawing of me*/
-.about-me img
-{
-    /*Setting less, to allow padding*/
-    width: 38%;
-    float: right;
-    /*Resolves radius issue*/
-    margin-right: 2vw;
-    border-radius: 1vw;
-    /*Don't wanna be too large*/
-    max-width: 24vw;
-    max-height: 24vw;
-    box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
-}
-/*Contact link container*/
-.contact-me
-{
-    padding-top: 1vw;
-}
-/*Contact link styling*/
-.contact-me a
-{
-    font-size: 2.4vw;
-    border-width: 0.3vw;
-    border-style: dashed;
-    border-color: #f97979;
-    padding-left: 0.3vw;
-    padding-right: 0.3vw;
-}
 /*Entry container*/
-.entry
-{
+.entry {
     padding-bottom: 0.4vw;
     width: 80%;
 }
 /*Dropdown button*/
-.entry button
-{
+.entry button {
     background-color: #222223;
     border: none;
     text-align: left;
@@ -419,35 +342,30 @@ u
     padding-left: 0;
 }
 /*Down caret*/
-.entry i 
-{
+.entry i {
     font-size: 60%;
     padding-left: 0.7vw;
 }
-.fa-caret-right
-{
+.fa-caret-right {
     color: #f97979;
     padding-right: 1vw;
 }
 /*Dropdown tags*/
-.entry h4
-{
+.entry h4 {
     color: #f97979;
     padding-bottom: 0.3vw;
     font-family: Consolas,monospace;
     font-size: 1.2vw;
 }
 /*Dropdown info*/
-.entry div
-{
+.entry div {
     font-size: 1.6vw;
     padding-left: 1vw;
     display: none;
     box-shadow: 0.2vw 0.2vw 0.2vw #121212;
 }
 /*Dropdown text*/
-.entry p
-{
+.entry p {
     font-size: 1.4vw;
     font-family: Consolas,monospace;
     color: #6aabe3;
@@ -455,69 +373,69 @@ u
     padding-right: 1vw;
     padding-bottom: 0.4vw;
 }
-.entry img
-{
+.entry img {
     padding: 0.8vw 0.8vw 0vw 0vw;
     background-image: #2e2e2e;
     max-height: 18vw;
     width: auto;
 }
-.entry-drop span
-{
+.entry-drop span {
     font-family: Consolas,monospace;
     font-size: 1vw;
     padding-right: 0.5vw;
 }
-.exp-info button
-{
+.exp-info button {
     font-family: Roboto;
 }
-.exp-info a 
-{
+.exp-info a {
     color: #f97979;
     font-family: Consolas,monospace;
 }
-.exp-info p
-{
+.exp-info p {
     padding-top: 0.2vw;
     padding-bottom: 0.2vw;
     font-family: Consolas,monospace;
     font-size: 1.2vw;
 }
-.exp-info span
-{
+.exp-info span {
     font-family: Consolas,monospace;
     font-size: 1vw;
 }
-.languages p
-{
-    font-family: Consolas,monospace;
-    padding-top: 0.2vw;
+.contact-me {
+    padding-top: 1vw;
+	text-align: center;
 }
-.policy-entry h4
-{
+.contact-me a:hover {
+    opacity: 80%;
+}
+.contact-me a {
+    font-size: 2.4vw;
+    border-width: 0.3vw;
+    border-style: solid;
+    border-color: #f97979;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+}
+.policy-entry h4 {
     padding-top: 6vw;
     padding-bottom: 1vw;
     font-family: Consolas,monospace;
     font-size: 4vw;
     color: #f97979;
 }
-.policy-entry p
-{
+.policy-entry p {
     padding-top: 0.2vw;
     font-size: 1.4vw;
     font-family: Consolas,monospace;
     color: #6aabe3;
 }
-.policy-entry b
-{
+.policy-entry b {
     font-size: 1.5vw;
     font-family: Consolas,monospace;
     color: #f97979;
 }
 /*Small styling*/
-span
-{
+span {
     color: #f97979;
 }
 /*When width <=768px*/
@@ -527,14 +445,6 @@ span
         width: 98%;
         margin-right: 2%;
         /*No longer float to left*/
-        float: none;
-    }
-    .about-me img
-    {
-        float: none;
-    }
-    .about-data
-    {
         float: none;
     }
 }
