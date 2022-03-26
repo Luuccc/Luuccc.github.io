@@ -119,6 +119,9 @@ u {
     font-size: clamp(0.5vw, 1.5vw, 3vw);
 	padding-bottom: 1vw;
 }
+.section-header b {
+	font-weight: normal;
+}
 .title-container {
     padding-top: 2vw;  /*Spacing away from section parent*/
 }
@@ -246,7 +249,7 @@ u {
     opacity: 80%;
 }
 .vault-link {
-	font-size: 1.2vw;
+	font-size: 1.5vw;
 }
 .web-link {
 	font-family: inherit;
@@ -339,7 +342,12 @@ u {
     color: #6aabe3;
     outline: none;  
     font-family: Consolas,monospace;
+	font-weight: 100;
     padding-left: 0;
+}
+/*Slightly more contrast*/
+.entry b {
+	font-weight: 900;
 }
 /*Down caret*/
 .entry i {
