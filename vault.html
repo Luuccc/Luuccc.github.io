@@ -25,940 +25,1411 @@
 				if (content.style.display === "block") {
 					content.style.display = "none";
 				} else {
+					var childs = content.childNodes;
 					content.style.display = "block";
+					for (var i = 0; i < childs.length; i++) {
+						if (childs[i].nodeName == "VIDEO") {
+							childs[i].autoplay = true;
+							childs[i].play();
+						}
+					}
 				}
 			}
 		</script>
     </head>
-    <body>
 
+    <body>
         <header>
-			<a class="header-item" href="index.html#about">about</a>
-			<a class="divider"> / </a>
-            <a class="header-item" href="index.html#portfolio">portfolio</a>
-            <a class="divider"> / </a>
-            <a class="header-item" href="index.html#experience">experience</a>
-            <a class="divider"> / </a>
-            <a class="header-item" href="index.html#contact">contact</a>
-            <div>
-                <div id="progBar"></div>
-            </div>
+			<div class="row">
+				<div class="col-12">
+					<a class="header-item" href="index.html#about">about</a>
+					<a class="divider"> / </a>
+					<a class="header-item" href="index.html#portfolio">portfolio</a>
+					<a class="divider"> / </a>
+					<a class="header-item" href="index.html#experience">experience</a>
+				</div>
+				<div class="col-12">
+					<div id="progBar"></div>
+				</div>
+			</div>
         </header>
 
         <div class="social-bar">
-            <div><a href="https://github.com/Luuccc"><i class="fab fa-github"></i></a></div>
-            <div><a href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a></div>
-            <div><a href="mailto:luc@lucheaton.com"><i class="fas fa-envelope"></i></a></div>
-        </div>
+			<a target="_blank" href="https://github.com/Luuccc"><i class="fab fa-github"></i></a>
+			<a target="_blank" href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a>
+			<a target="_blank" href="mailto:luc@lucheaton.com" style="padding-bottom: 2vw;"><i class="fas fa-envelope"></i></a>
+		</div>
+
 		<div class="email-bar">
-			<div><a href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a></div>
+			<a href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a>
 		</div>
 
         <div class="main-container">
-
             <section id="vault">
 				<div class="section-header">
 					<h3><u>.vault</u></h3>
 					<p>A list of most of the things I've worked on (some with images).<br>
 					   The projects marked in <b>bold</b> are some of my favourites</p>
 				</div>
-                <div>
-					<div class="entry">
-						<button type="button" onClick="ToggleDesc(this)"><span>[</span>30/12/2021<span>]</span><b> Grandstand Munchman repair</b><i class="fas fa-caret-down"></i></button>
-						<div class="entry-drop">
-							<img src="images/Munchman1.jpg">
-							<img src="images/Munchman2.jpg">
-							<img src="images/Munchman.gif">
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/11/2022<span>]</span> Website changes<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video  loop muted playsinline>
+							<source src="images/WebPre.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video  loop muted playsinline>
+							<source src="images/WebPost.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 
-							<p>This is my dad's original Grandstand Munchman that hadn't powered up for the past few decades. Over the years, I've made small attempts to locate and fix the problem, with no luck.</br></br>
-								But every year I've picked up new fragments of knowledge in troubleshooting electronics and was finally able to identify a single NPN transistor that wasn't meeting its datasheet specification.
-								Finally bringing Munchman to life, once again</p>
-							<span>Electronics</span>
-							<span>Myself</span>
-						</div>
+						<p>Every time I review my website, I seem to notice more problems. From awful scaling 
+                            to smaller resolutions, unnecessarily large media files, or my poor grammar. So 
+                            with my current knowledge of things, I've spent some time making minor changes to the 
+                            site, most notably to the scaling for smaller displays.<br><br>
+                            On the left, you can see how the site used to scale, with elements becoming 
+                            unreadable and misplaced. On the right are my changes, with elements not 
+                            becoming too small. Also, hiding media files on smaller displays.</p>
+						<span>Myself</span>
 					</div>
-					<div class="entry">
-						<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/09/2021<span>]</span> Power Regulator<i class="fas fa-caret-down"></i></button>
-						<div class="entry-drop">
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>22/10/2022<span>]</span> Visited CERN<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/CERN.jpg">
 
-							<p>Using my knowledge of analyzing 10-bit analogue inputs and Port manipulation, I developed another speed efficient power analyzer program for the tiny series.</br></br>
-								Built to indicate an LED so long as the sampled voltage level is within an acceptable range, otherwise perform a power cycle - If the device is power cycled too many times, 
-								enter a "lockdown" mode, whereby the power to the main device is "cut", and a manual reset is required.</p>
-							<span>C</span>
-                            <span>Arduino</span>
-                            <span>Electronics</span>
-                            <span>Hive Industries</span>
-						</div>
+						<p>Other than the long wait time in the queue, I had the chance to have an interesting 
+							tour around part of the facility. With the opportunity to ask some questions! 
+							I wanted an insight into their data storage solutions for the huge amount of data 
+							they process. I also wanted to ask if they used neural networks to process and 
+							filter this data to find patterns, but forgot... maybe next time!</p>
+						<span>Myself</span>
 					</div>
-					<div class="entry">
-						<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/09/2021<span>]</span><b> Terminal Mastermind</b><i class="fas fa-caret-down"></i></button>
-						<div class="entry-drop">
-							<a target="_blank" href="https://play.google.com/store/apps/details?id=com.LucHeaton.TerminalMastermind">
-								<img src="images/TM1.jpg">
-								<img src="images/TM2.jpg">
-								<img src="images/TM3.jpg">
-								<img src="images/TM4.jpg">
-                                <img src="images/TMGame.jpg">
-								<img src="images/TerminalMastermind.gif">
-                            </a>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/09/2022<span>]</span> TFT displays and fonts<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TFTAllChars.jpg">
+						<img src="images/TFTChars.jpg">
 
-							<p>Wanting to build another Unity game for Android, I looked no further than the Fallout minigame that I keep reprogramming.</br></br>
-								To begin with, I started working on generating the hexadecimal row headers and "play area". Followed, by implementing the highlighting and grouping methods. As each symbol character
-								needed to be accessed by a uniquely addressable "cell". </br></br>
-								After finalizing my method of grouping cells, I could highlight individual row headers on mouseover/touch for both desktop and mobile platforms. I had some fun with placing the generated 
-								"passwords" evenly within the play area, with the random amount of words all fitting, without touching. Also attempting to limit the number of wrapped words.</br></br>
-								I thoroughly enjoyed designing the logic and programming this, but the process of adding Ads, Google Play Service support, GP Leaderboards, and Unity In-App-Purchases, really slowed things down. But, 
-								I'm happy to say that it's finally released and can be found on the 
-								<a target="_blank" class="web-link" href="https://play.google.com/store/apps/details?id=com.LucHeaton.TerminalMastermind">Google Play Store</a> for free!</p>
-							<span>C#</span>
-							<span>Unity</span>
-                            <span>Myself</span>
-						</div>
+						<p>I had some time working with a 0.96" (160x80px) TFT display, where I finally 
+							noticed the speed difference between hardware and software-based SPI. 
+							Also spent some time counting pixels so I could correctly space characters.</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Myself</span>
 					</div>
-					<div class="entry">
-						<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/09/2021<span>]</span> Advent of Code<i class="fas fa-caret-down"></i></button>
-						<div class="entry-drop">
-							<img src="images/AdventOfCode.JPG">
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>19/09/2022<span>]</span> <b>Ecole de Langue Française et d'Informatique</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/ELFI.jpg">
 
-							<p>Wanting to improve my programming and problem solving, I began working through a couple days of the <a target="_blank" class="web-link" href="https://adventofcode.com/">Advent of Code</a>. 
-							Each day, you are given two interesting problems to solve (shown by the stars on the right) of varying difficulty.</br></br> 
-							With puzzles ranging from MD5 hashing problems to "quantum entanglement". I've only completed 12 tasks (in both C and C#), but I'll probably return for more when I feel like a challenge</p>
-							<span>C</span>
-                            <span>C#</span>
-                            <span>Myself</span>
-						</div>
+						<p>During my short stay in Geneva, I had the opportunity to attend a french 
+							language course for six weeks, which I really enjoyed and was a great 
+							chance to practice my reading, writing and speaking skills and meet some 
+							great people!</p>
+						<span>Myself</span>
 					</div>
-					<div class="entry">
-						<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/09/2021<span>]</span><b> Pixel Dailies</b><i class="fas fa-caret-down"></i></button>
-						<div class="entry-drop">
-							<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434832169889828864" >
-                                <img src="images/PixelDailies1.png">
-                            </a>
-							<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434959425618460675" >
-                                <img src="images/PixelDailies2.png">
-                            </a>
-							<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434143541048094721" >
-                                <img src="images/PixelDailies3.png">
-                            </a>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/08/2022<span>]</span> <b>WiFi Air mouse</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video  loop muted playsinline>
+							<source src="images/MPU6050.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
 
-							<p>With the extra time I had, I took part in a couple of <a target="_blank" class="web-link" href="https://twitter.com/Pixel_Dailies">@Pixel_Dailies</a>. 
-								An interesting Twitter account dedicated to posting topics for people to create Pixelart of or about, such as 
-								<a target="_blank" class="web-link" href="https://twitter.com/HeatonLuc/status/1434959425618460675">#snowboarding</a> or 
-								<a target="_blank" class="web-link" href="https://twitter.com/HeatonLuc/status/1434143541048094721">#floral</a></p>
-							<span>Artwork</span>
-							<span>Myself</span>
-						</div>
+						<p>Wanting to combine the remote connectivity of the ESP32 with the accurate 
+							readings of the MPU6050 that I had managed. I built a C++ library for the ESP32 
+							that talked to the sensor over I2C then packaged the modified axis data to 
+							be sent over WiFi to a receiver, handling mouse movement.<br><br>
+							The above clip is of the wired MPU6050 version.</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Myself</span>
 					</div>
-					<div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>17/08/2021<span>]</span> Fiverr<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/FiverrCode.jpg">
-							<img src="images/FiverrTagging.jpg">
-							<img src="images/FiverrBot.jpg">
-
-                            <p>Looking for some extra work, I ended up posting some freelancing offers on Fiverr. Offering to build people Discord bots, fix their poorly tagged audio files, 
-                                or attempt writing clean explained C# for people. Sadly, no luck</p>
-                            <span>C#</span>
-							<span>Unity</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-					<div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>12/06/2021<span>]</span> Mobile Memory game<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/QuestionTester.gif">
-
-                            <p>Aiming to improve my French I built this Android application. Allowing me to store translations and test myself against statements that I add to the app over time.
-								Although I just illustrate this functionality with some math statements. 
-							</br></br>After building it though, I realized that it was just a flashcard app, and just installed a polished one from the app store</p>
-                            <span>C#</span>
-							<span>Unity</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-					<div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>28/04/2021<span>]</span><b> Perlin noise</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/PerlinGen.gif">
-                            <img src="images/PerlinMaps.gif">
-							<img src="images/Minimap1.png">
-							<img src="images/Minimap2.png">
-
-                            <p>As a small side project, I decided to create a nice visual to illustrate different functions being layered over Perlin noise. 
-                            </br></br>Starting with a small 2D Perlin noise sample, I layer functions such as upscaling and clamping, at each stage, finally applying colour to the sample using a Custom gradient editor script, 
-                            which I can't take credit for.</br></br>
-                            I really liked some of the maps created with this generator and decided to build a small "treasure" map game, where you have to use a tiny section of the map to find the correct location on the full map</p>
-							<span>C#</span>
-							<span>Unity</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>15/04/2021<span>]</span><b> TLC59281</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/TLC59281.gif">
-
-                            <p>I was asked to produce a tester program to send commands via SPI to a TLC59281 (LED Driver), drawing to four seven-segment displays.</br></br>
-								This involved building 32-bit payloads from the serial data received that specify the segments to illuminate, the colour bits, and symbol bits. 
-								As well as creating a serial transfer method to send payloads to the LED driver chip.</br></br>
-								Continuing this, I realized it would instead be useful to refactor my code and build a C++ library. Allowing anyone to interface with this display without needing to understand the payload.
-								I also extended the functionality of the library by adding various helper methods, allowing a user to perform more actions with the display.
-                            </p>
-                            <span>C</span>
-							<span>C++</span>
-                            <span>Arduino</span>
-                            <span>Electronics</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>14/04/2021<span>]</span> iPhone 4S Batteries<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Batt.jpg">
-
-                            <p>Despite these phones being very out-of-date, they're still useful for simple messages and calls. Although the batteries within were no longer holding charge. So I replaced two of them, with new replacements</p>
-                            <span>Electronics</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>07/04/2021<span>]</span> Impact drill repair<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Drill.jpg">
-                            <img src="images/Drill1.jpg">
-
-                            <p>After years of use, my father's Bosch drill was showing signs of failure, only functioning when held in a certain way. Until recently, it finally stopped working. 
-                                After opening it up, I found a small connection that had snapped, possibly caused by the heat. After rejoining the connection the drill was good as new.</p>
-                            <span>Electronics</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/04/2021<span>]</span> Xamarin Android<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/StackViewAndroid.gif">
-
-                            <p>Looking for a method of creating a mobile application without the usage of Java outside of Unity, I looked into Xamarin. Realising that it uses the same XML template base and flow as Android Studio (Java) 
-                                but allows the usage of C# on top.</br></br>With this, I produced a small Stack Overflow viewer for mobile, grabbing the latest questions from the RSS feed given a tag and learning a little more about 
-                                asynchronous calls</p>
-                            <span>Xamarin</span>
-                            <span>XML</span>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>24/03/2021<span>]</span> Small online courses<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>As a refresher, or to gain a better understanding of C and C#, I completed two short courses on the languages. The most significant being a greater understanding of pointers, and memory management within C.</p>
-                            <span>C</span>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>21/01/2021<span>]</span><b> Cube Count game</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.LucHeaton.CubeCount" >
-                                <img src="images/CubeCount.png">
-                            </a>
-                            <img src="images/CubeCountProg.gif">
-
-                            <p>After working with Android Studio, I wanted to return to something I understood better and decided to build a slightly cleaner looking application than my older game attempts. 
-								With a simple counting game in mind, I started building assets and the basic game loop. After quite a few more steps, as well as finally gaining a better understanding of scaling UI 
-								for multiple resolutions (shown above), creating graphics, and the ever-growing code.
-								</br></br>I produced Cube Count a quick and minimalist counting game, available on the Google Play Store! and can be found by clicking the game's icon above!</p>
-                            <span>C#</span>
-                            <span>Unity</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>04/01/2021<span>]</span> Android Studio Revisit<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/AndroidStudio.gif">
-
-                            <p>Wanting to bring some older ideas to life, I began learning about the Android Studio workflow, making a few prototype apps, but nothing too noteworthy.
-                            </br></br>Other than a small working start to the Binary Utility for Android, a Higher/Lower game, and some async testing.</p>
-                            <span>Java</span>
-                            <span>XML</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>14/11/2020<span>]</span> Connected lines<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Lines.gif">
-
-                            <p>Continuing my enjoyment in creating visual random generators. I put together a small connections generator using Extended ASCII, which I thought produced nice looking geometry,
-								generating for any width or height. It worked by analyzing the surrounding symbols, selecting a "connecting" character from a small dictionary, making sure every character is 
-								correctly linked vertically</p>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span><b> Text word wrapping</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/WordWrap.gif">
-
-                            <p>To allow the Notifier to display text clearly, I produced a small word-wrapping utility. Creating a newline before a given width is reached, without cutting words</p>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span><b> Notifier Utility</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Notifier.gif">
-                            <img src="images/NotifierOld.gif">
-
-                            <p>At first, I wanted to produce a graphical events system that notifies you with given data at a given interval.</br></br> 
-								Entering a small summary for each "note", defining its time/datetime/interval through a pop-up menu. After realising how many things needed to be figured out, I stopped with it.
-                                Instead, building a smaller version as a console application, making use of BackgroundWorkers to manage intervals of each defined entry. As well as storing
-                                given notes within a JSON file, on creation / deletion, so that they are recalled on loading of the application.
-                                </br></br>When the event is called at the specified time, the summary of the event is simply displayed</p>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>02/11/2020<span>]</span><b> Binary Utility</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Utility1.gif">
-                            <img src="images/Utility2.gif">
-
-                            <p>I wanted to produce a utility that combined all of the functions that I usually have to find online. Including bitwise maths, converting between decimal, hex, and binary automatically 
-                                (could be better), and drawing an 8x8 bitmap from entered byte data. Or by drawing on the canvas with the mouse (left-click to draw, right-click to erase)</p>
-                            <span>Winforms</span>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>26/10/2020<span>]</span> SSD1306<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/SSD1306.jpg">
-
-                            <p>Building a driver chip for the SSD1306 128x32 OLED display, working over SPI. Taking in defined commands from another device, then converting them to a set of byte commands for the display to interpret, 
-                                and draw to the screen.</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>17/10/2020<span>]</span> First revision of my new site<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/OldSite.gif">
-
-                            <p>Disliking the look of my previous WordPress website, I wanted to build something better, and more personal.</br></br>
-								After spending quite some time revising my web dev skills. I had almost finished building this new website from complete scratch (and it wasn't half bad!). 
-								Just more styling and population, although a lot of cleaning up could be done</p>
-                            <span>HTML & CSS</span>
-                            <span>Js</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>16/10/2020<span>]</span> Reviving my Discord bot<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>I tried running my old discord bots once again. But as expected, the Python discord library that the bot was originally built on was outdated. Plus the issues with the JSON save files. 
-								Although, I did temporarily fix some of the issues though, just to see it work again.</p>
-                            <span>Python</span>
-                            <span>Json</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>04/10/2020<span>]</span> Ebook name formatting<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Similarly to my music file metadata issues, when downloading ebooks the names are rarely formatted correctly. So I built another small utility to clean up the title names for select ebook readers</p>
-                            <span>Python</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>23/09/2020<span>]</span> Nintendo DS Lite power switch<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/DS.jpg">
-
-                            <p>A small electronics job I accepted. Replacing a faulty Nintendo DS Lite power switch for my cousin, as the mechanism had snapped.</p>
-                            <span>Electronics</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>16/09/2020<span>]</span> Battery Tester<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Charlieplex.jpg">
-                            <img src="images/Charlieplex1.jpg">
-
-                            <p>I was asked to produce a Charlieplexed indicator program for a microcontroller, that displayed the charge status of a battery. As well as doing this, and instead of recreating the Charlieplexed 
-								circuit every time on a breadboard, I finally built a permanent perfboard version.</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Electronics</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>14/09/2020<span>]</span><b> StackOverflow feed app</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Stack.gif">
-							<img src="images/Stack.jpg">
-
-                            <p>While trying to be somewhat helpful on StackOverflow, I didn't want to sit on the webpage refreshing every so often, looking for questions that I might be able to answer.</br></br>
-                                So I developed a small Winforms application that displays the latest questions under a given tag as links to the web post. Refreshing every five minutes, grabbing entries from the RSS feed.
-                                I may build upon this with extra info such as views, votes, as well as other features like page navigation.</p>
-                            <span>Winforms</span>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>21/08/2020<span>]</span> Door Counter<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>With the "epidemic" being everyone's concern, I was asked to build a program for an AVR microcontroller to pull in sensor data to determine the number of people within a building. 
-                                Then pushing that data through a UART interface to write it to a display. Letting customers know how many people should enter</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>09/08/2020<span>]</span> Comms over USB to Arduino<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>A small project to learn how to send serial data over USB, which may be useful for future ideas.</p>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2020<span>]</span> Steam library sorting<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/SteamLib.JPG">
-
-                            <p>Wanting to download some older games, but still having a poor internet connection, I wanted to sort through my uninstalled games by file size.</br></br> 
-								Sadly, the Steam library doesn't support the filtering of uninstalled games. I pulled the XML data of my library from the Steam Web API, deserialized it, and applied it to a CSV file. 
-								Preferring to see the game art rather than just the name, I learnt how to create macros within Excel to insert images in place of image URLs.</p>
-                            <span>C#</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>08/07/2020<span>]</span> Mastermind game<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Being told how similar the board game Mastermind is to Fallout's terminal minigame. I decided to recreate a version of this, as a Visual Studio console application, to give it a try.</p>
-                            <span>C#</span>
-                            <span>Visual Studio</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>04/07/2020<span>]</span> Terminal Access Minigame<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/TA.JPG">
-
-                            <p>With the terrible internet connection I currently had, I decided to recreate the terminal hacking minigame from Fallout 4 for my phone.
-                                I ended up building a version that took most of the visuals, but scored slightly differently to the original game (which was a bad idea), scoring two
-                                points for the guessed word containing a correct letter in the correct position, and one point for containing a correct letter, but not in the right spot.
-                                In short, it was more confusing, and less intuitive than the original, but I enjoyed making and playing it</p>
-                            <span>C#</span>
-                            <span>Unity</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2020<span>]</span> Thaumcraft solver<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Thaum.jpg">
-
-                            <p>While playing a little bit of some old school Modded Minecraft, you encounter a mod named <a class="web-link" target="_blank" href="https://ftb.fandom.com/wiki/Thaumcraft_6">Thaumcraft</a>, 
-								where a main mechanic is linking "Aspects" which can only connect to a specific set of other Aspects, to progress through the mod. So naturally, I built a small application 
-								that finds connections that can be made, from a starting to an ending Aspect.</p>
-                            <span>C#</span>
-                            <span>Visual Studio</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>11/05/2020<span>]</span><b> Desktop VU Meter</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/DesktopVU.JPG">
-                            <img src="images/DesktopVU1.JPG">
-
-                            <p>Produced a prototype version of a desktop VU Meter with Winforms. Monitoring multiple devices (current limit of 5) simultaneously, scaling the form with each device added, with 
-								options to add / remove monitors and clear all.</p>
-                            <span>C#</span>
-                            <span>Winforms</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2020<span>]</span><b> NoteTaking app</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Note.JPG">
-                            <img src="images/ListNotes.jpg">
-
-                            <p>I thought it might be a nice idea to create a diary console application, which could take in given notes (some text, datetime, and a bit of data), storing them within a JSON file,
-                                to then be deserialized, formatted and displayed on screen. Also with the option to display notes by a specific month / year / all, also crudely adding it as an Autoexec at a set
-                                time every day through Task Scheduler.</p>
-                            <span>C#</span>
-                            <span>Visual Studio</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>09/03/2020<span>]</span> ASCII heightmaps<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/OldGen.gif">
-
-                            <p>While playing around with generating heightmaps based on surrounding cells, similar to <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>. 
-								I ended up building what I thought was a nice little pattern generator. Which I ended up moving over to Javascript to embed within this site, for a little while.</p>
-                            <span>Python</span>
-                            <span>Js</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> RSSI Signal Strength<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/TFTDisplay.jpg">
-
-                            <p>I programmed ATtiny to call for an interrupt from a device, asking for the signal strength over SPI. Then drawing the returned signal strength value to a TFT display</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>29/02/2020<span>]</span> Shutdown Recovery<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>I was asked to program an IC that implemented a small recovery system. That will continuously check the state of the PWR line affected by an external sleep function. 
-								If certain conditions aren't met, an LED will indicate this event, and the device will be restarted. Otherwise, to indicate the device is powered up, the LED will display a heartbeat effect</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Electronics</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>24/02/2020<span>]</span> Looking into Companion<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Suggested as an extra feature of the MC7, it would be interesting to send commands from a local StreamDeck. So I began looking into the Companion app, as well as the possibility of adding modules</p>
-                            <span>Javascript</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>22/02/2020<span>]</span> Drawing to a TFT display<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Needing to display information gathered from data inputs of a microcontroller that I was also managing, I improved my understanding of SPI interfacing to communicate with the display.</br></br>
-							Later I'd found myself troubleshooting the incorrectly displayed colours. Where I also learnt that this particular TFT display relies on the RGB565 byte format rather than RGB888</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>20/02/2020<span>]</span> NodeJs UDP<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Preparing for future features of the MC7, I began looking into the UDP protocol. As well as learning how to program with <a class="web-link" target="_blank" href="https://nodejs.org/">NodeJs</a>, 
-								so I could send and receive small amounts of data between local and remote servers, and confirm data packets with <a class="web-link" target="_blank" href="https://www.wireshark.org/">Wireshark</a></p>
-                            <span>NodeJs</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>23/01/2020<span>]</span> MC7 prototype pages<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/Pages.jpg">
-
-                            <p>Hive Industries had an upcoming exhibition, which I was asked to design and produce the pages that would be the base for the MC7 graphical user interface. After many iterations, a preferred style and layout
-                                for an early version of the MC7 display was chosen, ready for its first showing</p>
-                            <span>Artwork</span>
-                            <span>Nextion</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>31/12/2019<span>]</span> More web scrapers<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Considering building a website for my father, I began learning more about web scraping with the <a class="web-link" target="_blank" href="https://pypi.org/project/beautifulsoup4/">BeautifulSoup</a> library. 
-								Allowing me to grab entries from his current site, to populate CSV (spreadsheet) files with data and images</p>
-                            <span>Python</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>23/11/2019<span>]</span> Rotary encoders<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Learning the fundamentals of interpreting the rotation of an encoder. Such as the direction of rotation or the magnitude of rotation</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Electronics</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>01/10/2019<span>]</span> Quick look at Ultrasound<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Wanting to measure short distances or detect motion, I decided to have a look into the HC-SR04 module and learn a little about Ultrasound</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>26/09/2019<span>]</span><b> Building a Discord bot</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/DBot.jpg">
-
-                            <p>I taught myself how to build a bot for the messaging/VoIP application <a class="web-link" target="_blank" href="https://discord.com/">Discord</a>, switching between 
-								<a class="web-link" target="_blank" href="https://discordpy.readthedocs.io/en/stable/">discord.py</a> and <a class="web-link" target="_blank" href="https://discord.js.org/#/">discord.js</a>. 
-								That would allow me to add some extra features to the server that my friends and I share.</br></br>
-                                It works by responding to defined commands, indicated by a forward-slash command prefix, followed by a command such as "diceroll", which will simply return a number between one and six.
-                                To a level of progression to the bot, I implemented a load/save system, storing data with JSON files. Doing this allowed me to create and keep track of a virtual currency, which led to the
-                                addition of a roulette game, coinflip, and currency leaderboard.</br></br> As well as a case opening clone from the game CSGO, which allows a player to "open a case" using virtual currency, storing the 
-                                unboxed item of varying quality (indicated by colouring with text syntax) within their "inventory" as JSON data. Which could then be sold, or kept.</br></br> For this bot to work, however it relied on my computer 
-                                running. So naturally, I learnt how to program a Raspberry PI, and then moved the bot program onto it which I could then leave on almost 24/7.</p>
-                            <span>Python</span>
-                            <span>RaspberryPI</span>
-                            <span>Json</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>26/09/2019<span>]</span><b> Colonists minigame</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Castle.gif">
-                            <img src="images/Castle1.gif">
-                            <img src="images/Castle2.gif">
-                            <img src="images/Castle3.gif">
-                            <img src="images/Castle4.gif">
-
-                            <p>Without too much of a plan, I wanted to build a colony game where you manage little colonists, with opposing faction(s), which also worked on mobile.</br></br>
-								You're able to select a member from your faction (blue), then click a position for them to move towards, or select a resource for them to gather. 
-								If two opposing members come within the vision range, the two colonists will "battle" (currently bumping each other to the death)</p>
-                            <span>C#</span>
-                            <span>Unity</span>
-                            <span>MagicaVoxel</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/08/2019<span>]</span> The nRF24L01<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>My first introduction to transmitting data over RF involved learning how to transmit strings from one nRF24L01 module to another, with the received message being drawn to a 16x2 char display</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>29/07/2019<span>]</span> Mapping analog input across LEDs<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/POTFade.gif">
-
-                            <p>Using a potentiometer as the input device, and mapping the 0-1023 voltage range across multiple LEDs, including deadzones between each LED.
-                                As the potentiometer is turned, the brightness of the first LED will increase, until reaching full brightness, then the next LED in sequence will begin to light up (after passing the deadzone)
-                                until max, and so on</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>09/07/2019<span>]</span> AutoTagger<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/MetaTags.jpg">
-
-                            <p>Often times a track name is correctly listed within the filename of the song, but not within the file's metadata. I built a Python script to fix this.</br></br>
-                                It cycles through audio files within a local directory gathering artist(s) names and comparing them against an ever-growing txt file of artists.
-                                 To correctly capitalize the name (as often they have slight differences which break media player albums), which is then applied to the ID3 tags along with the song name, for clear track 
-                                 formatting when using media players</p>
-                            <span>Python</span>
-                            <span>Json</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>08/07/2019<span>]</span> MicroCue power control<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Developed a solution to power cycle a number of times, depending on a pin state check. If the device doesn't "stabilize", further checks are not made, and the device is disconnected</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2019<span>]</span> Power regulator<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Grabbing samples of line voltage-in, performing "power checks" if certain conditions aren't met. Causing a safe power cycle if required, which is indicated by LEDs, preventing damage to the device</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2019<span>]</span> CIO2 VU Meter<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/CIO2.jpg">
-
-                            <p>Produced the firmware to enable a VU metering function. By reading in an analogue sample, reference voltage reading, and converting to a dB range, which is indicated through Charlieplexed LEDs</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>24/06/2019<span>]</span> Nextion Countdown Touch<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Countdown.JPG">
-
-                            <p>I produced a combination of features, building upon an older product from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. Incorporating the digit shift module, I produced a timer input, as well as numerous page designs for the Nextion</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Nextion</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>23/06/2019<span>]</span> Microwave style digit shifting<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/Keypad.png">
-
-                            <p>Produced a method that takes in a numeric digit through a Nextion display, shifting the four digits ahead removing the digit overflow</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Nextion</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>20/06/2019<span>]</span> Nextion calculator<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>With my current understanding of the Nextion, I drew up a keypad that allowed the user to input a calculation through the display, which was then processed by an Uno, returning the correct result to the display</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Nextion</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>18/06/2019<span>]</span> Nextion touchscreen displays<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-							<p>For the next few days, I taught myself about the <a class="web-link" target="_blank" href="https://nextion.tech/">Nextion</a> display. Learning how to add text, images, 
-								and interactive elements (listening for touch event callbacks), by understanding the Nextion Editor. 
-                                As well as a method of communicating with it over two-pin serial.</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Nextion</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>18/06/2019<span>]</span> Power Indicator based on PWR down delay<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Building a solution that detects and indicates upon a certain pin state that is held for an amount of time. Power cycling the device. If this process is called too many times within a set period of time, 
-								disconnect the device, and await manual reset.</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Hive Industries</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>15/06/2019<span>]</span> M3U Creator<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Learning about the <a class="web-link" target="_blank" href="https://pypi.org/project/requests/">requests</a> library to build a small Python program that "scrapes" 
-								the title names from a youtube music playlist, attempting to match against filenames within a local directory. Building up an M3U playlist file following the same order as the youtube playlist</p>
-                            <span>Python</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>04/05/2019<span>]</span> ATtiny Port manipulation<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>To perform faster operations as well as save on memory. I began learning about Port manipulation, as well as the bit-math and registers involved to control functions of the chip</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>11/04/2019<span>]</span> R/Ws to EEPROM<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Teaching myself how to read and write small amounts of data from ATtiny EEPROM</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span> Char display calculator<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Calc.jpg">
-                            <img src="images/Calc1.jpg">
-
-                            <p>Using way too many pushbuttons, I built a program for the Arduino that allows you to cycle through the values 0-9 to enter a basic calculation. After confirming the first digit, operator,
-                                and then the second value. With the result displayed on the 16x2 char display</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span> Fading through multiple LEDs<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-							<img src="images/PushFade.gif">
-
-                            <p>Applying my knowledge of mapping one range to another, I built a small program to fade through a sequence of LEDs while holding down a single pushbutton. Changing direction on release.</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span><b> Seven-segment display</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Segment.gif">
-							
-                            <p>Understanding the logic behind <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexing</a>, drawing numbers 0-9 to a seven-segment display, controlled by an Arduino Uno</p>
-                            <span>C</span>
-                            <span>Arduino</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span> Fading LEDs using the ATtiny<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Learning how to access data registers of the ATtiny45, and revisiting binary math to combine the bit data of two registers to form a 10-bit reading of analogue input, to fade an LED</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span> ADC with the ATtiny<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-
-                            <p>Reading 8-bit AVR datasheets to learn how the tiny interprets analogue inputs, and how to program an integrated circuit to perform digital read/writes</p>
-                            <span>C</span>
-                            <span>AVR</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>16/12/2018<span>]</span><b> Text-based Scrabble</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Scrabble.jpg">
-                            <img src="images/Scrabble1.PNG">
-                            <p>An ASCII recreation of the board game Scrabble developed for my <a class="web-link" target="_blank" href="https://github.com/Luuccc/PythonScrabble">A-Level Computer Science coursework</a>. Including Premium scoring cells,
-                                Horizontal and vertical placement, Blank tiles, A dictionary validation check around the letter(s) placement, Multi-word scoring, and more.
-                                Also thanking my incredible teacher, Mr May for fuelling my interest in computing</p>
-                            <span>Python</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>08/10/2018<span>]</span><b> Digital Illustration</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Rubix.png">
-                            <img src="images/Cat.png">
-                            <img src="images/Planets.jpg">
-                            <img src="images/Neon.jpg">
-                            <img src="images/Arctic.jpg">
-                            <img src="images/Z.jpg">
-                            <img src="images/Glasses.jpg">
-
-                            <p>As well as studying Computer Science, and Physics, I also studied Digital Illustration during my A-Levels. Which involved lots of short studies into the styles of a range of artists which we could interpret, and
-								expand upon in our ways, some of which you can see above. Many thanks to my wonderful teacher, Mr Eyre</p>
-                            <span>Artwork</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>22/07/2018<span>]</span><b> Bomb Run game</b><i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/HR.png">
-                            <img src="images/HR1.png">
-                            <img src="images/HR2.png">
-                            <img src="images/HR3.png">
-                            <img src="images/HR4.gif">
-                            <img src="images/HR5.gif">
-
-                            <p>For my second mobile game, I wanted to add some more features. This included the addition of multiple "abilities", where a random ability is activated when you collide with a mystery box.
-                                Also, some basic character customization and upgrades, allowing a player to increase the length of time that each ability lasts, and change their colour.</br></br>As I haven't kept
-                                the game up-to-date, it has been removed due to its outdated usage of Ads. I also provided an
-                                APK version of it for a period of time, but I also feel it is too outdated now</p>
-                            <span>C#</span>
-                            <span>Unity</span>
-                            <span>Aseprite</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>22/04/2018<span>]</span> Sweep Driveby game<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/BR.png">
-                            <img src="images/BR1.png">
-                            <img src="images/BR2.png">
-
-                            <p>In my first released game for Android, I designed and programmed Sweep Driveby. The aim is to swipe the junk off the road, that the vehicles continue to dump off. This earns you points, with bonus
-                                points for swiping junk into the hoops! The smaller the hoop the more bonus points you will receive. The game is lost if a car collides with a piece of junk.</br></br>As I haven't kept
-                                the game up-to-date with the latest Android Play Store policies, it has been removed due to its outdated usage of Ads (and everything else). For a short period of time, I provided an
-                                APK version of it, but I feel it is too outdated now (although some site probably still has an APK of it, but I wouldn't trust it).</p>
-                            <span>C#</span>
-                            <span>Unity</span>
-                            <span>Blender</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-                    <div class="entry">
-                        <button type="button" onClick="ToggleDesc(this)"><span>[</span>07/04/2018<span>]</span> Autocomplete UnityCS<i class="fas fa-caret-down"></i></button>
-                        <div class="entry-drop">
-                            <img src="images/Autocomplete.gif">
-
-                            <p>Built an autocomplete package for the <a class="web-link" target="_blank" href="https://atom.io/">Atom editor</a>, that integrates the majority of elements from the 
-								<a class="web-link" target="_blank" href="https://docs.unity3d.com/ScriptReference/">Unity Scripting API</a>. 
-								Including reference links to the relevant Unity Scripting Reference page, through the [More] redirect. </br></br>
-								As I haven't kept this project up-to-date, it will not include the latest reference entries, as the entries were pulled using a web scraper I built in Python, at the time of creation</p>
-                            <span>Atom</span>
-                            <span>Python</span>
-                            <span>Myself</span>
-                        </div>
-                    </div>
-
-                </div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2022<span>]</span> Circuit diagrams<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Searching for schematic designer software I stumbled across <a target="_blank" class="web-link" href="https://diptrace.com/">DipTrace</a>, 
+							a very useful free tool. As I've recently been wanting to improve 
+							my understanding of circuits to create better layouts of my own as well as 
+							interpret others.</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/07/2022<span>]</span> Temporary printer repairs<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Printer.jpg">
+
+						<p>I offered to take a look at a printer that wasn't functioning. Spending a few hours for 
+							a couple of weeks trying what I could to get this thing working, with varying 
+							degrees of success...<br><br>
+							I managed to get it working for a very short period of time after cleaning it, 
+							disconnecting the faulty output tray sensor, and playing a bit of Simon Says 
+							with the buttons to reset and modify its settings. Although, I did eventually 
+							have to give up on it.</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/06/2022<span>]</span> <b>ESP32</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video  loop muted playsinline>
+							<source src="images/ESP32.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Asked to learn as much as I could about the <a target="_blank" class="web-link" href="https://www.espressif.com/en/products/socs/esp32">ESP32 from Espressif</a>, 
+							I began my humble beginnings by grabbing and displaying the device's 
+							MAC address!<br><br>
+							I then began learning how to achieve two-way communication via ESP-NOW, sending a 
+							data payload over WiFi to a hardcoded peer's address, that is received and verified through 
+							callbacks.<br><br>
+							Moving onto a one-to-many network, with a single transmitter sending its 
+							data (on button input) to the registered remote peers that relay the received data 
+							to a serial output<br><br>
+							With the requirement to draw low current, I looked into the "deep sleep mode", 
+							which powers down a large portion of the module's functionality, but requires the 
+							usage of the RTC IOs, or timers to wake the device from this state.<br><br>
+							As well as lots of testing, and figuring out how to fetch RSSI values, I 
+							improved my understanding of I2C, which had a small learning curve with the ESP</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2022<span>]</span> <b>MPU6050 Accelerometer and Gyroscope</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video  loop muted playsinline>
+							<source src="images/MPU6050.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>I was simply requested to make this module function as a sort-of mouse pointer. 
+							With no prior knowledge about these types of sensors, I began learning 
+							how they work, specifically how to pull raw axis data from its registers, 
+							after setting the configuration and resolution bits (and quite a bit of 
+							troubleshooting).<br><br>
+							After getting somewhat meaningful readings after normalizing the data, 
+							I read the data serially from the chip using an Arduino Micro (HID compatible). 
+							Translating the data into mouse positions to be used to control the mouse of 
+							a computer.</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/03/2022<span>]</span> Revisiting the electronic fuse<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Previously I was asked to program a chip with a relatively simple but essential 
+							function; to detect and manage a power line, performing short tests to prevent 
+							components from being damaged. But this updated version needed to manage multiple power 
+							lines simultaneously.</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/02/2022<span>]</span> Mobile NoteTaking<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/PersonalTerminal.jpg">
+
+						<p>I wanted to be able to use my NoteTaking desktop console application on my phone 
+							when I didn't have access to my desktop. So I began looking for methods of 
+							drawing a console interface within Unity, which (with the route I took) was 
+							more challenging than I thought. With the scrolling, text-wrapping, responses to 
+							text input, and other minor things.<br><br>
+							After the usual trial and error, I created a sort-of terminal-style GUI, ready 
+							to copy most of the functionality from the desktop version. Except for the user 
+							input and file saving, which needed changes to work on Android.</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/01/2022<span>]</span> <b>Machine Learning</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/Neuralish.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Wanting to understand some of the entry-level machine learning concepts, 
+							I decided to recreate a project I had seen created with <a target="_blank" class="web-link" href="https://unity.com/">Unity</a>. 
+							My goal was to create a learning algorithm that would result in AI agents 
+							reaching a location with no exact knowledge of the destination (only their 
+							final distance from it) and improving over time.<br><br>
+							The process involved placing the agents on the scene with a maximum number of 
+							steps they can take in any direction before they "die". After each agent has 
+							taken all of its steps, it's given a fitness value calculated based on its 
+							distance from the target location or, if reached, based on the number of steps 
+							taken.<br><br>
+							I then take the best-performing agents by fitness value (coloured blue) and 
+							place them in the next generation with slight mutations to their movement 
+							pattern, which may be for the better or worse.<br><br>
+							Looking at my example above, you can see that there is a point where you reach 
+							diminishing returns, with tens of generations going by and only improving by 
+							a step or two. It came down to fine adjustments to the fitness algorithm, where 
+							I achieved a minimum of 65 steps to reach the target over 175 generations, with 
+							the actual minimum being about 60.<br><br>
+							Even though it was just a surface level look into this field. I enjoyed it as a 
+							small learning project.</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>25/01/2022<span>]</span> Digi XBee<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I was requested to spend some time researching and working with the XBee modules 
+							from <a target="_blank" class="web-link" href="https://www.digi.com/">Digi</a>. 
+							Beginning by teaching myself the basics of the XCTU application used 
+							to interface and configure the RF modules.<br><br>
+							For each unit, there was a bit of setup beyond assigning them the correct network 
+							ID. Such as ensuring that each device had been given a suitable role within the 
+							network (as a Coordinator, Router, or End Point), was in the correct operating 
+							mode, and other minor changes.<br><br>
+							After manually setting up each module, it was possible to demonstrate their 
+							interconnectivity with the communication of data frames, which I could then 
+							verify serially with C/C++! I also learnt that it was possible to configure 
+							modules remotely if the unit was in the correct mode, but this was good enough 
+							to test the units.
+						</p>
+						<span>C/C++</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/01/2022<span>]</span> Reaction game for Williams Racing<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/ReactionRacingGame.gif">
+
+						<p>Strangely enough, around the same time that I was working on my small shape game, 
+							I was asked for my "game creation skills" to produce a reaction game for 
+							<a target="_blank" class="web-link" href="https://www.williamsf1.com/">Williams 
+							Racing</a>, which can be seen above (but missing sound)<br><br>
+							I worked with <a target="_blank" class="web-link" href="https://www.hiveindustries.com/">Hive Industries</a> 
+							and <a target="_blank" class="web-link" href="https://www.thisisfury.com/">Fury Design Agency</a> to use a real Formula One 
+							steering wheel. Which had been modified by Hive Industries and programmed by me 
+							to send keyboard presses serially to a computer that was running the reaction game that 
+							I created with Unity</p>
+						<span>C/C++</span>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Fury Design Agency</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>07/01/2022<span>]</span> Shape Fall<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/SFFeatureGraphic.jpg">
+						<video loop muted playsinline>
+							<source src="images/ShapeFall.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>With a simple idea in mind, I wanted to produce a small mobile game
+							where the aim is to match the falling polygon that you control to the holes it's heading
+							towards, endlessly, and more quickly.<br><br>
+							It can be found for free on the <a target="_blank" class="web-link" href="https://play.google.com/store/apps/details?id=com.LucHeaton.ShapeFall">Google Play Store</a></p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>30/12/2021<span>]</span><b> Grandstand Munchman repair</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Munchman1.jpg">
+						<img src="images/Munchman2.jpg">
+						<video loop muted playsinline>
+							<source src="images/Munchman.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>My dad's original Grandstand Munchman hasn't powered up for the last few 
+                            decades. Over the years, I've made small attempts to find the cause with no luck.<br><br>
+                            But every year, I have picked up new fragments of knowledge in troubleshooting 
+							electronics and was finally able to identify a single NPN transistor that wasn't meeting 
+							the datasheet's specification and needed replacement.<br><br>
+                            Finally bringing Munchman to life, once again</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/09/2021<span>]</span> Power Regulator<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I developed another performance-efficient realtime power analyzer for the tiny series.<br><br>
+                            Built to indicate so long as the sampled voltage level is within an acceptable range. 
+                            Otherwise, power cycling - However, if this occurs too many times, we enter a lockdown 
+                            mode, whereby the power to the device is disconnected, and a manual reset is required. 
+							With my knowledge of AVR registers, I was able to gather a higher-resolution analogue 
+							input by combining the values of two separate registers.</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/09/2021<span>]</span><b> Terminal Mastermind</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TM1.jpg">
+						<img src="images/TM2.jpg">
+						<img src="images/TM3.jpg">
+						<img src="images/TM4.jpg">
+						<img src="images/TMGame.jpg">
+						<video loop muted playsinline>
+							<source src="images/TerminalMastermind.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Wanting to build another Unity game for Android, I looked no further than the Fallout 
+							minigame that I had already made so many prototypes of in the past.<br><br>
+							To begin with, I started working on generating the hexadecimal row headers and "play 
+							area". Followed, by implementing the highlighting and grouping methods. As each 
+							symbol character needed to be accessed by a uniquely addressable "cell". <br><br>
+							After finalizing my method of grouping cells, I could highlight individual row 
+							headers on mouseover/touch for both desktop and mobile platforms. I had some fun 
+							with placing the generated "passwords" evenly within the play area - where the 
+							random amount of words had to fit within the region, without touching, and of 
+							varying lengths depending on difficulty. Also attempting to limit the number of 
+							wrapped words.<br><br>
+							I thoroughly enjoyed designing the logic and programming this, but the process of 
+							implementing Ads, Google Play Service support, GP Leaderboards, and Unity 
+							In-App-Purchases, really slowed things down. But, I'm happy to say that it's finally 
+							released and can be found on the <a target="_blank" class="web-link" href="https://play.google.com/store/apps/details?id=com.LucHeaton.TerminalMastermind">Google Play Store</a> for free!</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/09/2021<span>]</span> Advent of Code<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/AdventOfCode.JPG">
+
+						<p>Wanting to improve my programming and problem-solving, I began working through a 
+							couple days of the <a target="_blank" class="web-link" href="https://adventofcode.com/">Advent of Code</a>. 
+							Each day, you are given two interesting problems to solve (shown by the stars on the 
+							right) of varying difficulty.<br><br> 
+							With puzzles ranging from MD5 hashing problems to "quantum entanglement". I've only 
+							completed 12 tasks (in both C and C#), but I'll probably return for more when I feel 
+							like an extra challenge</p>
+						<span>C/C++</span>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/09/2021<span>]</span><b> Pixel Dailies</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434832169889828864" >
+							<img src="images/PixelDailies1.png">
+						</a>
+						<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434959425618460675" >
+							<img src="images/PixelDailies2.png">
+						</a>
+						<a target="_blank" href="https://twitter.com/HeatonLuc/status/1434143541048094721" >
+							<img src="images/PixelDailies3.png">
+						</a>
+
+						<p>With the extra time I've had I took part in a couple of <a target="_blank" class="web-link" href="https://twitter.com/Pixel_Dailies">@Pixel_Dailies</a>. 
+							An interesting Twitter account dedicated to posting a topic or subject for people to create Pixelart of or about, such as 
+							<a target="_blank" class="web-link" href="https://twitter.com/HeatonLuc/status/1434959425618460675">#snowboarding</a> or 
+							<a target="_blank" class="web-link" href="https://twitter.com/HeatonLuc/status/1434143541048094721">#floral</a></p>
+						<span>Artwork</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/08/2021<span>]</span> Fiverr<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/FiverrCode.jpg">
+						<img src="images/FiverrTagging.jpg">
+						<img src="images/FiverrBot.jpg">
+
+						<p>Looking for some extra work, I ended up posting some freelancing offers on Fiverr. 
+							Offering to build people Discord bots, fix their poorly tagged audio files, or 
+							assist in writing C# for people. Sadly, not much luck</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>12/06/2021<span>]</span><b> Mobile Memory game</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/QuestionTester.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Aiming to improve my French I built this Android application. Allowing me to store 
+							translations and test myself against statements I add to the app over time.
+							Although I've just illustrated this functionality with some math statements.<br><br>
+							After building it though, I realized what I had built was a flashcard app.. 
+							nothing too special</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/04/2021<span>]</span><b> Perlin noise</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/PerlinGen.gif">
+						<img src="images/PerlinMaps.gif">
+						<img src="images/Minimap1.png">
+						<img src="images/Minimap2.png">
+
+						<p>As a small side project, I wanted to create a nice interactive visual to illustrate 
+                            different functions layered over Perlin noise.<br><br>
+                            Starting with a small 2D Perlin noise sample, I append my functions, including an
+                            "upscaler" and a "limiter", finally applying colour to the sample using a Custom 
+                            gradient editor script, which I can't take credit for.<br><br>
+                            I really liked some of the "maps" created with this generator and decided to build a 
+                            small treasure map game, where you have to use a tiny section of the map to find the 
+                            correct location on the full map</p></p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/04/2021<span>]</span><b> TLC59281</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TLC59281.gif">
+
+						<p>I was asked to produce a program that sent commands via SPI to a TLC59281
+                            (an LED Driver) to control four seven-segment displays. This involved building 
+                            32-bit payloads that specify which segments to illuminate, the colour of the LEDs, 
+                            and the symbol bits. As well as the serial transfer method with the correct timing 
+                            to send data to the driver chip<br><br>
+                            Continuing this, I realized it would instead be useful to refactor my code and build 
+                            a C++ library. Allowing anyone to interface with this display without needing to 
+                            understand the payload structure. I also extended the functionality of the library by 
+                            adding various helper methods, allowing a user to perform extra functions with the display.</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/04/2021<span>]</span> iPhone 4S Batteries<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Batt.jpg">
+
+						<p>Despite my parent's phones being very out-of-date for the time, they were still good
+							enough for them. Sadly though, the batteries within were no longer holding charge. 
+							So I opened them up and replaced the two of them with new parts</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>07/04/2021<span>]</span> Impact drill repair<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Drill.jpg">
+						<img src="images/Drill1.jpg">
+
+						<p>After years of use, my father's Bosch drill showed signs of failure, only 
+							functioning when held in a certain way. Until recently, it finally gave up.<br><br>
+							Opening it up, I noticed a small connection that had broken. I concluded it was from 
+							the years of withstanding high currents (not finding any other causes). Re-soldering 
+							the connection was good enough for a few months before it failed again. Sadly I 
+							didn't know enough about electronics to find the true fault.</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/04/2021<span>]</span> Xamarin Android<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/StackViewAndroid.gif">
+
+						<p>Looking for other methods of creating mobile applications without the usage of Java, 
+							I looked into Xamarin. Learning that it had a similar flow to Android Studio but 
+							allowed for the usage of C# on top.<br><br>
+							With this, I produced a small Stack Overflow post viewer for mobile, grabbing 
+							the latest posts from the RSS feed given a tag and learning a little more about 
+							asynchronous calls</p>
+						<span>Xamarin</span>
+						<span>XML</span>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/03/2021<span>]</span> Small online courses<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Wanting a refresher in certain aspects of C and C#, I completed two short online 
+							courses. The most significant being a greater understanding of pointers and memory 
+							management within C.</p>
+						<span>C</span>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>21/01/2021<span>]</span><b> Cube Count game</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/CubeCount.png">
+						<img src="images/CubeCountProg.gif">
+						<video loop muted playsinline>
+							<source src="images/CubeCountGameplay.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>After working with Android Studio, I wanted to return to something I understood 
+							well and wanted to build a cleaner looking application than my previous attempts.<br><br>
+							With a simple counting game in mind, I started creating assets and the basic game loop. 
+							After quite a few more steps, creating graphics, the ever-growing codebase, and 
+							gaining a better understanding of scaling UI for multiple resolutions (shown above)<br><br>
+							I produced Cube Count a quick and minimalist counting game, available on the Google 
+							Play Store! That can be found on the <a class="web-link" target="_blank" href="https://play.google.com/store/apps/details?id=com.LucHeaton.CubeCount">Google Play Store</a></p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/01/2021<span>]</span> Android Studio Revisit<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/AndroidStudio.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Wanting to bring some older ideas to life, I began learning about the Android 
+							Studio workflow, making a few prototype apps, but nothing too noteworthy.<br><br>
+							Other than a small working start to the Binary Utility for Android, a Higher/Lower game, 
+							and some async testing.</p>
+						<span>Java</span>
+						<span>XML</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/11/2020<span>]</span> Connected lines<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Lines.gif">
+
+						<p>Continuing my enjoyment in creating visual pseudorandom generators. I put together 
+							a small connections generator using Extended ASCII, which I thought produced nice 
+							looking geometry, generating for any width or height. It worked by matching against 
+							the surrounding symbols, selecting a "connecting" character from a dictionary, 
+							ensuring every character is correctly linked vertically</p>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span><b> Text word wrapping</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/WordWrap.gif">
+
+						<p>To allow my Notifier Utility to display text clearly, I produced a small 
+							word-wrapping utility. After entering a large amount of text, it will simply 
+							create a newline before a given width is reached, without cutting words</p>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/11/2020<span>]</span><b> Notifier Utility</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Notifier.gif">
+						<img src="images/NotifierOld.gif">
+
+						<p>At first, I wanted to produce a graphic events system that notifies you with 
+							given data at a given interval.<br><br> 
+							Entering a small summary for each "notification", defining its time / datetime / 
+							interval through a pop-up menu. But after realizing how many new things I needed 
+							to understand, I stopped with it. Instead, building a smaller console application 
+							version, making use of BackgroundWorkers to manage the intervals of each defined 
+							entry. To retain this data after closing the application, I serialize it into a 
+							JSON file. Deserializing it on loading of the application.<br><br>
+							When it becomes time to notify an event, the given summary is simply displayed</p>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>02/11/2020<span>]</span><b> Binary Utility</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Utility1.gif">
+						<img src="images/Utility2.gif">
+
+						<p>I wanted to produce a utility that combined all of the bitwise functions that 
+							I usually have to find online. Including bitwise maths, converting between 
+							decimal, hexadecimal, and binary automatically (could be better), and drawing 
+							an 8x8 bitmap from entered byte data. Or by drawing on the canvas directly with 
+							the mouse (left-click to draw, right-click to erase)</p>
+						<span>Winforms</span>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>26/10/2020<span>]</span> SSD1306<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/SSD1306.jpg">
+
+						<p>I designed and coded a driver chip for the SSD1306 128x32 OLED display, 
+							working over SPI. Taking in my defined commands over serial, then converting 
+							them to a set of byte commands that the display chip can interpret, 
+							and draw to the screen.</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/10/2020<span>]</span><b> First revision of my new site</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/OldSite.gif">
+
+						<p>Disliking the look of my previous WordPress website, I wanted to build something 
+							better and more my style.<br><br>
+							After spending quite some time revising my web development skills. I had almost 
+							finished building this new website from complete scratch (and it wasn't half 
+							bad!). Just requiring more styling and population, although I'm sure a lot of 
+							cleaning up could be done</p>
+						<span>HTML & CSS</span>
+						<span>Js</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/10/2020<span>]</span> Reviving my Discord bot<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Looking through my older projects, I tried running my old discord bots once 
+							again. But as expected, the original Python discord library that my bot was 
+							built with was now outdated. As well as the problems with the JSON save files. 
+							Although I did temporarily fix some methods though just to see it work once again.</p>
+						<span>Python</span>
+						<span>Json</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/10/2020<span>]</span> Ebook name formatting<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Similarly to my music file metadata issues, when downloading ebooks the names are 
+							rarely formatted correctly. So I built another small utility to speed up the 
+							process of formatting title names for select mobile ebook readers</p>
+						<span>Python</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>23/09/2020<span>]</span> Nintendo DS Lite power switch<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/DS.jpg">
+
+						<p>A small power switch repair for my cousin's Nintendo DS Lite, as the power 
+							switch mechanism had been damaged and was no-longer making contact with the 
+							switch. So I replaced it with a secondhand part.</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/09/2020<span>]</span> Battery Tester<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Charlieplex.jpg">
+						<img src="images/Charlieplex1.jpg">
+
+						<p>Asked to design and produce the code for a microcontroller to indicate 
+                            the charge status of a battery through Charlieplexed LEDs. Also, instead of 
+                            recreating the Charlieplexed circuit once again on a breadboard for testing, I 
+                            finally drew out and built a permanent perfboard version of my own.</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/09/2020<span>]</span><b> StackOverflow feed app</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Stack.gif">
+						<img src="images/Stack.jpg">
+
+						<p>While trying to be somewhat helpful on StackOverflow, I didn't want to sit on 
+                            the webpage refreshing every so often, looking for questions I might be 
+                            able to answer.<br><br>
+                            So I developed a small Winforms application that displayed the latest questions 
+                            under a given tag as links to the web post. Updating every five minutes, 
+                            grabbing entries from the RSS feed.
+                            I may build upon this with extra info such as views, votes, as well as 
+                            other features like page navigation.</p>
+						<span>Winforms</span>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>21/08/2020<span>]</span> Door Counter<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>With the epidemic on everyone's mind, I was asked to build a program for 
+							an AVR microcontroller to pull in sensor data to determine the number of people 
+							within a building. Then sending that data through a UART interface to be written 
+							to a display. Letting customers know how many people are allowed to enter</p>
+						<span>C/C++</span>
+						<span>AVR</span>
+						<span>Arduino</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>09/08/2020<span>]</span> Comms over USB to Arduino<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>A small note to remind me that I had created a project to learn how to 
+							send serial data over USB, which may be useful for future projects</p>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2020<span>]</span><b> Steam library sorting</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/SteamLib.JPG">
+
+						<p>Wanting to download some older games, but being limited to my internet connection, 
+							I looked to sort through my uninstalled games by file size.<br><br> 
+							Sadly though, the Steam library doesn't support the filtering of uninstalled 
+							games. So I pulled the XML data of my library from the Steam Web API, 
+							deserialized it, and applied it to a CSV file using C#. Then preferring to see the 
+							cover art rather than just the game titles as text, I also learnt how to create macros 
+							within Excel to insert images in place of image URLs.</p>
+						<span>C#</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/07/2020<span>]</span> Mastermind game<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Being told how similar the board game Mastermind is to Fallout's terminal minigame. 
+							I decided to recreate a Visual Studio console version to try it out. "Foreshadowing"</p>
+						<span>C#</span>
+						<span>Visual Studio</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/07/2020<span>]</span> Terminal Access Minigame<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TA.JPG">
+
+						<p>With the terrible internet connection I had, I decided to entertain myself by 
+							recreating the terminal hacking minigame from Fallout 4 for my phone. I ended 
+							up building a version that took most of the visuals, but scored slightly 
+							differently from the original game (which was a bad idea), scoring two
+							points for the guessed word containing a correct letter in the correct 
+							position, and one point for a shared letter, but not in the right spot.<br><br>
+							In short, it was more confusing and less intuitive than the original, but I 
+							enjoyed making and playing it</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2020<span>]</span> Thaumcraft solver<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Thaum.jpg">
+
+						<p>While playing a little bit of some old school Modded Minecraft, you encounter a 
+							mod named <a class="web-link" target="_blank" href="https://ftb.fandom.com/wiki/Thaumcraft_6">Thaumcraft</a>, 
+							where a main mechanic is linking "Aspects" which can only connect to a specific 
+							set of other Aspects, to progress through the mod. So naturally, I built a 
+							small application that finds and lists these connections for you, from a given
+							starting to an ending Aspect. By traversing through a dictionary of defined
+							Aspects and their connections</p>
+						<span>C#</span>
+						<span>Visual Studio</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>11/05/2020<span>]</span><b> Desktop VU Meter</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/DesktopVU.JPG">
+						<img src="images/DesktopVU1.JPG">
+
+						<p>Produced a working prototype of a desktop VU Meter with Winforms using <a class="web-link" target="_blank" href="https://github.com/naudio/NAudio">NAudio</a>. 
+							Monitoring multiple devices (current limit of 5) simultaneously, scaling the 
+							program window with each device added, with options to add / remove monitors, 
+							and refresh the list of audio devices.<br><br>
+							The source code can be found on my <a class="web-link" target="_blank" href="https://github.com/Luuccc/DesktopVU">Github</a></p>
+						<span>C#</span>
+						<span>Winforms</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2020<span>]</span><b> NoteTaking app</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Note.JPG">
+						<img src="images/ListNotes.jpg">
+
+						<p>I thought it might be a nice idea to create a diary console application, taking in 
+							given notes (some text, datetime, and a bit of data), storing them within a JSON 
+							file, to then be deserialized, formatted and displayed on-screen at a later date. 
+							With the option to display notes by a specific month / year / all, and  
+							executing the program at a set time every day through the Task Scheduler.</p>
+						<span>C#</span>
+						<span>Visual Studio</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>09/03/2020<span>]</span> ASCII heightmaps<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/OldGen.gif">
+
+						<p>While playing around with generating shapes based on surrounding cells, 
+							similar to <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>. 
+							I ended up building what I thought was an interesting pattern generator. Then 
+							decided to move it over to Javascript to embed within this site for a little while.</p>
+						<span>Python</span>
+						<span>Js</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/03/2020<span>]</span> Signal strength, displays, and interrupts<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TFTDisplay.jpg">
+
+						<p>I programmed an ATtiny with the function to interrupt another chip, requesting 
+							for it's signal strength over SPI. Then drawing the returned value to a TFT 
+							display</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>29/02/2020<span>]</span> Shutdown Recovery<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I was asked to program an IC that implemented a recovery system. 
+							That will continuously monitor the state of a PWR line affected by an 
+							external sleep function. If certain conditions aren't met, an LED will 
+							indicate this event, and the device is restarted. Otherwise, to 
+							indicate the device is functioning correctly, the LED will pulse, creating a 
+							heartbeat effect</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Electronics</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/02/2020<span>]</span> Looking into Companion<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Suggested as an extra feature it would be interesting to interface 
+							with a device from a local <a class="web-link" target="_blank" href="https://www.elgato.com/en/stream-deck">StreamDeck</a>. 
+							So I began looking into the Companion app, as well as the possibility of 
+							adding modules. Although after some research it sadly seemed out of reach.</p>
+						<span>Javascript</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>22/02/2020<span>]</span> Drawing to a TFT display<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Needing to display information gathered from the data inputs of a microcontroller 
+							that I was also managing, I improved my understanding of SPI interfacing to 
+							communicate with the display.<br><br>
+							Later I'd found myself troubleshooting the incorrectly displayed colours. 
+							Where I also learnt that this particular TFT display relies on the RGB565 
+							byte format rather than standard RGB888</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>20/02/2020<span>]</span> NodeJs UDP<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I began looking into the UDP protocol and learning how to program with 
+							<a class="web-link" target="_blank" href="https://nodejs.org/">NodeJs</a>, 
+							so I could send and receive small amounts of data between local and 
+							remote servers, and confirm data packets with 
+							<a class="web-link" target="_blank" href="https://www.wireshark.org/">Wireshark</a></p>
+						<span>NodeJs</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>23/01/2020<span>]</span> MC7 prototype pages<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Hive Industries had an upcoming exhibition, which I was asked to design and 
+							produce the pages that would be the base for the MC7 graphical user interface. 
+							After many iterations, a preferred style and layout for an early version of 
+							the MC7 display was chosen, ready for its first showing</p>
+						<span>Artwork</span>
+						<span>Nextion</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>31/12/2019<span>]</span> More web scraping<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Considering building a website for my father, I began re-learning about web 
+							scraping with the <a class="web-link" target="_blank" href="https://pypi.org/project/beautifulsoup4/">BeautifulSoup</a> 
+							library. Allowing me to grab entries from his current site, to populate a CSV 
+							(spreadsheet) file with data and images of his work</p>
+						<span>Python</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>23/11/2019<span>]</span> Rotary encoders<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I can't exactly remember why. But I ended up learning some of the fundamentals 
+							of interpreting the rotation of an encoder. Such as the direction of rotation 
+							or the magnitude of rotation</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/10/2019<span>]</span> Quick look at Ultrasound<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Wanting to measure short distances or detect motion, I decided to have a look 
+							into the HC-SR04 module and learn a little about Ultrasound</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>26/09/2019<span>]</span><b> Building a Discord bot</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/RaspBot.jpg">
+						<img src="images/DBot.jpg">
+
+						<p>I taught myself how to build a bot for the messaging/VoIP application <a class="web-link" target="_blank" href="https://discord.com/">Discord</a> 
+							and switching between <a class="web-link" target="_blank" href="https://discordpy.readthedocs.io/en/stable/">discord.py</a> and <a class="web-link" target="_blank" href="https://discord.js.org/#/">discord.js</a>. 
+							That would allow me to add some extra features to the server that my friends 
+							and I share.<br><br>
+							It only responds to defined commands, indicated by a forward-slash command 
+							prefix, followed by a command such as "diceroll", which will return a 
+							number between one and six. Adding a level of progression to the bot, I 
+							implemented a load/save system, storing data more permanently within JSON files. 
+							Doing this allowed me to create and keep track of a virtual currency I created, 
+							which led to the addition of a roulette game, coin flip, and currency leaderboard.<br><br> 
+							As well as a case-opening clone from the game CS:GO, which allows a player to 
+							"open a case" using my virtual currency, storing the unboxed item of varying 
+							quality (indicated by colouring with text syntax) within their "inventory" 
+							(another JSON file). Which could then be sold or kept.<br><br>
+							For this bot to work however, it relied on my computer running. So naturally, 
+							I learnt how to program a Raspberry PI and then moved the bot program onto 
+							it, which I could then leave on nearly 24/7.</p>
+						<span>Python</span>
+						<span>RaspberryPI</span>
+						<span>Json</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>26/09/2019<span>]</span><b> Colonists minigame</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/Castle.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/Castle1.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/Castle2.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/Castle3.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/Castle4.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Without too much of a plan in mind I wanted to build a colony game where you 
+							manage little colonists on your phone.<br><br>
+							You're able to select a member from your faction (blue), then click a position 
+							for them to move towards or select a resource for them to gather. If two members 
+							from opposing factions come within the vision range, the two colonists will 
+							"battle" (currently bumping each other to the death). I'd like to revisit and 
+							expand on this idea one day..</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>MagicaVoxel</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/08/2019<span>]</span> The nRF24L01<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>My first introduction to transmitting data over radio involved learning how to 
+							send strings of data from one nRF24L01 module to another, with the received 
+							message being drawn to my 16x2 char display from before</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>29/07/2019<span>]</span> Mapping analog input across LEDs<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/POTFade.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>To apply my knowledge of the tiny series AVR chip, I used a potentiometer as 
+                            the input device and mapped the read 10-bit analogue voltage level across 
+                            multiple LEDs, including small dead zones between each LED range.<br><br>
+                            As the potentiometer is turned, the brightness of the first LED increases 
+                            until reaching full brightness, and then the next LED in sequence will begin 
+                            to light up (after passing the dead zone) until max, and so on</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>09/07/2019<span>]</span> AutoTagger<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/MetaTags.jpg">
+
+						<p>It's common that the track name is correctly listed within the filename of a song 
+							but not within the file's metadata. I built a Python script to fix this.<br><br>
+							It works by cycling through audio files within a local directory collecting
+							artist names, comparing them against an ever-growing text file of artists. 
+							Correctly formatting them (as often they have slight differences which 
+							break media player albums), this is then applied to the ID3 tags along with the 
+							song name for clear track formatting when using media players</p>
+						<span>Python</span>
+						<span>Json</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2019<span>]</span> Power regulators<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Once again, I needed to sample and monitor line-in, and if certain 
+							conditions weren't met, a safe power cycle was carried out,
+							preventing damage to the device, and indicated by LEDs.<br><br>
+							Around a similar time, I developed another solution to power cycle some number 
+							of times, depending on a pin state. If the device doesn't "stabilize" after the 
+							current inrush, no further checks are made, and the device is disconnected</p>
+						<span>C/C++</span>
+						<span>AVR</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/07/2019<span>]</span><b> CIO2 VU Meter</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/CIO2.jpg">
+
+						<p>I designed and programmed the functionality of the chip that manages the VU Meter 
+							on the CiO² from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. 
+							Representing a dB value from a 10-bit analogue signal and reference, displayed 
+							through <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexed</a> LEDs.</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>18/06/2019<span>]</span><b> Nextion touchscreen displays</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Countdown.JPG">
+
+						<p>For the next week or two, I taught myself about the <a class="web-link" target="_blank" href="https://nextion.tech/">Nextion</a> 
+							display. Learning how to add text, images, and interactive elements by 
+							understanding the Nextion Editor software. As well as communicating with the 
+							display over a two-pin serial.<br><br>
+							Using what I had learned, I drew up a keypad allowing the user to input a 
+							calculation through the display, which sent serial data to an Uno to process
+							the input, returning the correct result to the display.<br><br>
+							I also produced a microwave-style numeric input system, shifting digits ahead and removing the digit overflow.<br><br>
+							Lastly creating a combination of features, building upon an older product from 
+							<a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. 
+							Incorporating the digit shift module, a timer input, as well as numerous page 
+							designs for the Nextion</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Nextion</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>18/06/2019<span>]</span> Power line Indicator<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Built a solution that analyses line-in, indicating when certain conditions 
+							are met and power cycling the device. If these conditions occur
+							frequently within some time frame, disconnect the device, and 
+							await manual reset.</p>
+						<span>C/C++</span>
+						<span>AVR</span>
+						<span>Hive Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/06/2019<span>]</span> M3U Playlist Creator<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Learning about the <a class="web-link" target="_blank" href="https://pypi.org/project/requests/">requests</a> 
+							library to build a Python program that pulls the title names from a youtube 
+							music playlist, matching against filenames within a local directory. Building 
+							up an M3U playlist file in the same order as the youtube playlist</p>
+						<span>Python</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>11/04/2019<span>]</span> ATtiny Port manipulation and EEPROM<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Wanting to perform operations more frequently as well as save on memory. I began 
+							learning about "Port manipulation", as well as more bit-math and registers 
+							involved in controlling the functions of this series of chips<br><br>
+							Around the same time, I also taught myself about EEPROM (non-volatile 
+							memory), for retaining small amounts of data after power down</p>
+						
+						<span>C/C++</span>
+						<span>AVR</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/03/2019<span>]</span> Char display calculator<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Calc.jpg">
+						<video loop muted playsinline>
+							<source src="images/CharDisplayCalc.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Wanting to find a use for my 16x2 character display, I thought it'd be fun
+							to build a single-digit calculator using too many push buttons. It worked
+							by allowing you to cycle through values 0-9 (with the unlabeled pushbutton) 
+							for the first digit. After confirming the first digit, do the same for the second,
+							then select the operator (+,-,/,x), completing the calculation and appending
+							the result to the end</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>20/02/2019<span>]</span> Multi function, single control LED fading<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/ButtonFade.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>Applying my knowledge of range mapping, I built a program fading through a 
+							sequence of LEDs while holding down a single pushbutton, changing direction 
+							on re-press, and toggling state on a single press, retaining the previous state</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/01/2019<span>]</span><b> Seven-segment display</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video loop muted playsinline>
+							<source src="images/Segment.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/SmallSegment.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						
+						<p>Needing to control more LEDs with less pins, I learnt the logic behind <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexing</a>, 
+							which allowed me to illustrate numbers 0 through 9 with a seven-segment display, 
+							controlled by an Arduino Uno.<br><br>
+							I also applied wanted to see the result of fewer LEDs per segment...
+						</p>
+						<span>C/C++</span>
+						<span>Arduino</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>03/01/2019<span>]</span> ATtiny registers<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<p>To begin my journey into the world of reading datasheets, I downloaded and started 
+							looking through the 8-bit AVR documentation. Quickly learning how the tiny series
+							handles analogue/digital IO after a small refresher of binary maths.<br><br>
+							To fade an LED from an analogue input involved addressing and accessing the IC's data 
+							registers, combining the bit data of two to get an input of 10-bit resolution.</p>
+						<span>C/C++</span>
+						<span>AVR</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/12/2018<span>]</span><b> Text-based Scrabble</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Scrabble.jpg">
+						<img src="images/Scrabble1.PNG">
+						<p>An ASCII recreation of the board game Scrabble developed for my 
+							<a class="web-link" target="_blank" href="https://github.com/Luuccc/PythonScrabble">A-Level Computer Science coursework</a>. 
+							Including Premium scoring cells, Horizontal and vertical placement, Blank tiles, 
+							A dictionary validation check around the letter(s) placement, Multi-word scoring, 
+							and more. Also thanking my incredible teacher, Mr May for fuelling my interest 
+							in computing</p>
+						<span>Python</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/10/2018<span>]</span><b> Digital Illustration</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Rubix.png">
+						<img src="images/Cat.png">
+						<img src="images/Planets.jpg">
+						<img src="images/Neon.jpg">
+						<img src="images/Arctic.jpg">
+						<img src="images/Z.jpg">
+						<img src="images/Glasses.jpg">
+
+						<p>As well as studying Computer Science, and Physics, I also studied 
+							Digital Illustration during my A-Levels. Which involved lots of short 
+							studies into the styles of a range of artists which we could interpret, and 
+							expand upon in our ways, some of which you can see above. Many thanks to my 
+							wonderful teacher, Mr Eyre</p>
+						<span>Artwork</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>22/07/2018<span>]</span><b> Bomb Run game</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/HR.png">
+						<img src="images/HR1.png">
+						<img src="images/HR2.png">
+						<img src="images/HR3.png">
+						<video loop muted playsinline>
+							<source src="images/HR4.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video loop muted playsinline>
+							<source src="images/HR5.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<p>For my second mobile game, I wanted to add some more features. This included the 
+							addition of multiple "abilities", where a random ability is activated when you 
+							collide with a mystery box. As well as some basic character customization and 
+							upgrades, allowing a player to increase the length of time that each ability 
+							lasts, and change their colour.<br><br>
+							As I haven't kept the game up-to-date, it has been removed due to its outdated 
+							usage of Ads. I also provided an APK version of it for a period of time, but 
+							I also feel it is too outdated now</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Aseprite</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>22/04/2018<span>]</span> Sweep Driveby game<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/BR.png">
+						<img src="images/BR1.png">
+						<img src="images/BR2.png">
+
+						<p>For my first released game for Android, I designed and programmed Sweep Driveby. 
+							The aim is to swipe the junk off the road, that the vehicles continue to dump off. 
+							This earns you points, with bonus points for swiping junk into the hoops! The 
+							smaller the hoop the more bonus points you will receive. The game is lost if a car 
+							collides with a piece of junk.<br><br>
+							As I haven't kept the game up-to-date with the latest Android Play Store policies, 
+							it has been removed due to its outdated usage of Ads (and everything else). For a 
+							short period of time, I provided an APK version of it, but I feel it is too outdated 
+							now (although some site probably still has an APK of it, but I wouldn't trust it).
+							</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Blender</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>07/04/2018<span>]</span><b> Autocomplete UnityCS</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Autocomplete.gif">
+
+						<p>I built an autocomplete package for the <a class="web-link" target="_blank" href="https://atom.io/">Atom editor</a>, 
+							that integrates the majority of elements from the 
+							<a class="web-link" target="_blank" href="https://docs.unity3d.com/ScriptReference/">Unity Scripting API</a> 
+							as autocomplete suggestions. Including reference links to the relevant Unity 
+							Scripting Reference page, through the [More] redirect.<br><br>
+							As I haven't kept this project up-to-date, it will not include the latest 
+							reference entries, as the entries were pulled using a web scraper that I 
+							built in Python, at the time of creation</p>
+						<span>Atom</span>
+						<span>Python</span>
+						<span>Myself</span>
+					</div>
+				</div>
+
             </section>
+			
             <footer>
-                <p>Designed and Built by Luc Heaton</p>
-                <a href="privacy-policy.html">Privacy policy</a>
+                <p style="color:#6aabe3;">Designed and built by Luc Heaton</p>
+				<a href="privacy-policy.html">Privacy policy</a>
             </footer>
         </div>
 

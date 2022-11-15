@@ -1,5 +1,8 @@
+* {
+	box-sizing: border-box; /*Includes padding and border in element's total width and height*/
+}
 a,p,h1,h2,h3,h4,li {
-    font-family: Roboto,Consolas,monospace;
+    font-family: Roboto, Consolas, monospace;
     color: #6aabe3;
     margin: 0;
     padding: 0;
@@ -10,66 +13,59 @@ a {
 body {
     background-color: #222223;
     margin: 0;
-    overflow: scroll;
 }
 header {
     z-index: 1;
     top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-	height: 3vw;
     position: sticky;
     box-shadow: 1vw 0.2vw 1vw #121212;
     background-color: #272728;
     text-align: center;
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: lighter;
-}
-header a {
-    /*For complete-ness*/
-    display: inline-block;
-	padding-top: 0.2vw;
 }
 .header-item:hover {
     color: #f97979;
 }
 .divider {
     color: #f97979;
-    font-size: 2vw;
+    font-size: 3vw;
     display: inline-block;
     pointer-events: none;
 }
 section {
-	/*Fixes hiding under navbar*/
-    padding-top: 4vw;
-    padding-bottom: 8vw;
+    padding-top: 4em; /*Fixes hiding under navbar*/
+    padding-bottom: 8em; /*Spacing for section jumping*/
     overflow: auto;
 }
 footer {
-    text-align: center;
-    padding-top: 20vw;
+	padding-top: 8vw; /*Section jumping*/
     padding-bottom: 1vw;
+	text-align: center;
 }
 footer p, footer a {
     font-size: 1.2vw;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     color: #f97979;
 }
 footer a:hover {
     color: #6aabe3;
 }
 u {
-	font-family: Roboto,Consolas,monospace;
+	font-family: Roboto, Consolas, monospace;
     text-decoration: underline;
-    text-decoration-thickness: 0.3vw;
+    text-decoration-thickness: 0.05em;
+}
+span {
+    color: #f97979;
 }
 .main-container {
-	margin-left: 12.5%;
-	margin-right: 12.5%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 .social-bar {
-	padding-left: 5vw;
+	margin-left: 3vw;
     position: fixed;
 	left: 0;
     bottom: 5%;
@@ -78,15 +74,15 @@ u {
 .social-bar i {
     display: block;
     text-align: center;
-    padding-bottom: 2vw;
+    padding-top: 0.8em;
     color: #6aabe3;
-    font-size: 2.6vw;
+    font-size: 2.5vw;
 }
 .social-bar i:hover {
     color: #f97979;
 }
 .email-bar {
-	padding-right: 5vw;
+	margin-right: 3vw;
     position: fixed;
 	right: 0;
     bottom: 5%;
@@ -95,9 +91,10 @@ u {
 	display: block;
     text-align: center;
     padding-bottom: 2vw;
+	padding-left: 0.5vw;
     color: #6aabe3;
-	font-family: Consolas,monospace;
-    font-size: 1vw;
+	font-family: Consolas, monospace;
+    font-size: 1.75vw;
 	font-weight: lighter;
 	writing-mode: vertical-rl;
 	text-orientation: mixed;
@@ -105,70 +102,88 @@ u {
 .email-bar a:hover {
     color: #f97979;
 }
+/*Flare!*/
+.social-bar::after,
+.email-bar::after {
+	content: "";
+	display: block;
+	width: 2px;
+	height: 90px;
+	margin: 0px auto;
+	background-color: #6aabe3;
+}
 /*Spacing away from section parent*/
 .section-header h3 {
-    padding-bottom: 1vw;
-	font-size: clamp(1vw, 4vw, 4vw);
+    padding-bottom: 0.3em;
+	font-size: 4vw;
     font-weight: lighter;
 	text-align: left;
     color: #f97979;
 }
 .section-header p {
+	font-family: Consolas, monospace;
 	font-weight: lighter;
 	text-align: left;
-    font-size: clamp(0.5vw, 1.5vw, 3vw);
-	padding-bottom: 1vw;
+    font-size: 1.2vw;
+	padding-bottom: 1em;
 }
 .section-header b {
-	font-weight: normal;
+	font-weight: 900;
+	text-shadow: 0.5px 0 #6aabe3;
+	letter-spacing: 0.5px;
 }
-.title-container {
-    padding-top: 2vw;  /*Spacing away from section parent*/
+.title-container-row {
+	padding-top: 2em; /*Spacing away from section jump*/
 }
 .title-container h1 {
-    font-size: clamp(6vw, 7vw, 12vw);
+    font-size: 6vw;
     font-weight: lighter;
+	margin-left: -0.2vw; /*Small alignment with title, which scales with width*/
 }
 .title-container h2 {
-    font-size: clamp(3vw, 4vw, 12vw);
+    font-size: 4vw; /*Scale with width*/
     font-weight: lighter;
     color: #f97979;
 }
-.about-me {
-	padding-top: 3vw;
-	width: 100%;
-	overflow: hidden;
+.title-container {
+	padding-left: 2vw; /*Offset from icon, which scales with width*/
 }
-.about-me img{
-	float: left;
+.title-container-img img {
 	pointer-events: none;
 	border-radius: 5%;
-	max-width: 100%;
-    max-height: 100%;
-	height: 13vw;
-    width: 13vw;
-	margin-right: 1vw;
-	margin-bottom: 1vw;
+	height: 15vw; /*Align with title which scales with width*/
+    width: 15vw;  /*Align with title which scales with width*/
 	box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
 }
-.short-info p,h4 {
-    font-weight: lighter;
-    font-size: clamp(0.5vw, 1.5vw, 3vw);
+.about-me-container {
+	padding-top: 1em; /*Upward spacing between title and details*/
+}
+/*My details*/
+.long-info p {
+	font-family: Consolas, monospace;
+	font-weight: lighter;
+	font-size: 1.2vw;
 }
 .languages {
-	padding-top: 2vw;
+	padding-top: 1em; /*Upward spacing between point lists*/
 }
-.languages i {
-	font-size: 60%;
-}
+/*List header*/
 .languages h4 {
-    font-family: Roboto;
-	font-weight: lighter;
-    font-size: clamp(0.5vw, 1.5vw, 3vw);
+    font-family: Consolas, monospace;
+	font-weight: 300;
+	color: #f97979;
+    font-size: 1.2vw;
 }
+/*Right carat*/
+.languages i {
+	font-size: 1vw;
+	color: #f97979;
+    padding-right: 0.5em;
+}
+/*List content*/
 .languages p {
-    font-family: Consolas,monospace;
-	font-size: 1.5vw;
+    font-family: Consolas, monospace;
+	font-size: 1vw;
     padding-top: 0.2vw;
 }
 /*Progress bar*/
@@ -194,80 +209,72 @@ u {
 }
 /*Featured project container*/
 .project {
-    /*Spaces data and keeps background*/
-    padding-right: 2vw;
-    margin-bottom: 2vw;
-    /*Keeps order in these parts*/
-    overflow: hidden;
+    margin-bottom: 2vw; /*Spaces blocks, keeping background*/
+    overflow: hidden; /*Keeps order in these parts*/
     background-color: #272728;
-    /*Nothing like some effects*/
-    box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
+    box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b; /*Nothing like some effects*/
     border-radius: 0.4vw;
-    position: relative;
+	position: relative;
 }
-/*Styling till your hearts content*/
+/*Featured title*/
 .project h2 {
     font-size: 2vw;
-    padding-bottom: 1vw;
-    text-align: right;
+    padding: 0vw 0vw 1vw 1vw;
+    text-align: left;
     color: #f97979;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
 }
 /*Featured project*/
 .project h3 {
-    font-family: Consolas,monospace;
-    font-size: 1.5vw;
-    text-align: right;
+    font-family: Consolas, monospace;
+    font-size: 1vw;
+    text-align: left;
     color: #f97979;
-    padding-top: 1vw;
+	padding: 1vw 0vw 0vw 1vw;
 }
-/*Extra info*/
-.project h4 {
-    font-family: Consolas,monospace;
-    font-size: 1.4vw;
-    color: #f97979;
-    text-align: right;
-    padding-bottom: 1vw;
-    float: right;
-}
-/*Desc*/
-.project p {
-    padding-bottom: 1vw;
-    text-align: right;
-    font-size: 1.5vw;
-}
-/*What you're really here for*/
 .project img {
     padding: 0.8vw 1.2vw 0.8vw 0.8vw;
-    float: left;
-    width: 60%;
+    float: right;
+    width: 40%;
     border-radius: 1.5vw;
-    min-width: 160px;
-    min-height: 90px;
 }
-.clickable img:hover {
+.project p {
+	font-family: Consolas, monospace;
+    padding: 0vw 0vw 4vw 1vw;
+    text-align: left;
+    font-size: 1.2vw;
+}
+.project h4 {
+    font-family: Consolas, monospace;
+    font-size: 1vw;
+    color: #f97979;
+    text-align: left;
+    padding: 0vw 0vw 1vw 1vw;
+	position: absolute;
+	bottom: 0;
+    left: 0;
+}
+.clickable-img img:hover {
     opacity: 80%;
 }
 .vault-link {
 	font-size: 1.5vw;
 }
 .web-link {
-	font-family: inherit;
+	font-family: Consolas, monospace;
     color: #f97979;
 }
 .web-link:hover {
     color: #6aabe3;
 }
-/*The notable, but not as notable project container*/
 .project-extra {
-    padding-top: 4vw;
+    padding-top: 1em;
     text-align: center;
 }
-/*The not-so note worthy projects title*/
+/*Other projects header*/
 .project-extra h4 {
     font-size: 3vw;
     font-weight: lighter;
-    padding-bottom: 1vw;
 }
 /*Here they come! All in their mini project containers*/
 .mini-project {
@@ -275,7 +282,6 @@ u {
     float: left;
     background-color: #272728;
     box-shadow: 0vw 0.2vw 0.5vw 0.3vw #1b1b1b;
-    /*Making responsiveness difficult*/
     margin-right: 1%;
     margin-bottom: 1vw;
     position: relative;
@@ -288,7 +294,7 @@ u {
     float: left;
     position: relative;
     top: 0;
-    padding: 1vw 1vw 1vw 1vw;
+    padding: 1vw 1vw 0vw 1vw;
 }
 /*Mini project container*/
 .mini-data {
@@ -297,13 +303,15 @@ u {
 /*Mini project title*/
 .mini-data h2 {
     font-family: Consolas, monospace;
+	font-size: 1.5vw;
+	text-align: center;
     color: #f97979;
-    padding-top: 1.5vw;
-    padding-bottom: 1vw;
-    font-size: 2.2vw;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 /*Mini project desc*/
 .mini-data p {
+	font-family: Consolas, monospace;
     font-size: 1.2vw;
 }
 /*Mini project tag*/
@@ -311,71 +319,73 @@ u {
     font-family: Consolas, monospace;
     font-size: 1vw;
     color: #f97979;
-    text-align: left;
+    text-align: right;
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1vw 1vw 0vw 1vw;
+    padding: 1vw 1vw 0vw 0vw;
 }
 /*Contains all the minis*/
 .grid {
-    /*I said, don't touch that other element*/
     padding-top: 2vw;
-    /*Remain FULL*/
     width: 100%;
-    /*Fixes collapsing margins*/
-    overflow: auto;
+    overflow: auto; /*Fixes collapsing margins*/
 }
-/*Entry container*/
 .entry {
-    padding-bottom: 0.4vw;
-    width: 80%;
+	line-height: 0;
+	padding-bottom: 0.25em;
 }
 /*Dropdown button*/
 .entry button {
+	font-family: Consolas, monospace;
+	font-weight: 100;
+    font-size: 1.2vw;
+	text-align: left;
     background-color: #222223;
     border: none;
-    text-align: left;
-    font-size: 1.5vw;
     width: 100%;
     cursor: pointer;
     color: #6aabe3;
     outline: none;  
-    font-family: Consolas,monospace;
-	font-weight: 100;
-    padding-left: 0;
+    padding: 0 0 0 0;
+	white-space: nowrap;
 }
 /*Slightly more contrast*/
 .entry b {
 	font-weight: 900;
+	text-shadow: 0.5px 0 #6aabe3;
+	letter-spacing: 0.5px;
 }
 /*Down caret*/
-.entry i {
-    font-size: 60%;
-    padding-left: 0.7vw;
+.fa-caret-down {
+    font-size: 0.5vw;
+    padding-left: 0.2vw;
 }
 .fa-caret-right {
     color: #f97979;
-    padding-right: 1vw;
+    padding-right: 0.5vw;
+	vertical-align: middle;
+	font-size: 1vw;
 }
 /*Dropdown tags*/
 .entry h4 {
     color: #f97979;
     padding-bottom: 0.3vw;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     font-size: 1.2vw;
 }
 /*Dropdown info*/
 .entry div {
-    font-size: 1.6vw;
+    font-size: 1vw;
     padding-left: 1vw;
+	padding-bottom: 0.5vw;
     display: none;
     box-shadow: 0.2vw 0.2vw 0.2vw #121212;
 }
 /*Dropdown text*/
 .entry p {
-    font-size: 1.4vw;
-    font-family: Consolas,monospace;
+    font-size: 1vw;
+    font-family: Consolas, monospace;
     color: #6aabe3;
     padding-top: 0.4vw;
     padding-right: 1vw;
@@ -384,75 +394,202 @@ u {
 .entry img {
     padding: 0.8vw 0.8vw 0vw 0vw;
     background-image: #2e2e2e;
-    max-height: 18vw;
+    max-height: 24vw;
     width: auto;
 }
+.entry video {
+	padding: 0.8vw 0.8vw 0vw 0vw;
+    background-image: #2e2e2e;
+    max-width: 36vw;
+	max-height: 24vw;
+    height: auto;
+}
+.entry-drop {
+	line-height: normal;
+}
 .entry-drop span {
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     font-size: 1vw;
     padding-right: 0.5vw;
 }
+.exp-info {
+	line-height: normal; /*Ignore vault line spacing*/
+	padding-bottom: 0; /*Ignore vault entry padding*/
+}
 .exp-info button {
-    font-family: Roboto;
+    font-family: Roboto, monospace; /*Work places*/
+	font-size: 1.5vw;
 }
 .exp-info a {
     color: #f97979;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
+}
+.exp-info i {
+    font-size: 0.75vw;
 }
 .exp-info p {
     padding-top: 0.2vw;
     padding-bottom: 0.2vw;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     font-size: 1.2vw;
 }
 .exp-info span {
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     font-size: 1vw;
 }
-.contact-me {
-    padding-top: 1vw;
-	text-align: center;
-}
-.contact-me a:hover {
-    opacity: 80%;
-}
-.contact-me a {
-    font-size: 2.4vw;
-    border-width: 0.3vw;
-    border-style: solid;
-    border-color: #f97979;
-    padding-left: 0.3vw;
-    padding-right: 0.3vw;
-}
 .policy-entry h4 {
-    padding-top: 6vw;
-    padding-bottom: 1vw;
-    font-family: Consolas,monospace;
+    padding-top: 1em;
+    padding-bottom: 0.25em;
+    font-family: Consolas, monospace;
     font-size: 4vw;
     color: #f97979;
 }
 .policy-entry p {
-    padding-top: 0.2vw;
-    font-size: 1.4vw;
-    font-family: Consolas,monospace;
+    padding-top: 0.2em;
+    font-size: 1.5vw;
+    font-family: Consolas, monospace;
     color: #6aabe3;
 }
 .policy-entry b {
     font-size: 1.5vw;
-    font-family: Consolas,monospace;
+    font-family: Consolas, monospace;
     color: #f97979;
 }
-/*Small styling*/
-span {
-    color: #f97979;
+/* For mobile phones*/
+[class*="col-"] {
+	float: left;
+	width: 100%;
 }
-/*When width <=768px*/
-@media screen and (max-width: 720px) {
-    .mini-project {
+
+/*When less than*/
+@media only screen and (max-width: 350px) {
+	.social-bar a,
+	.social-bar i {
+		font-size: 5vw !important;
+	}
+	.email-bar a {
+		font-size: 4vw !important;
+	}
+}
+/*When less than*/
+@media only screen and (max-width: 500px) {
+	.entry video,
+	.entry img,
+    .project img {
+		display: none; /*Hide icon on small devices*/
+	}
+	.mini-project {
         /*Fill width with small margin*/
         width: 98%;
         margin-right: 2%;
         /*No longer float to left*/
         float: none;
     }
+}
+/*When less than*/
+@media only screen and (max-width: 800px) {
+	.title-container-img {
+		display: none; /*Hide icon on small devices*/
+	}
+	.title-container {
+		padding-left: 0px; /*Remove padding from icon*/
+	}
+	.project p {
+		padding: 0vw 0vw 20px 1vw;
+	}
+	/*6.0vw*/
+	.title-container h1 {
+		font-size: 48px;
+	}
+	/*4.0vw*/
+	.policy-entry h4,
+	.section-header h3,
+	.title-container h2 {
+		font-size: 32px;
+	}
+	/*3.0vw*/
+	.project-extra h4 {
+		font-size: 24px;
+	}
+	/*2.5vw*/
+	.social-bar a,
+	.social-bar i,
+	.divider, header {
+		font-size: 20px;
+	}
+	/*2.0vw*/
+	.mini-project span,
+	.project h2 {
+		font-size: 16px;
+	}
+	/*1.75vw*/
+	.email-bar a {
+		font-size: 14px;
+	}
+	/*1.5vw*/
+	.policy-entry b,
+	.policy-entry p,
+	.vault-link,
+	.exp-info button,
+	.mini-data h2 {
+		font-size: 12px;
+	}
+	/*1.2vw*/
+	footer p, 
+	footer a,
+	.entry button,
+	.exp-info p,
+	.mini-data p,
+	.project p,
+	.entry h4,
+	.fa-caret-down,
+	.section-header p,
+	.languages h4,
+	.long-info p {
+		font-size: 9.6px;
+	}
+	/*1vw*/
+	.entry-drop span,
+	.fa-caret-right,
+	.exp-info span,
+	.entry p,
+	.entry div,
+	.mini-data h4,
+	.project h4,
+	.project h3,
+	.languages i,
+	.languages p {
+		font-size: 8px;
+	}
+	/*0.75*/
+	.exp-info i {
+		font-size: 6px;
+	}
+	/*0.5vw*/
+	.fa-caret-down {
+    	font-size: 4px;
+	}
+}
+
+
+/*When more than*/
+@media only screen and (min-width: 720px) {
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }
