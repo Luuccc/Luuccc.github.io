@@ -233,9 +233,9 @@ span {
 	padding: 1vw 0vw 0vw 1vw;
 }
 .project img {
-    padding: 0.8vw 1.2vw 0.8vw 0.8vw;
+    padding: 0.8vw 1.2vw 1vw 1vw;
     float: right;
-    width: 40%;
+    width: 50%;
     border-radius: 1.5vw;
 }
 .project p {
@@ -472,7 +472,7 @@ span {
 	}
 }
 /*When less than*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
 	.entry video,
 	.entry img,
     .project img {
@@ -576,6 +576,7 @@ span {
 @media only screen and (min-width: 720px) {
 	.col-1 {width: 8.33%;}
 	.col-2 {width: 16.66%;}
+	.col-2-5 {width: 20.825%;}
 	.col-3 {width: 25%;}
 	.col-4 {width: 33.33%;}
 	.col-5 {width: 41.66%;}
@@ -583,6 +584,7 @@ span {
 	.col-7 {width: 58.33%;}
 	.col-8 {width: 66.66%;}
 	.col-9 {width: 75%;}
+	.col-9-5 {width: 79.165%;}
 	.col-10 {width: 83.33%;}
 	.col-11 {width: 91.66%;}
 	.col-12 {width: 100%;}
