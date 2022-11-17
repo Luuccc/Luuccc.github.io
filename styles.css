@@ -201,6 +201,14 @@ span {
     border-radius: 0.4vw;
 	position: relative;
 }
+/*Featured project*/
+.project h3 {
+    font-family: Consolas, monospace;
+    font-size: 1vw;
+    text-align: left;
+    color: #f97979;
+	padding: 1vw 0vw 0.5vw 1vw;
+}
 /*Featured title*/
 .project h2 {
     font-size: 2vw;
@@ -209,16 +217,8 @@ span {
     color: #f97979;
     font-family: Consolas, monospace;
 }
-/*Featured project*/
-.project h3 {
-    font-family: Consolas, monospace;
-    font-size: 1vw;
-    text-align: left;
-    color: #f97979;
-	padding: 1vw 0vw 0vw 1vw;
-}
 .project img {
-    padding: 0.8vw 1.2vw 1vw 1vw;
+    padding: 1.2vw 1.2vw 1.2vw 1vw;
     float: right;
     width: 50%;
     border-radius: 1.5vw;
@@ -379,15 +379,14 @@ span {
 .entry img {
     padding: 0.8vw 0.8vw 0vw 0vw;
     background-image: #2e2e2e;
-    max-height: 24vw;
-    width: auto;
+    max-height: 50vw;
+	max-width: 100%;
 }
 .entry video {
 	padding: 0.8vw 0.8vw 0vw 0vw;
     background-image: #2e2e2e;
-    max-width: 36vw;
-	max-height: 24vw;
-    height: auto;
+    max-width: 100%;
+	max-height: 50vw;
 }
 .entry-drop {
 	line-height: normal;
@@ -399,11 +398,28 @@ span {
 }
 .exp-info {
 	line-height: normal; /*Ignore vault line spacing*/
-	padding-bottom: 0; /*Ignore vault entry padding*/
+	padding-bottom: 0.2vw;
+}
+/*Dropdown info*/
+.exp-info div {
+    display: none;
+	padding-left: 1vw;
+	padding-bottom: 0.5vw;
+	box-shadow: 0.2vw 0.2vw 0.2vw #121212;
 }
 .exp-info button {
+	text-align: left;
+    background-color: #222223;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    color: #6aabe3;
+    outline: none;  
+    padding: 0 0 0 0;
+	white-space: nowrap;
     font-family: 'Roboto', monospace; /*Work places*/
-	font-size: 1.5vw;
+	font-weight: 100;
+	font-size: 2vw;
 }
 .exp-info a {
     color: #f97979;
@@ -416,11 +432,11 @@ span {
     padding-top: 0.2vw;
     padding-bottom: 0.2vw;
     font-family: Consolas, monospace;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
 }
 .exp-info span {
     font-family: Consolas, monospace;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 .policy-entry h4 {
     padding-top: 1em;
@@ -482,6 +498,7 @@ span {
 	.project p {
 		padding: 0vw 0vw 20px 1vw;
 	}
+	/*(vw * viewport width) / 100 = pixel*/
 	/*6.0vw*/
 	.title-container h1 {
 		font-size: 48px;
@@ -503,6 +520,7 @@ span {
 		font-size: 20px;
 	}
 	/*2.0vw*/
+	.exp-info button,
 	.mini-project span,
 	.project h2 {
 		font-size: 16px;
@@ -512,10 +530,10 @@ span {
 		font-size: 14px;
 	}
 	/*1.5vw*/
+	.exp-info p,
 	.policy-entry b,
 	.policy-entry p,
 	.vault-link,
-	.exp-info button,
 	.mini-data h2 {
 		font-size: 12px;
 	}
@@ -523,7 +541,7 @@ span {
 	footer p, 
 	footer a,
 	.entry button,
-	.exp-info p,
+	.exp-info span,
 	.mini-data p,
 	.project p,
 	.entry h4,
@@ -536,7 +554,6 @@ span {
 	/*1vw*/
 	.entry-drop span,
 	.fa-caret-right,
-	.exp-info span,
 	.entry p,
 	.entry div,
 	.mini-data h4,
@@ -556,6 +573,17 @@ span {
 	}
 }
 
+/*When more than*/
+@media only screen and (min-width: 1000px) {
+	.entry img {
+		max-width: 800px;
+		max-height: 500px;
+	}
+	.entry video {
+		max-width: 800px;
+		max-height: 500px;
+	}
+}
 
 /*When more than*/
 @media only screen and (min-width: 720px) {
