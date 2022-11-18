@@ -374,7 +374,7 @@ span {
     color: #6aabe3;
     padding-top: 0.4vw;
     padding-right: 1vw;
-    padding-bottom: 0.4vw;
+    padding-bottom: 0.75vw;
 }
 .entry img {
     padding: 0.8vw 0.8vw 0vw 0vw;
@@ -403,7 +403,7 @@ span {
 /*Dropdown info*/
 .exp-info div {
     display: none;
-	padding-left: 1vw;
+	padding-left: 2vw;
 	padding-bottom: 0.5vw;
 	box-shadow: 0.2vw 0.2vw 0.2vw #121212;
 }
@@ -426,11 +426,11 @@ span {
     font-family: Consolas, monospace;
 }
 .exp-info i {
-    font-size: 0.75vw;
+    font-size: 1vw;
 }
 .exp-info p {
     padding-top: 0.2vw;
-    padding-bottom: 0.2vw;
+    padding-bottom: 0.3vw;
     font-family: Consolas, monospace;
     font-size: 1.5vw;
 }
@@ -554,6 +554,7 @@ span {
 	/*1vw*/
 	.entry-drop span,
 	.fa-caret-right,
+	.exp-info i,
 	.entry p,
 	.entry div,
 	.mini-data h4,
@@ -562,10 +563,6 @@ span {
 	.languages i,
 	.languages p {
 		font-size: 8px;
-	}
-	/*0.75*/
-	.exp-info i {
-		font-size: 6px;
 	}
 	/*0.5vw*/
 	.fa-caret-down {
