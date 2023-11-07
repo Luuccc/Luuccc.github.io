@@ -47,9 +47,9 @@
 				<div class="col-12">
 					<a class="header-item" href="index.html#about">about</a>
 					<a class="divider"> / </a>
-					<a class="header-item" href="index.html#portfolio">portfolio</a>
-					<a class="divider"> / </a>
 					<a class="header-item" href="index.html#experience">experience</a>
+					<a class="divider"> / </a>
+					<a class="header-item" href="index.html#portfolio">portfolio</a>
 				</div>
 				<div class="col-12">
 					<div id="progBar"></div>
@@ -61,10 +61,7 @@
 			<a target="_blank" href="https://github.com/Luuccc"><i class="fab fa-github"></i></a>
 			<a target="_blank" href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a>
 			<a target="_blank" href="mailto:luc@lucheaton.com" style="padding-bottom: 2vw;"><i class="fas fa-envelope"></i></a>
-		</div>
-
-		<div class="email-bar">
-			<a href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a>
+			<a class="email" href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a>
 		</div>
 
         <div class="main-container">
@@ -86,13 +83,13 @@
 							Your browser does not support the video tag.
 						</video>
 
-						<p>Every time I review my website, I seem to notice more problems. From awful scaling 
-                            to smaller resolutions, unnecessarily large media files, or my poor grammar. So 
-                            with my current knowledge of things, I've spent some time making minor changes to the 
-                            site, most notably to the scaling for smaller displays.<br><br>
-                            At the top, you can see how the site used to scale, with elements becoming 
-                            unreadable and misplaced. Below that are my changes, with elements not 
-                            becoming too small. Also, hiding media files on smaller displays.</p>
+						<p>Each time I review this website, I always find something that could do with revising.
+                            From some quite awful scaling on smaller resolutions to the unnecessarily large 
+                            media files or my poor grammar. So, with my current knowledge of things. I've made 
+							minor changes to the site, most notably to the scaling for smaller displays.<br><br>
+                            Above, you can see how the site previously scaled, with elements becoming 
+                            unreadable and misplaced. Below are my changes, with elements not becoming too 
+                            small. Also, hiding media files on smaller displays.</p>
 						<span>Myself</span>
 					</div>
 				</div>
@@ -101,11 +98,12 @@
 					<div class="entry-drop">
 						<img src="images/CERN.jpg">
 
-						<p>Other than the long wait time in the queue, I had the chance to have an interesting 
-							tour around part of the facility. With the opportunity to ask some questions! 
-							I wanted an insight into their data storage solutions for the huge amount of data 
-							they process. I also wanted to ask if they used neural networks to process and 
-							filter this data to find patterns, but forgot... maybe next time!</p>
+						<p>As the title suggests, I had the chance to tour around a part of the CERN facility. 
+							With the opportunity to ask some questions! Getting an insight into 
+                            their data storage solutions for the huge amount of data they process. But I did want 
+                            to ask if they had any interest in using neural networks (after the current worldwide 
+							interest) to process and filter this crazy data set  to find patterns. But forgot... 
+							maybe next time!</p>
 						<span>Myself</span>
 					</div>
 				</div>
@@ -115,52 +113,54 @@
 						<img src="images/TFTAllChars.jpg">
 						<img src="images/TFTChars.jpg">
 
-						<p>I had some time working with a 0.96" (160x80px) TFT display, where I finally 
-							noticed the speed difference between hardware and software-based SPI. 
-							Also spent some time counting pixels so I could correctly space characters.</p>
+						<p>I had some time to work with a 0.96" (160x80px) TFT LCD display, this time building
+							on my understanding of the formatting of the serial data used to draw to the display.  
+							Also seeing the speed difference between hardware and software-based SPI. 
+							As well as spent some time counting pixels (so I could correctly space characters).</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
 						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>19/09/2022<span>]</span> <b>Ecole de Langue Française et d'Informatique</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>19/09/2022<span>]</span><b> Ecole de Langue Française et d'Informatique</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/ELFI.jpg">
 
 						<p>During my short stay in Geneva, I had the opportunity to attend a french 
-							language course for six weeks, which I really enjoyed and was a great 
-							chance to practice my reading, writing and speaking skills and meet some 
-							great people!</p>
+                            language course for six weeks! I really enjoyed my experience, as well as having a 
+                            great chance to practice my reading, writing and speaking skills and meet some 
+                            amazing people!</p>
 						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/08/2022<span>]</span> <b>WiFi Air mouse</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/08/2022<span>]</span><b> WiFi Air mouse</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video  loop muted playsinline>
 							<source src="images/MPU6050.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 
-						<p>Wanting to combine the remote connectivity of the ESP32 with the accurate 
-							readings of the MPU6050 that I had managed. I built a C++ library for the ESP32 
-							that talked to the sensor over I2C then packaged the modified axis data to 
-							be sent over WiFi to a receiver, handling mouse movement.<br><br>
-							The above clip is of the wired MPU6050 version.</p>
+						<p>After working with a six-axis motion tracking device for quite some time, interfacing 
+                            with it over I2C to fine-tune its registers for each output (of which it has three 
+                            accelerometer outputs and three gyroscope outputs). I incorporated the remote 
+                            connectivity of the ESP32, building a C++ library that communicated with the sensor,
+                            and packaged the modified axis data to be sent over WiFi to a receiver, handling mouse movement.<br><br>
+                            The above clip is of the wired MPU6050 version.</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
 						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2022<span>]</span> Circuit diagrams<i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2022<span>]</span> Circuit diagram software<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Searching for schematic designer software I stumbled across <a target="_blank" class="web-link" href="https://diptrace.com/">DipTrace</a>, 
-							a very useful free tool. As I've recently been wanting to improve 
-							my understanding of circuits to create better layouts of my own as well as 
-							interpret others.</p>
+						<p>I've recently been wanting to improve my understanding of circuits, interpret 
+                            others and create better layouts of my own. So I've been searching for a schematic designer 
+                            software and stumbled across <a target="_blank" class="web-link" href="https://diptrace.com/">DipTrace</a>, 
+                            which I've been using prototype and iterate on an upcoming product.</p>
 						<span>Electronics</span>
 						<span>Myself</span>
 					</div>
@@ -170,61 +170,60 @@
 					<div class="entry-drop">
 						<img src="images/Printer.jpg">
 
-						<p>I offered to take a look at a printer that wasn't functioning. Spending a few hours for 
-							a couple of weeks trying what I could to get this thing working, with varying 
+						<p>I offered to take a look at a printer that wasn't functioning. Spending a few hours 
+							over a couple of weeks trying what I could to get it working, with varying 
 							degrees of success...<br><br>
-							I managed to get it working for a very short period of time after cleaning it, 
-							disconnecting the faulty output tray sensor, and playing a bit of Simon Says 
-							with the buttons to reset and modify its settings. Although, I did eventually 
+							After dismantling the entire unit, disconnecting the faulty output tray sensor, and 
+							playing a bit of Simon Says with the buttons to reset and modify its settings.<br><br>
+							I managed to get it working for a very short period of time. Although, I did eventually 
 							have to give up on it.</p>
 						<span>Electronics</span>
 						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/06/2022<span>]</span> <b>ESP32</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/06/2022<span>]</span><b> ESP32</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video  loop muted playsinline>
 							<source src="images/ESP32.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 
-						<p>Asked to learn as much as I could about the <a target="_blank" class="web-link" href="https://www.espressif.com/en/products/socs/esp32">ESP32 from Espressif</a>, 
-							I began my humble beginnings by grabbing and displaying the device's 
-							MAC address!<br><br>
-							I then began learning how to achieve two-way communication via ESP-NOW, sending a 
-							data payload over WiFi to a hardcoded peer's address, that is received and verified through 
-							callbacks.<br><br>
-							Moving onto a one-to-many network, with a single transmitter sending its 
-							data (on button input) to the registered remote peers that relay the received data 
-							to a serial output<br><br>
-							With the requirement to draw low current, I looked into the "deep sleep mode", 
-							which powers down a large portion of the module's functionality, but requires the 
-							usage of the RTC IOs, or timers to wake the device from this state.<br><br>
-							As well as lots of testing, and figuring out how to fetch RSSI values, I 
-							improved my understanding of I2C, which had a small learning curve with the ESP</p>
+						<p>Requested to learn as much as I could about the <a target="_blank" class="web-link" href="https://www.espressif.com/en/products/socs/esp32">ESP32 from Espressif</a>, 
+                            I began my humble beginnings by grabbing and displaying the device's 
+                            MAC address!<br><br>
+                            Before learning how to achieve two-way communication via ESP-NOW, sending a 
+                            data payload over WiFi to a hardcoded peer's address that is received and verified through 
+                            callbacks.<br><br>
+                            Then, a one-to-many network with a single transmitter which sends its 
+                            data (on button input) to the registered remote peers that relay the received data 
+                            to a serial output.<br><br>
+                            The requirement to draw low current, I researched the "deep sleep mode", 
+                            which powers down a large portion of the module's functionality but requires the 
+                            usage of the RTC IOs or timers to wake the device from this state.<br><br>
+                            After lots of testing, improving my understanding of I2C and unpacking data packets 
+                            with the help of "promiscuous mode", I figured out how to fetch accurate RSSI values!<br><br>
+                            This study will help me in future projects.
+						</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
 						<span>Hive Industries</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2022<span>]</span> <b>MPU6050 Accelerometer and Gyroscope</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2022<span>]</span><b> MPU6050 Accelerometer and Gyroscope</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video  loop muted playsinline>
 							<source src="images/MPU6050.mp4" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 
-						<p>Requested to make this module function as a sort-of mouse pointer. 
-							With no prior knowledge about these types of sensors, I began learning 
-							how they work, specifically how to pull raw axis data from its registers, 
-							after setting the configuration and resolution bits (and quite a bit of 
-							troubleshooting).<br><br>
+						<p>With no prior knowledge about these types of sensors, I began learning how to fetch 
+							raw axis data from its registers, after setting the configuration and resolution 
+							bits (and quite a bit of troubleshooting).<br><br>
 							After getting relatively meaningful readings from the six-axis motion sensor, 
 							I read the data serially from the chip using an Arduino Micro (HID compatible). 
-							Translating the data into mouse positions to be used to control the mouse of 
-							a computer.</p>
+							Translating the data into mouse positions to control the mouse of a connected computer.</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
 						<span>Hive Industries</span>
@@ -234,10 +233,10 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/03/2022<span>]</span> Revisiting the electronic fuse<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Previously I was asked to program a chip with a relatively simple but essential 
-							function; to detect and manage a power line, performing short tests to prevent 
-							components from being damaged. But this updated version needed to manage multiple power 
-							lines simultaneously.</p>
+						<p>Previously I worked on some embedded software with a relatively simple but essential 
+							function; to detect and manage a power line and perform short tests to prevent 
+							components from being damaged. An updated revision was needed, with the added ability 
+							to monitor multiple power lines (nearly) simultaneously.</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
 						<span>Hive Industries</span>
@@ -248,21 +247,23 @@
 					<div class="entry-drop">
 						<img src="images/PersonalTerminal.jpg">
 
-						<p>I wanted to be able to use my NoteTaking desktop console application on my phone 
-							when I didn't have access to my desktop. So I began looking for methods of 
-							drawing a console interface within Unity, which (with the route I took) was 
-							more challenging than I thought. With the scrolling, text-wrapping, responses to 
-							text input, and other minor things.<br><br>
-							After the usual trial and error, I created a sort-of terminal-style GUI, ready 
-							to copy most of the functionality from the desktop version. Except for the user 
-							input and file saving, which needed changes to work on Android.</p>
+						<p>About two years ago, I developed a Windows desktop application (NoteTaking), which I 
+                            wanted to use on my phone in times when I didn't have access to my desktop.<br><br>
+                            With my knowledge of Unity and the relative ease of creating cross-platform applications 
+                            (skipping the work for Store presence), I decided to build a console interface, 
+                            which (with the route I took) was more challenging than I thought. For the terminal to
+                            scroll and size correctly, display each row naturally, with text wrapping and 
+                            responses to text input.<br><br>
+                            After the usual trial and error, I created the GUI, ready to copy most of the 
+                            functionality from the desktop version. Except for the user input and file-saving
+                            methods, which needed rewriting to work on Android.</p>
 						<span>C#</span>
 						<span>Unity</span>
 						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/01/2022<span>]</span> <b>Machine Learning</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/01/2022<span>]</span><b> Machine Learning</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video loop muted playsinline>
 							<source src="images/Neuralish.mp4" type="video/mp4">
@@ -270,13 +271,13 @@
 						</video>
 
 						<p>Wanting to understand some of the entry-level machine learning concepts, 
-							I decided to recreate a project I had seen created with <a target="_blank" class="web-link" href="https://unity.com/">Unity</a>. 
+							I recreated a project I had seen created with <a target="_blank" class="web-link" href="https://unity.com/">Unity</a>. 
 							My goal was to create a learning algorithm that would result in AI agents 
 							reaching a location with no exact knowledge of the destination (only their 
-							final distance from it) and improving over time.<br><br>
+							final distance from it) and improving with time.<br><br>
 							The process involved placing the agents on the scene with a maximum number of 
 							steps they can take in any direction before they "die". After each agent has 
-							taken all of its steps, it's given a fitness value calculated based on its 
+							taken all of its steps, it is given a fitness value calculated based on its 
 							distance from the target location or, if reached, based on the number of steps 
 							taken.<br><br>
 							I then take the best-performing agents by fitness value (coloured blue) and 
@@ -286,9 +287,8 @@
 							diminishing returns, with tens of generations going by and only improving by 
 							a step or two. It came down to fine adjustments to the fitness algorithm, where 
 							I achieved a minimum of 65 steps to reach the target over 175 generations, with 
-							the actual minimum being about 60.<br><br>
-							Even though it was just a surface level look into this field. I enjoyed it as a 
-							small learning project.</p>
+							the real minimum being about 60.<br><br>
+							As a surface level look into this field. I enjoyed working on it.</p>
 						<span>C#</span>
 						<span>Unity</span>
 						<span>Myself</span>
@@ -305,12 +305,11 @@
 							For each unit, there was a bit of setup beyond assigning them the correct network 
 							ID. Such as ensuring that each device had been given a suitable role within the 
 							network (as a Coordinator, Router, or End Point), was in the correct operating 
-							mode, and other minor changes.<br><br>
+							mode, and other minor adjustments.<br><br>
 							After manually setting up each module, it was possible to demonstrate their 
 							interconnectivity with the communication of data frames, which I could then 
-							verify serially with C/C++! I also learnt that it was possible to configure 
-							modules remotely if the unit was in the correct mode, but this was good enough 
-							to test the units.
+							verify serially with C. I also learnt that it was possible to configure 
+							modules remotely if the unit was in the correct mode.
 						</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
@@ -323,7 +322,7 @@
 						<img src="images/ReactionRacingGame.gif">
 
 						<p>Strangely enough, around the same time that I was working on my small shape game, 
-							I was asked for my "game creation skills" to produce a reaction game for 
+							I was asked to produce a reaction game for 
 							<a target="_blank" class="web-link" href="https://www.williamsf1.com/">Williams 
 							Racing</a>, which can be seen above (but missing sound)<br><br>
 							I worked with <a target="_blank" class="web-link" href="https://www.hiveindustries.com/">Hive Industries</a> 
@@ -367,7 +366,7 @@
 						<p>My dad's original Grandstand Munchman hasn't powered up for the last few 
                             decades. Over the years, I've made small attempts to find the cause with no luck.<br><br>
                             But every year, I have picked up new fragments of knowledge in troubleshooting 
-							electronics and was finally able to identify a single NPN transistor that wasn't meeting 
+							electronics and was finally able to identify an NPN transistor that wasn't meeting 
 							the datasheet's specification and needed replacement.<br><br>
                             Finally bringing Munchman to life, once again</p>
 						<span>Electronics</span>
@@ -379,10 +378,10 @@
 					<div class="entry-drop">
 
 						<p>I developed another performance-efficient realtime power analyzer for the tiny series.<br><br>
-                            Built to indicate so long as the sampled voltage level is within an acceptable range. 
+                            Built to indicate an OK status so long as the sampled voltage level is within an acceptable range. 
                             Otherwise, power cycling - However, if this occurs too many times, we enter a lockdown 
                             mode, whereby the power to the device is disconnected, and a manual reset is required. 
-							With my knowledge of AVR registers, I was able to gather a higher-resolution analogue 
+							With my knowledge of AVR registers, I was able to gather and monitor the 10-bit resolution analogue 
 							input by combining the values of two separate registers.</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
@@ -404,15 +403,15 @@
 							minigame that I had already made so many prototypes of in the past.<br><br>
 							To begin with, I started working on generating the hexadecimal row headers and "play 
 							area". Followed, by implementing the highlighting and grouping methods. As each 
-							symbol character needed to be accessed by a uniquely addressable "cell". <br><br>
+							symbol character needed to be accessed by a uniquely addressable "cell".<br><br>
 							After finalizing my method of grouping cells, I could highlight individual row 
 							headers on mouseover/touch for both desktop and mobile platforms. I had some fun 
 							with placing the generated "passwords" evenly within the play area - where the 
 							random amount of words had to fit within the region, without touching, and of 
 							varying lengths depending on difficulty. Also attempting to limit the number of 
 							wrapped words.<br><br>
-							I thoroughly enjoyed designing the logic and programming this, but the process of 
-							implementing Ads, Google Play Service support, GP Leaderboards, and Unity 
+							I thoroughly enjoyed designing and programming the logic for this, but the process of 
+							implementing Google Play Service support, GP Leaderboards, and Unity 
 							In-App-Purchases, really slowed things down. But, I'm happy to say that it's finally 
 							released and can be found on the <a target="_blank" class="web-link" href="https://play.google.com/store/apps/details?id=com.LucHeaton.TerminalMastermind">Google Play Store</a> for free!</p>
 						<span>C#</span>
@@ -484,8 +483,7 @@
 						<p>Aiming to improve my French I built this Android application. Allowing me to store 
 							translations and test myself against statements I add to the app over time.
 							Although I've just illustrated this functionality with some math statements.<br><br>
-							After building it though, I realized what I had built was a flashcard app.. 
-							nothing too special</p>
+							After building it though, I realized what I had built was a flashcard app..</p>
 						<span>C#</span>
 						<span>Unity</span>
 						<span>Myself</span>
@@ -499,7 +497,7 @@
 						<img src="images/Minimap1.png">
 						<img src="images/Minimap2.png">
 
-						<p>As a small side project, I wanted to create a nice interactive visual to illustrate 
+						<p>As a small side project, I wanted to create an interactive visual to illustrate 
                             different functions layered over Perlin noise.<br><br>
                             Starting with a small 2D Perlin noise sample, I append my functions, including an
                             "upscaler" and a "limiter", finally applying colour to the sample using a Custom 
@@ -523,7 +521,7 @@
                             and the symbol bits. As well as the serial transfer method with the correct timing 
                             to send data to the driver chip<br><br>
                             Continuing this, I realized it would instead be useful to refactor my code and build 
-                            a C++ library. Allowing anyone to interface with this display without needing to 
+                            a C++ library. Allowing others to interface with this display without needing to 
                             understand the payload structure. I also extended the functionality of the library by 
                             adding various helper methods, allowing a user to perform extra functions with the display.</p>
 						<span>C/C++</span>
@@ -533,29 +531,20 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/04/2021<span>]</span> iPhone 4S Batteries<i class="fas fa-caret-down"></i></button>
-					<div class="entry-drop">
-						<img src="images/Batt.jpg">
-
-						<p>Despite my parent's phones being very out-of-date for the time, they were still good
-							enough for them. Sadly though, the batteries within were no longer holding charge. 
-							So I opened them up and replaced the two of them with new parts</p>
-						<span>Electronics</span>
-						<span>Myself</span>
-					</div>
-				</div>
-				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>07/04/2021<span>]</span> Impact drill repair<i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/04/2021<span>]</span> Electronic repairs<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/Drill.jpg">
 						<img src="images/Drill1.jpg">
+						<img src="images/Batt.jpg">
 
-						<p>After years of use, my father's Bosch drill showed signs of failure, only 
-							functioning when held in a certain way. Until recently, it finally gave up.<br><br>
-							Opening it up, I noticed a small connection that had broken. I concluded it was from 
-							the years of withstanding high currents (not finding any other causes). Re-soldering 
-							the connection was good enough for a few months before it failed again. Sadly I 
-							didn't know enough about electronics to find the true fault.</p>
+						<p>After years of use, my father's Bosch drill started showing signs of failure, only 
+							functioning when held in a certain way.<br><br>
+							Opening it up revealed a cracked solder joint, which I thought was likely due to 
+							after years of withstanding high currents. Re-soldering the connection resolved the
+							issue for a few months before it failed again. Sadly unable to find the underlying fault.<br><br>
+							Around the same time I replaced the batteries within my parents phones which were 
+							no longer holding charge.
+						</p>
 						<span>Electronics</span>
 						<span>Myself</span>
 					</div>
@@ -733,17 +722,6 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/10/2020<span>]</span> Ebook name formatting<i class="fas fa-caret-down"></i></button>
-					<div class="entry-drop">
-
-						<p>Similarly to my music file metadata issues, when downloading ebooks the names are 
-							rarely formatted correctly. So I built another small utility to speed up the 
-							process of formatting title names for select mobile ebook readers</p>
-						<span>Python</span>
-						<span>Myself</span>
-					</div>
-				</div>
-				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>23/09/2020<span>]</span> Nintendo DS Lite power switch<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/DS.jpg">
@@ -831,17 +809,6 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>08/07/2020<span>]</span> Mastermind game<i class="fas fa-caret-down"></i></button>
-					<div class="entry-drop">
-
-						<p>Being told how similar the board game Mastermind is to Fallout's terminal minigame. 
-							I decided to recreate a Visual Studio console version to try it out. "Foreshadowing"</p>
-						<span>C#</span>
-						<span>Visual Studio</span>
-						<span>Myself</span>
-					</div>
-				</div>
-				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/07/2020<span>]</span> Terminal Access Minigame<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/TA.JPG">
@@ -853,7 +820,9 @@
 							points for the guessed word containing a correct letter in the correct 
 							position, and one point for a shared letter, but not in the right spot.<br><br>
 							In short, it was more confusing and less intuitive than the original, but I 
-							enjoyed making and playing it</p>
+							enjoyed the process of making it<br><br>
+							After showing it off I learnt how similar it is to the board game Mastermind, of 
+							which I made a Visual Studio console version to try it out.</p>
 						<span>C#</span>
 						<span>Unity</span>
 						<span>Myself</span>
@@ -867,10 +836,10 @@
 						<p>While playing a little bit of some old school Modded Minecraft, you encounter a 
 							mod named <a class="web-link" target="_blank" href="https://ftb.fandom.com/wiki/Thaumcraft_6">Thaumcraft</a>, 
 							where a main mechanic is linking "Aspects" which can only connect to a specific 
-							set of other Aspects, to progress through the mod. So naturally, I built a 
-							small application that finds and lists these connections for you, from a given
+							set of other Aspects, to progress through the mod. So naturally, I built a small 
+							application that finds and lists all the possible connections for you, from a given
 							starting to an ending Aspect. By traversing through a dictionary of defined
-							Aspects and their connections</p>
+							Aspects and their allowed connections</p>
 						<span>C#</span>
 						<span>Visual Studio</span>
 						<span>Myself</span>
@@ -927,7 +896,7 @@
 					<div class="entry-drop">
 						<img src="images/TFTDisplay.jpg">
 
-						<p>I programmed an ATtiny with the function to interrupt another chip, requesting 
+						<p>I programmed an ATtiny which interrupts another chip, requesting 
 							for it's signal strength over SPI. Then drawing the returned value to a TFT 
 							display</p>
 						<span>C/C++</span>
@@ -958,7 +927,7 @@
 						<p>Suggested as an extra feature it would be interesting to interface 
 							with a device from a local <a class="web-link" target="_blank" href="https://www.elgato.com/en/stream-deck">StreamDeck</a>. 
 							So I began looking into the Companion app, as well as the possibility of 
-							adding modules. Although after some research it sadly seemed out of reach.</p>
+							adding modules. Although after some research it sadly seemed out of reach, for now..</p>
 						<span>Javascript</span>
 						<span>Hive Industries</span>
 					</div>
@@ -972,7 +941,7 @@
 							communicate with the display.<br><br>
 							Later I'd found myself troubleshooting the incorrectly displayed colours. 
 							Where I also learnt that this particular TFT display relies on the RGB565 
-							byte format rather than standard RGB888</p>
+							byte format rather than regular RGB888</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
 						<span>Hive Industries</span>
@@ -984,8 +953,7 @@
 
 						<p>I began looking into the UDP protocol and learning how to program with 
 							<a class="web-link" target="_blank" href="https://nodejs.org/">NodeJs</a>, 
-							so I could send and receive small amounts of data between local and 
-							remote servers, and confirm data packets with 
+							so I could send and receive small amounts of data between local and remote servers, and confirm data packets with 
 							<a class="web-link" target="_blank" href="https://www.wireshark.org/">Wireshark</a></p>
 						<span>NodeJs</span>
 						<span>Myself</span>
@@ -1010,8 +978,8 @@
 
 						<p>Considering building a website for my father, I began re-learning about web 
 							scraping with the <a class="web-link" target="_blank" href="https://pypi.org/project/beautifulsoup4/">BeautifulSoup</a> 
-							library. Allowing me to grab entries from his current site, to populate a CSV 
-							(spreadsheet) file with data and images of his work</p>
+							library. Allowing me to grab entries from his current site, to populate a
+							spreadsheet file with data and images of his work</p>
 						<span>Python</span>
 						<span>Myself</span>
 					</div>
@@ -1148,7 +1116,10 @@
 							artist names, comparing them against an ever-growing text file of artists. 
 							Correctly formatting them (as often they have slight differences which 
 							break media player albums), this is then applied to the ID3 tags along with the 
-							song name for clear track formatting when using media players</p>
+							song name for clear track formatting when using media players<br><br>
+							Similarly to my music file metadata issues, when downloading ebooks the names are 
+							rarely formatted correctly. So I built another small utility to speed up the 
+							process of formatting title names for select mobile ebook readers</p>
 						<span>Python</span>
 						<span>Json</span>
 						<span>Myself</span>
@@ -1174,9 +1145,10 @@
 					<div class="entry-drop">
 						<img src="images/CIO2.jpg">
 
-						<p>I designed and programmed the functionality of the chip that manages the VU Meter 
-							on the CiO² from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. 
-							Representing a dB value from a 10-bit analogue signal and reference, displayed 
+						<p>With my understanding of the ATtinys registers, I developed a solution that combined a 
+							ground referenced signal presented within its ADC registers to generate a 10-bit resolution 
+							result. Which represents an analogue dB value, then displayed via the VU Meter of the CiO² 
+							product from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a> 
 							through <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexed</a> LEDs.</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
@@ -1210,10 +1182,9 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>18/06/2019<span>]</span> Power line Indicator<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Built a solution that analyses line-in, indicating when certain conditions 
-							are met and power cycling the device. If these conditions occur
-							frequently within some time frame, disconnect the device, and 
-							await manual reset.</p>
+						<p>Built a solution that analyses line-in, indicating when certain conditions are met 
+							and power cycling the device. If these conditions occur frequently within some time 
+							frame, disconnect the device, and await a manual reset.</p>
 						<span>C/C++</span>
 						<span>AVR</span>
 						<span>Hive Industries</span>
@@ -1235,7 +1206,7 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>11/04/2019<span>]</span> ATtiny Port manipulation and EEPROM<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Wanting to perform operations more frequently as well as save on memory. I began 
+						<p>Wanting to perform operations more frequently as well as save on program memory. I began 
 							learning about "Port manipulation", as well as more bit-math and registers 
 							involved in controlling the functions of this series of chips<br><br>
 							Around the same time, I also taught myself about EEPROM (non-volatile 
@@ -1297,7 +1268,7 @@
 						<p>Needing to control more LEDs with less pins, I learnt the logic behind <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexing</a>, 
 							which allowed me to illustrate numbers 0 through 9 with a seven-segment display, 
 							controlled by an Arduino Uno.<br><br>
-							I also applied wanted to see the result of fewer LEDs per segment...
+							I also wanted to see the result of fewer LEDs per segment...
 						</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
@@ -1345,9 +1316,9 @@
 
 						<p>As well as studying Computer Science, and Physics, I also studied 
 							Digital Illustration during my A-Levels. Which involved lots of short 
-							studies into the styles of a range of artists which we could interpret, and 
+							studies into the styles of a range of different artists which we could interpret, and 
 							expand upon in our ways, some of which you can see above. Many thanks to my 
-							wonderful teacher, Mr Eyre</p>
+							wonderful teacher Mr Eyre</p>
 						<span>Artwork</span>
 						<span>Myself</span>
 					</div>
@@ -1427,7 +1398,7 @@
             </section>
 			
             <footer>
-                <p style="color:#6aabe3;">Designed and built by Luc Heaton</p>
+                <p style="color:#6aabe3;">Designed and built by myself</p>
 				<a href="privacy-policy.html">Privacy policy</a>
             </footer>
         </div>

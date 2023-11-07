@@ -30,9 +30,9 @@
 				<div class="col-12">
 					<a class="header-item" href="index.html#about">about</a>
 					<a class="divider"> / </a>
-					<a class="header-item" href="index.html#portfolio">portfolio</a>
-					<a class="divider"> / </a>
 					<a class="header-item" href="index.html#experience">experience</a>
+					<a class="divider"> / </a>
+					<a class="header-item" href="index.html#portfolio">portfolio</a>
 				</div>
 				<div class="col-12">
 					<div id="progBar"></div>
@@ -44,35 +44,25 @@
 			<a target="_blank" href="https://github.com/Luuccc"><i class="fab fa-github"></i></a>
 			<a target="_blank" href="https://twitter.com/HeatonLuc"><i class="fab fa-twitter"></i></a>
 			<a target="_blank" href="mailto:luc@lucheaton.com" style="padding-bottom: 2vw;"><i class="fas fa-envelope"></i></a>
-		</div>
-
-		<div class="email-bar">
-			<a href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a>
+			<a class="email" href="mailto:luc@lucheaton.com">luc@lucheaton.com</i></a>
 		</div>
 
         <div class="main-container">
             <section id="about">
-				<div class="row title-container-row">
-					<div class="col-2-5 title-container-img"><img src="images/drawn-me.png"/></div>
-					<div class="col-9-5 title-container">
+				<div class="title-container">
+					<div class="title-container-icon"><img src="images/drawn-me.png"/></div>
+					<div class="title-container-text">
 						<h1>Luc Heaton</h1>
 						<h2><u>Programmer</u></h2>
 					</div>
 				</div>
 	
-				<div class="row about-me-container">
+				<div class="about-me-container">
 					<div class="col-12 long-info">
-						<p>Hi, I'm Luc! I enjoy making things come to life.<br><br>
-							This might mean designing and programming the functionality for a microcontroller, 
-							repairing a problematic unit, creating a desktop or mobile application, or building a 
-							website (like this one).<br><br>
-							I also enjoy drawing, but for the most part, it's an idea, diagram, or birthday card!</p>
-					</div>
-					<div class="col-6 languages">
-						<h4>Recently I've been working with:</h4>
-						<p><i class="fas fa-caret-right"></i>C/C++</p>
-						<p><i class="fas fa-caret-right"></i>C#</p>
-						<p><i class="fas fa-caret-right"></i>HTML & CSS</p>
+						<p>I'm a developer of many things, and I enjoy bringing ideas to life.<br><br>
+							This might mean programming the functionality of a microcontroller,<br>
+							repairing a problematic device, creating a desktop or mobile application,<br>
+							or building a website (like this one).</p>
 					</div>
 					<div class="col-6 languages">
 						<h4>During my further education I studied:</h4>
@@ -80,8 +70,57 @@
 						<p><i class="fas fa-caret-right"></i>Physics</p>
 						<p><i class="fas fa-caret-right"></i>Digital Illustration</p>
 					</div>
+					<div class="col-6 languages">
+						<h4>Some languages I work with:</h4>
+						<p><i class="fas fa-caret-right"></i>Embedded C</p>
+						<p><i class="fas fa-caret-right"></i>C#</p>
+						<p><i class="fas fa-caret-right"></i>HTML & CSS</p>
+						<p><i class="fas fa-caret-right"></i>French</p>
+					</div>
+					<div class="col-6 languages">
+						<h4>The embedded devices I work on:</h4>
+						<p><i class="fas fa-caret-right"></i>ATtiny series</p>
+						<p><i class="fas fa-caret-right"></i>ESP32</p>
+						<p><i class="fas fa-caret-right"></i>STM32</p>
+					</div>
+					<div class="col-6 languages">
+						<h4>Some communication protocols I use:</h4>
+						<p><i class="fas fa-caret-right"></i>SPI</p>
+						<p><i class="fas fa-caret-right"></i>I2C</p>
+						<p><i class="fas fa-caret-right"></i>UART</p>
+					</div>
 				</div>
 			</section>
+
+			<section id="experience">
+				<div class="section-header">
+					<h3><u>.experience</u></h3>
+					<p>I learn from the projects that I work on everyday, which are nearly all listed <a class="web-link" href="vault.html">here</a><br>
+						Although I have or continue to work for:</p>
+				</div>
+                <div>
+                    <div class="exp-info">
+                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Hive Industries<i class="fas fa-caret-down exp-info"></i></button>
+                        <div>
+                            <p><i class="fas fa-caret-right"></i>Designing and programming performant code to control the functionality of various microcontrollers. Like the ESP32 or ATtiny.</p>
+							<p><i class="fas fa-caret-right"></i>Interfacing with modules such as a six-axis motion tracking device over I2C.</p>
+							<p><i class="fas fa-caret-right"></i>Producing GUIs for products that incorporate a display using serial communication.</p>
+                            <p><i class="fas fa-caret-right"></i>Discussing features and ideas on a daily-basis and adapting to changes in design to meet customer requirements.</p>
+                            <span>2019 - Present</span>
+                        </div>
+                    </div>
+                    <div class="exp-info">
+                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Switch Computer Support SW<i class="fas fa-caret-down exp-info"></i></button>
+                        <div>
+							<p><i class="fas fa-caret-right"></i>Gained a new perspective of troubleshooting through working alongside the support team.</p>
+							<p><i class="fas fa-caret-right"></i>Retained valuable technical knowledge improving my ability to diagnose software and hardware faults with computers and portable devices.</p>
+                            <p><i class="fas fa-caret-right"></i>Interaction at the front desk with new or returning customers, taking notes of issues, and offering feedback.</p>
+                            <p><i class="fas fa-caret-right"></i>Acquired a great insight into web development through discussions with other employees.</p>
+                            <span>2017 - 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section id="portfolio">
 				<div class="section-header">
@@ -95,10 +134,11 @@
                     </a>
                     <h3>Featured Project</h3>
                     <h2>CIO2 VU Meter</h2>
-                    <p>I designed and programmed the functionality of the chip that manages the VU Meter 
-						on the CiO² from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. 
-						Representing a dB value from a referenced 10-bit analogue signal, displayed 
-						through <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexed</a> LEDs.</p>
+                    <p>With my understanding of the ATtinys registers, I developed a solution that combined a 
+						ground referenced signal presented within its ADC registers to generate a 10-bit resolution 
+						result. Which represents an analogue dB value, then displayed via the VU Meter of the CiO² 
+						product from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a> 
+						through <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexed</a> LEDs.
                     <h4>C/C++ AVR  03/07/2019</h4>
                 </div>
                 <div class="project">
@@ -179,41 +219,9 @@
 					<a class="vault-link web-link" href="vault.html">View all my projects</a>
                 </div>
             </section>
-
-            <section id="experience">
-				<div class="section-header">
-					<h3><u>.experience</u></h3>
-					<p>Alot of what I have learned is from the projects that I work on daily, nearly all listed <a class="web-link" href="vault.html">here</a><br>
-						Although I have or continue to work for:</p>
-				</div>
-                <div>
-                    <div class="exp-info">
-                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Hive Industries<i class="fas fa-caret-down exp-info"></i></button>
-                        <div>
-                            <p><i class="fas fa-caret-right"></i>Designing and programming performant code to control the functionality of microcontrollers and modules used within various prototypes and products.</p>
-							<p><i class="fas fa-caret-right"></i>Discovering new technologies to be applied in testing and products. Such as the Espressif ESP32 wireless connectivity modules.</p>
-							<p><i class="fas fa-caret-right"></i>Planning and developing graphical user interfaces for products that incorporate a display using serial communication.</p>
-							<p><i class="fas fa-caret-right"></i>Analyzing information from datasheets and documentation to find solutions and meet customer specifications.</p>
-                            <p><i class="fas fa-caret-right"></i>Discussing features on a daily-basis and adapting to changes in design at any stage in the development process.</p>
-                            <span>2019 - Present</span>
-                        </div>
-                    </div>
-                    <div class="exp-info">
-                        <button type="button" onClick="ToggleDesc(this)"><i class="fas fa-caret-right"></i>Switch Computer Support SW<i class="fas fa-caret-down exp-info"></i></button>
-                        <div>
-							<p><i class="fas fa-caret-right"></i>Gained a new perspective of troubleshooting through working alongside the support team.</p>
-							<p><i class="fas fa-caret-right"></i>Retained valuable technical knowledge improving my ability to diagnose software and hardware faults with computers and select portable devices.</p>
-                            <p><i class="fas fa-caret-right"></i>Interaction at the front desk with new or returning customers, taking notes of issues, and offering feedback.</p>
-                            <p><i class="fas fa-caret-right"></i>Acquired a great insight into web development through discussions with other employees.</p>
-							<p><i class="fas fa-caret-right"></i>Providing the essential tea and coffees, when needed most.</p>
-                            <span>2017 - 2018</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
 			
             <footer>
-                <p style="color:#6aabe3;">Designed and built by Luc Heaton</p>
+                <p style="color:#6aabe3;">Designed and built by myself</p>
 				<a href="privacy-policy.html">Privacy policy</a>
             </footer>
         </div>
