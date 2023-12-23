@@ -72,6 +72,190 @@
 					   The projects marked in <b>bold</b> are some of my favourites</p>
 				</div>
 				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>25/08/2023<span>]</span> Built HiveIndustries, InterspaceInd, and i2llc websites<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>I spent the last two months building three Wordpress websites.<br><br>
+							<a target="_blank" class="web-link" href="https://hiveindustries.com">HiveIndustries</a> 
+							and <a target="_blank" class="web-link" href="https://i2llc.com">i2llc</a> are both ecommerce stores, 
+							covering their respective regions, and allowing customers to seamlessly create Purchase Orders. 
+							With <a target="_blank" class="web-link" href="https://interspaceind.com">InterspaceInd</a> 
+							being the location of more detailed product information and guides.<br><br>
+							All of which I now manage and maintain.
+						</p>
+						<span>HTML, CSS</span>
+						<span>Wordpress</span>
+						<span>Interspace Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>20/06/2023<span>]</span><b> MasterCueV7 Companion Module</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<video  loop muted playsinline>
+							<source src="images/Companion.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+						<img src="images/CompanionImport.jpg">
+						<img src="images/CompanionModule.jpg">
+						<img src="images/CompanionConfig.jpg">
+						<img src="images/CompanionOptions.jpg">
+						<img src="images/CompanionPresets.jpg">
+
+						<p>I built a module for the <a target="_blank" class="web-link" href="https://bitfocus.io/companion">Companion</a>, 
+							a software platform designed to manage and control various software/hardware 
+							applications within the realm of live production, broadcasting, and other audio-visual 
+							setups. Through input devices such as the Stream Deck, users can perform complex 
+							actions with a simple button press without the need to be nearby.<br><br>
+							I spent the next couple months figuring out how to build modules. It didn't help that 
+							Companion was shifting to version 3, with the module system was having quite the overhaul.
+							Meaning there was now lots of outdated features and documentation, being 
+							revised as I was trying to learn.<br><br>
+							I was also quite unfamiliar with Javascript and asynchronous programming, but after 
+							plenty of iterations and commits, I built the MasterCueV7 module, which 
+							after pairing with, allows you to send and receive Cues, and set, suspend, or resume 
+							outputs, all through HTTP requests and JSON parsing.<br><br>
+							My MasterCueV7 module can be found by searching in the Companion Connections list 
+							of the Companion web interface, or on its <a target="_blank" class="web-link" href="https://github.com/bitfocus/companion-module-interspace-mastercuev7">Github page</a>
+						</p>
+						<span>NodeJs</span>
+						<span>Javascript</span>
+						<span>Companion</span>
+						<span>Interspace Industries</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/05/2023<span>]</span> Network Stack and Sockets<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Looking into the process behind other-the-air updates, as well as working with Ethernet,
+							I read into the network stack, a callback to my Computer Science studies. Where I 
+							reminded myself of the general function of each layer, before I began working and learning 
+							about a Windows API called winsock, as an entry into the world of networking.
+						</p>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/05/2023<span>]</span> STM Bootloader<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+
+						<p>Around this time I began learning some fundamentals on how bootloaders work, I learnt
+							about the importance of memory mapping and the offsets required to point to specific sectors 
+							within (in this case) the STM32. I was able to write a bootloader application which looked
+							for an update request on startup. On update, the sector containing the current firmware 
+							would become the "previous" version, and the update data from the UART would be written 
+							to the "current" version sector, after verifying the update checksum the current version 
+							is booted into after the bootloader, otherwise the previous sector remains the current sector.
+						</p>
+						<span>C/C++</span>
+						<span>STM32</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/04/2023<span>]</span> Unreleased Terminal Access update<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						
+						<p>I wanted to release a slight overhaul to my Google Play Terminal Access title, I had 
+							spent some time adding some security to the leaderboard system to make scoring more fair 
+							(I thought it was pretty clever atleast). Also was informed of the brackets rule for the "bonuses".
+							As it turns out they aren't distributed randomly, they are within any 2-3 character group 
+							of brackets, e.g "<1$2>" or "[$4*]". After implementation it made sense, and worked well. 
+							There were some improvements to the GUI aswell! Although the endless issues with building 
+							my application for Android with the various compatibility issues with the service libraries 
+							(required to work with Google Play), then all the fun new policies to work through, which was fine.
+							But my work won't see the light of day, as some permission that is now required with 
+							Android 13 (and is present within my package), isn't picked up by the Play Console so 
+							I can't rollout the update.
+						</p>
+						<span>C#</span>
+						<span>Unity</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/03/2023<span>]</span> embeddedworld Nürnberg<i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/Expo.jpg">
+						<img src="images/Architecture.jpg">
+						<img src="images/Architecture1.jpg">
+						<img src="images/Architecture2.jpg">
+
+						<p>I had the incredible opportunity to visit and experience the huge embedded exhibition 
+							that is <a target="_blank" class="web-link" href="https://www.embedded-world.de/en">embeddedworld!</a>
+							Not only did I get the chance to speak with the exhibitors and their products, I also
+							got to explore a small piece of Germany! As well as trying the delicious Currywurst!
+						</p>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>19/01/2023<span>]</span><b> TV Flashing and Backlights</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<img src="images/TV1 Backlight.jpg">
+						<img src="images/TV1 Backlight1.jpg">
+						<img src="images/TV2 Flash.jpg">
+						<img src="images/TV2 Flash1.jpg">
+						<video  loop muted playsinline>
+							<source src="images/Attempt1.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video  loop muted playsinline>
+							<source src="images/Attempt2.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+
+
+						<p>Unfortunately another TV/monitor of mine had given up on me. Upon inspection, I 
+							discovered that the TV worked, although the backlight LEDs weren't turning on. I 
+							opened up the device to find the single LED that was preventing the others from 
+							turning on, sadly these couldn't be replaced but I did find a replaced LED strip.<br><br>
+							Tragically the day before the replacement arrived, I had placed the (very fragile) LED display 
+							on my workbench, which the adhesive on its back had stuck to.. so naturally upon lifting, it
+							developed a fantastic crack and rendered the TV useless...<br><br>
+							Meanwhile I had been attempting to repair an old TV of mine which was stuck in a boot loop,
+							sadly I learning the common fault is a corrupted flash. Luckily for me, there wasn't 
+							a simple firmware update or reset I could, but I did manage to locate the 25Q64C flash chip,
+							as well as the TVs firmware in the form of a binary file!!<br><br>
+							I tried what felt like hundred of methods to program this IC, from quite a messy surgical 
+							operation, attempting to flash using Tera Term with the help of some logic level 
+							shifters as the chip can only handle 3.3V. To finally picking up a SOP-8 clip to make my 
+							life a little easier, then booted up a Linux distribution and attempted to use <a target="_blank" class="web-link" href="https://flashrom.org/">flashrom</a>,
+							which was able to verify the chip!!<br><br>
+							At this point I reached some hurdle with Ubuntu (I think it was the number of chip pinouts), 
+							so I tried the same thing on a Raspberry Pi, and I actually managed to program this 
+							flash with using some binary file I found in an EEPROM forum dump!!!<br><br>
+							Unsurprisingly, after all the the work I put into this project, I once again tripped at the last hurdle,
+							while resoldering the IC onto the board, I had lifted the solder pads... I couldn't believe my luck.<br><br>
+							Despite being unable to repair these devices, I really gave it a good shot and did learn a whole lot. 
+							I'm just a little disappointed that I'll never know if maybe, just maybe, it could've worked.
+						</p>
+						<span>Electronics</span>
+						<span>Myself</span>
+					</div>
+				</div>
+				<div class="entry">
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>28/12/2022<span>]</span><b> RS232 display tester</b><i class="fas fa-caret-down"></i></button>
+					<div class="entry-drop">
+						<video  loop muted playsinline>
+							<source src="images/SyncedTesting.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<p>I developed a Windows application featuring a simple GUI to transmit specified 
+							configurations of segment display data to drive Interspace Industries's (Big) <a target="_blank" class="web-link" href="https://www.interspaceind.com/accessories/big-display/">Countdown</a> 
+							displays over USB. Giving the user control of the three colours and 4x8 segments, plus the colon. <br><br>
+							Originally I planned to build an embedded version that would shift the serial data, 
+							but because of the modified version of the RS232 protocol used, I instead built a 
+							dedicated WinForms application, which now streamlines the product evaluation stage 
+							for the Quality Assurance team.</p>
+						<span>C#</span>
+						<span>Winforms</span>
+						<span>Interspace Industries</span>
+					</div>
+				</div>
+				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>14/11/2022<span>]</span> Website changes<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video  loop muted playsinline>
@@ -90,6 +274,7 @@
                             Above, you can see how the site previously scaled, with elements becoming 
                             unreadable and misplaced. Below are my changes, with elements not becoming too 
                             small. Also, hiding media files on smaller displays.</p>
+						<span>HTML, CSS</span>
 						<span>Myself</span>
 					</div>
 				</div>
@@ -135,37 +320,6 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>15/08/2022<span>]</span><b> WiFi Air mouse</b><i class="fas fa-caret-down"></i></button>
-					<div class="entry-drop">
-						<video  loop muted playsinline>
-							<source src="images/MPU6050.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
-
-						<p>After working with a six-axis motion tracking device for quite some time, interfacing 
-                            with it over I2C to fine-tune its registers for each output (of which it has three 
-                            accelerometer outputs and three gyroscope outputs). I incorporated the remote 
-                            connectivity of the ESP32, building a C++ library that communicated with the sensor,
-                            and packaged the modified axis data to be sent over WiFi to a receiver, handling mouse movement.<br><br>
-                            The above clip is of the wired MPU6050 version.</p>
-						<span>C/C++</span>
-						<span>Electronics</span>
-						<span>Myself</span>
-					</div>
-				</div>
-				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>01/08/2022<span>]</span> Circuit diagram software<i class="fas fa-caret-down"></i></button>
-					<div class="entry-drop">
-
-						<p>I've recently been wanting to improve my understanding of circuits, interpret 
-                            others and create better layouts of my own. So I've been searching for a schematic designer 
-                            software and stumbled across <a target="_blank" class="web-link" href="https://diptrace.com/">DipTrace</a>, 
-                            which I've been using prototype and iterate on an upcoming product.</p>
-						<span>Electronics</span>
-						<span>Myself</span>
-					</div>
-				</div>
-				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/07/2022<span>]</span> Temporary printer repairs<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/Printer.jpg">
@@ -189,16 +343,16 @@
 							Your browser does not support the video tag.
 						</video>
 
-						<p>Requested to learn as much as I could about the <a target="_blank" class="web-link" href="https://www.espressif.com/en/products/socs/esp32">ESP32 from Espressif</a>, 
+						<p>I learnt as much as I could about the <a target="_blank" class="web-link" href="https://www.espressif.com/en/products/socs/esp32">ESP32 from Espressif</a>, 
                             I began my humble beginnings by grabbing and displaying the device's 
                             MAC address!<br><br>
                             Before learning how to achieve two-way communication via ESP-NOW, sending a 
                             data payload over WiFi to a hardcoded peer's address that is received and verified through 
                             callbacks.<br><br>
                             Then, a one-to-many network with a single transmitter which sends its 
-                            data (on button input) to the registered remote peers that relay the received data 
+                            data (on button input) to the registered remote peers, which relay the received data 
                             to a serial output.<br><br>
-                            The requirement to draw low current, I researched the "deep sleep mode", 
+                            With concerns of power usage, I researched into the "deep sleep mode", 
                             which powers down a large portion of the module's functionality but requires the 
                             usage of the RTC IOs or timers to wake the device from this state.<br><br>
                             After lots of testing, improving my understanding of I2C and unpacking data packets 
@@ -207,11 +361,11 @@
 						</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2022<span>]</span><b> MPU6050 Accelerometer and Gyroscope</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>05/05/2022<span>]</span><b> Gyroscope Air Mouse</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video  loop muted playsinline>
 							<source src="images/MPU6050.mp4" type="video/mp4">
@@ -219,27 +373,31 @@
 						</video>
 
 						<p>With no prior knowledge about these types of sensors, I began learning how to fetch 
-							raw axis data from its registers, after setting the configuration and resolution 
-							bits (and quite a bit of troubleshooting).<br><br>
-							After getting relatively meaningful readings from the six-axis motion sensor, 
-							I read the data serially from the chip using an Arduino Micro (HID compatible). 
-							Translating the data into mouse positions to control the mouse of a connected computer.</p>
+							raw axis data from its registers over I2C. After fine-tuning the configuration 
+							and resolution register bits for each output (of which it has three accelerometer 
+							outputs and three gyroscope outputs), I built myself a C++ library to package this 
+							communication system.<br><br>
+							Finally getting relatively meaningful readings from the six-axis motion sensor, I
+							was able read the data serially using an Arduino Micro (HID compatible). 
+							Translating the data into mouse positions to control the mouse of a connected computer.<br><br>
+                            During this time I also discovered <a target="_blank" class="web-link" href="https://diptrace.com/">DipTrace</a>, 
+							which I've been using to improve my understanding of circuit design and prototyping.</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Myself</span>
 					</div>
 				</div>
 				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>16/03/2022<span>]</span> Revisiting the electronic fuse<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Previously I worked on some embedded software with a relatively simple but essential 
+						<p>Previously I worked on some embedded firmware with a relatively simple but essential 
 							function; to detect and manage a power line and perform short tests to prevent 
-							components from being damaged. An updated revision was needed, with the added ability 
-							to monitor multiple power lines (nearly) simultaneously.</p>
+							components from being damaged during a fault. An updated revision was needed, with 
+							the added ability to monitor multiple power lines (nearly) simultaneously.</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -298,7 +456,7 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>25/01/2022<span>]</span> Digi XBee<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>I was requested to spend some time researching and working with the XBee modules 
+						<p>I spent some time researching and working with the XBee modules 
 							from <a target="_blank" class="web-link" href="https://www.digi.com/">Digi</a>. 
 							Beginning by teaching myself the basics of the XCTU application used 
 							to interface and configure the RF modules.<br><br>
@@ -313,7 +471,7 @@
 						</p>
 						<span>C/C++</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -322,12 +480,12 @@
 						<img src="images/ReactionRacingGame.gif">
 
 						<p>Strangely enough, around the same time that I was working on my small shape game, 
-							I was asked to produce a reaction game for 
+							I was requested to produce a reaction game for 
 							<a target="_blank" class="web-link" href="https://www.williamsf1.com/">Williams 
 							Racing</a>, which can be seen above (but missing sound)<br><br>
-							I worked with <a target="_blank" class="web-link" href="https://www.hiveindustries.com/">Hive Industries</a> 
+							I worked with <a target="_blank" class="web-link" href="https://www.interspaceind.com/">Interspace Industries</a> 
 							and <a target="_blank" class="web-link" href="https://www.thisisfury.com/">Fury Design Agency</a> to use a real Formula One 
-							steering wheel. Which had been modified by Hive Industries and programmed by me 
+							steering wheel. Which had been modified by Interspace Industries and programmed by me 
 							to send keyboard presses serially to a computer that was running the reaction game that 
 							I created with Unity</p>
 						<span>C/C++</span>
@@ -377,16 +535,15 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/09/2021<span>]</span> Power Regulator<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>I developed another performance-efficient realtime power analyzer for the tiny series.<br><br>
+						<p>I developed another performance-efficient realtime power analyzer with the AVR tiny series.<br><br>
                             Built to indicate an OK status so long as the sampled voltage level is within an acceptable range. 
-                            Otherwise, power cycling - However, if this occurs too many times, we enter a lockdown 
-                            mode, whereby the power to the device is disconnected, and a manual reset is required. 
+                            Otherwise, power cycling - However, if this occurs too frequently, we enter a lockdown 
+                            state, whereby the power to the device is disconnected, and a manual reset is required. 
 							With my knowledge of AVR registers, I was able to gather and monitor the 10-bit resolution analogue 
 							input by combining the values of two separate registers.</p>
 						<span>C/C++</span>
-						<span>Arduino</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -466,7 +623,7 @@
 
 						<p>Looking for some extra work, I ended up posting some freelancing offers on Fiverr. 
 							Offering to build people Discord bots, fix their poorly tagged audio files, or 
-							assist in writing C# for people. Sadly, not much luck</p>
+							assist in writing C#. Sadly, not much luck</p>
 						<span>C#</span>
 						<span>Unity</span>
 						<span>Myself</span>
@@ -515,7 +672,7 @@
 					<div class="entry-drop">
 						<img src="images/TLC59281.gif">
 
-						<p>I was asked to produce a program that sent commands via SPI to a TLC59281
+						<p>I developed a program that sends commands via SPI to a TLC59281
                             (an LED Driver) to control four seven-segment displays. This involved building 
                             32-bit payloads that specify which segments to illuminate, the colour of the LEDs, 
                             and the symbol bits. As well as the serial transfer method with the correct timing 
@@ -527,7 +684,7 @@
 						<span>C/C++</span>
 						<span>Arduino</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -550,7 +707,7 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/04/2021<span>]</span> Xamarin Android<i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>06/04/2021<span>]</span><b> StackOverflow viewer Xamarin Android</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/StackViewAndroid.gif">
 
@@ -567,7 +724,7 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/03/2021<span>]</span> Small online courses<i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>24/03/2021<span>]</span> Improving my understanding<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
 						<p>Wanting a refresher in certain aspects of C and C#, I completed two short online 
@@ -601,7 +758,7 @@
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/01/2021<span>]</span> Android Studio Revisit<i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>04/01/2021<span>]</span><b> Android Studio Prototyping</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<video loop muted playsinline>
 							<source src="images/AndroidStudio.mp4" type="video/mp4">
@@ -689,11 +846,11 @@
 							and draw to the screen.</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
-					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/10/2020<span>]</span><b> First revision of my new site</b><i class="fas fa-caret-down"></i></button>
+					<button type="button" onClick="ToggleDesc(this)"><span>[</span>17/10/2020<span>]</span><b> Website upgrade</b><i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 						<img src="images/OldSite.gif">
 
@@ -739,14 +896,14 @@
 						<img src="images/Charlieplex.jpg">
 						<img src="images/Charlieplex1.jpg">
 
-						<p>Asked to design and produce the code for a microcontroller to indicate 
+						<p>Designed and produced the code for a microcontroller to indicate 
                             the charge status of a battery through Charlieplexed LEDs. Also, instead of 
                             recreating the Charlieplexed circuit once again on a breadboard for testing, I 
                             finally drew out and built a permanent perfboard version of my own.</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -772,22 +929,23 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>21/08/2020<span>]</span> Door Counter<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>With the epidemic on everyone's mind, I was asked to build a program for 
+						<p>With the epidemic on everyone's mind, I built a program for 
 							an AVR microcontroller to pull in sensor data to determine the number of people 
 							within a building. Then sending that data through a UART interface to be written 
-							to a display. Letting customers know how many people are allowed to enter</p>
+							to a display. Letting customers know how many people are allowed to enter. 
+							Unfortunately this projects development came to an end.</p>
 						<span>C/C++</span>
 						<span>AVR</span>
 						<span>Arduino</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>09/08/2020<span>]</span> Comms over USB to Arduino<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>A small note to remind me that I had created a project to learn how to 
-							send serial data over USB, which may be useful for future projects</p>
+						<p>To learn how to send serial data over USB, I developed a C# application, which may 
+							be useful for future projects</p>
 						<span>C#</span>
 						<span>Myself</span>
 					</div>
@@ -851,7 +1009,7 @@
 						<img src="images/DesktopVU.JPG">
 						<img src="images/DesktopVU1.JPG">
 
-						<p>Produced a working prototype of a desktop VU Meter with Winforms using <a class="web-link" target="_blank" href="https://github.com/naudio/NAudio">NAudio</a>. 
+						<p>I produced a working prototype of a desktop VU Meter with Winforms using <a class="web-link" target="_blank" href="https://github.com/naudio/NAudio">NAudio</a>. 
 							Monitoring multiple devices (current limit of 5) simultaneously, scaling the 
 							program window with each device added, with options to add / remove monitors, 
 							and refresh the list of audio devices.<br><br>
@@ -901,14 +1059,14 @@
 							display</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>29/02/2020<span>]</span> Shutdown Recovery<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>I was asked to program an IC that implemented a recovery system. 
+						<p>I programmed an IC that implemented a recovery system. 
 							That will continuously monitor the state of a PWR line affected by an 
 							external sleep function. If certain conditions aren't met, an LED will 
 							indicate this event, and the device is restarted. Otherwise, to 
@@ -917,7 +1075,7 @@
 						<span>C/C++</span>
 						<span>Arduino</span>
 						<span>Electronics</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -929,7 +1087,7 @@
 							So I began looking into the Companion app, as well as the possibility of 
 							adding modules. Although after some research it sadly seemed out of reach, for now..</p>
 						<span>Javascript</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -944,7 +1102,7 @@
 							byte format rather than regular RGB888</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -963,13 +1121,13 @@
 					<button type="button" onClick="ToggleDesc(this)"><span>[</span>23/01/2020<span>]</span> MC7 prototype pages<i class="fas fa-caret-down"></i></button>
 					<div class="entry-drop">
 
-						<p>Hive Industries had an upcoming exhibition, which I was asked to design and 
-							produce the pages that would be the base for the MC7 graphical user interface. 
+						<p>Interspace Industries had an upcoming exhibition, where I designed and 
+							produced the pages that would be the base for the MC7 graphical user interface. 
 							After many iterations, a preferred style and layout for an early version of 
 							the MC7 display was chosen, ready for its first showing</p>
 						<span>Artwork</span>
 						<span>Nextion</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -1137,7 +1295,7 @@
 							current inrush, no further checks are made, and the device is disconnected</p>
 						<span>C/C++</span>
 						<span>AVR</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -1148,11 +1306,11 @@
 						<p>With my understanding of the ATtinys registers, I developed a solution that combined a 
 							ground referenced signal presented within its ADC registers to generate a 10-bit resolution 
 							result. Which represents an analogue dB value, then displayed via the VU Meter of the CiO² 
-							product from <a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a> 
+							product from <a class="web-link" target="_blank" href="https://www.interspaceind.com/">Interspace Industries</a> 
 							through <a class="web-link" target="_blank" href="https://en.wikipedia.org/wiki/Charlieplexing">Charlieplexed</a> LEDs.</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -1169,13 +1327,13 @@
 							the input, returning the correct result to the display.<br><br>
 							I also produced a microwave-style numeric input system, shifting digits ahead and removing the digit overflow.<br><br>
 							Lastly creating a combination of features, building upon an older product from 
-							<a class="web-link" target="_blank" href="https://www.hiveindustries.com/">Hive Industries</a>. 
+							<a class="web-link" target="_blank" href="https://www.interspaceind.com/">Interspace Industries</a>. 
 							Incorporating the digit shift module, a timer input, as well as numerous page 
 							designs for the Nextion</p>
 						<span>C/C++</span>
 						<span>Arduino</span>
 						<span>Nextion</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">
@@ -1187,7 +1345,7 @@
 							frame, disconnect the device, and await a manual reset.</p>
 						<span>C/C++</span>
 						<span>AVR</span>
-						<span>Hive Industries</span>
+						<span>Interspace Industries</span>
 					</div>
 				</div>
 				<div class="entry">

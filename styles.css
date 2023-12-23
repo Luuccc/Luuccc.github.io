@@ -152,7 +152,7 @@ span {
 	font-size: 1rem;
 }
 .languages {
-	padding: 0.5rem; /*Upward spacing between point lists*/
+	padding: 0.5rem 0.5rem 0.5rem 0rem; /*Upward spacing between point lists*/
 }
 /*List header*/
 .languages h4 {
@@ -247,7 +247,7 @@ span {
     opacity: 80%;
 }
 .vault-link {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 .web-link {
 	font-family: Consolas, monospace;
@@ -272,19 +272,27 @@ span {
 }
 /*Contains all the minis*/
 .grid {
-    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+    /*width: 100%;*/
     overflow: auto; /*Fixes collapsing margins*/
 	margin-top: 20px;
 }
+.column {
+	flex: 48%;
+	max-width: 48%;
+	padding: 10px;
+}
 /*Here they come! All in their mini project containers*/
 .mini-project {
-    width: 48%;
-    float: left;
+    /*width: 48%;
+    float: left;*/
     background-color: #272728;
     box-shadow: 0px 4px 3px 2px #1b1b1b;
     margin: 2px;
 	margin-bottom: 10px;
-    position: relative;
+    /*position: relative;*/
     border-radius: 1%;
 }
 /*Mini project icon*/
@@ -413,13 +421,13 @@ span {
     border: none;
     width: 100%;
     cursor: pointer;
-    color: #6aabe3;
+    color: #f97979;
     outline: none;  
     padding: 0 0 0 0;
 	white-space: nowrap;
     font-family: 'Consolas', monospace; /*Work places*/
 	font-weight: 300;
-	font-size: 1.5rem
+	font-size: 1.25rem
 }
 .exp-info a {
     color: #f97979;
@@ -481,23 +489,16 @@ span {
 	}
 }
 /*When less than*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
 	.entry video,
 	.entry img,
     .project img {
 		display: none; /*Hide icon on small devices*/
 	}
-	.mini-project {
-        /*Fill width with small margin*/
-        width: 100%;
-		margin: 0;
-        margin-bottom: 20px;
-        /*No longer float to left*/
-        float: none;
-    }
-}
-/*When less than*/
-@media only screen and (max-width: 800px) {
 	.social-bar {
 		left: 3%;
 	}
@@ -539,7 +540,6 @@ span {
 	.exp-info p,
 	.policy-entry b,
 	.policy-entry p,
-	.vault-link,
 	.mini-data h2 {
 		font-size: 12px;
 	}
@@ -552,6 +552,7 @@ span {
 	.project p,
 	.entry h4,
 	.fa-caret-down,
+	.vault-link,
 	.section-header p,
 	.languages h4,
 	.long-info p {
