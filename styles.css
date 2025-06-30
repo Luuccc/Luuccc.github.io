@@ -140,6 +140,9 @@ span {
 	vertical-align: top;
 }
 
+.long-info {
+	padding-bottom: 1em;
+}
 
 
 .about-me-container {
@@ -297,12 +300,15 @@ span {
 }
 /*Mini project icon*/
 .mini-project span {
-    font-size: 2rem;
-    color: #6aabe3;
     float: left;
     position: relative;
-    top: 10px;
-    left: 10px
+    top: 23px;
+    left: 20px;
+	width: 25px;
+    height: 25px;
+    background-color: #222223; 
+	box-shadow: inset 0px 4px 3px 2px #1b1b1b;
+    border-radius: 50%;        
 }
 /*Mini project container*/
 .mini-data {
@@ -315,7 +321,9 @@ span {
 	font-size: 1.5rem;
 	text-align: center;
     color: #f97979;
-    padding-top: 1em;
+    padding-top: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
     padding-bottom: 0.5em;
 }
 /*Mini project desc*/
@@ -494,11 +502,6 @@ span {
 		flex: 100%;
 		max-width: 100%;
 	}
-	.entry video,
-	.entry img,
-    .project img {
-		display: none; /*Hide icon on small devices*/
-	}
 	.social-bar {
 		left: 3%;
 	}
@@ -574,6 +577,15 @@ span {
 	/*0.5vw*/
 	.fa-caret-down {
     	font-size: 4px;
+	}
+}
+
+/*When less than*/
+@media only screen and (max-width: 1180px) {
+	.entry video,
+	.entry img,
+    .project img {
+		display: none; /*Hide icon on small devices*/
 	}
 }
 
