@@ -302,8 +302,8 @@ span {
 .mini-project span {
     float: left;
     position: relative;
-    top: 23px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
 	width: 25px;
     height: 25px;
     background-color: #222223; 
@@ -312,7 +312,7 @@ span {
 }
 /*Mini project container*/
 .mini-data {
-    padding: 20px;
+    padding: 12px;
 	padding-bottom: 40px;
 }
 /*Mini project title*/
@@ -531,11 +531,16 @@ span {
 	}
 	/*2.0vw*/
 	.exp-info button,
-	.mini-project span,
 	.project h2 {
 		font-size: 16px;
 	}
 	/*1.75vw*/
+	.mini-project span {
+		width: 14px;
+		height: 14px;
+		top: 12px;
+		left: 10px;
+	}
 	.email-bar a {
 		font-size: 14px;
 	}
